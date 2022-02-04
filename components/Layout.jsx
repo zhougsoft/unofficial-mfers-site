@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import styles from '../styles/Layout.module.css'
+import styles from '../styles/modules/Layout.module.scss'
 
 const Layout = ({ pageTitle, children }) => {
 	return (
@@ -13,7 +13,7 @@ const Layout = ({ pageTitle, children }) => {
 			<main className={styles.content}>{children}</main>
 
 			<footer className={styles.footer}>
-				<div>unofficial mfers</div>
+				<small>sup mfers</small>
 			</footer>
 		</div>
 	)

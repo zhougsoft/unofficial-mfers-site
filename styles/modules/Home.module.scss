@@ -1,0 +1,27 @@
+@import '../variables';
+
+.titleSection {
+	margin-bottom: 4rem;
+	text-align: center;
+
+	h1,
+	p {
+		margin: 0;
+		line-height: 1.25;
+		letter-spacing: -0.02em;
+	}
+
+	h1 {
+		font-size: 4rem;
+	}
+
+	p {
+		font-size: 1.25rem;
+	}
+}
+
+.linkGroup {
+	width: 20rem;
+	display: flex;
+	justify-content: space-around;
+}

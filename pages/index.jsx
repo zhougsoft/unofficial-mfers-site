@@ -1,42 +1,22 @@
 import Image from 'next/image'
-
-import styles from '../styles/Home.module.css'
+import styles from '../styles/modules/Home.module.scss'
 import Layout from '../components/Layout'
-
-const linkBtn = { backgroundColor: 'red' }
-
-const WIP = () => (
-	<>
-		<div>
-			<h1 className={styles.title}>unofficial mfers</h1>
-			<p className={styles.description}>
-				welcome to the official website of the unofficial mfers
-			</p>
-		</div>
-
-		<br />
-		<br />
-		<br />
-
-		<div
-			style={{
-				width: '500px',
-				display: 'flex',
-				justifyContent: 'space-around',
-			}}
-		>
-			<div style={linkBtn}>discord</div>
-			<div style={linkBtn}>twitter</div>
-			<div style={linkBtn}>mfers contract</div>
-		</div>
-	</>
-)
+import ExtLink from '../components/ExtLink'
 
 const Home = () => {
 	return (
 		<Layout pageTitle="unofficial mfers">
-			<h1 className={styles.title}>coming soon</h1>
-			<p className={styles.description}>under construction, mfers...</p>
+			<div className={styles.titleSection}>
+				<h1>unofficial mfers</h1>
+				<p>
+					the <b>official</b> website of the <b>unofficial mfers</b>
+				</p>
+			</div>
+			<div className={styles.linkGroup}>
+				<ExtLink href="#">discord</ExtLink>
+				<ExtLink href="#">twitter</ExtLink>
+				<ExtLink href="#">mfers contract</ExtLink>
+			</div>
 		</Layout>
 	)
 }
