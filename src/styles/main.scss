@@ -73,21 +73,24 @@ a {
 
 .content {
 	min-height: 100vh;
-	flex: 1;
+	// flex: 1;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
 
-.footer {
-	display: flex;
-	flex: 1;
-	padding: 2rem 0;
-	border-top: 1px solid $font-body;
-	justify-content: center;
-	align-items: center;
-}
+
+// TODO: uncomment wen footer tiem
+
+// .footer {
+// 	display: flex;
+// 	flex: 1;
+// 	padding: 2rem 0;
+// 	border-top: 1px solid $font-body;
+// 	justify-content: center;
+// 	align-items: center;
+// }
 
 // --- INDEX PAGE ---
 .titleSection {
