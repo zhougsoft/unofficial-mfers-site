@@ -2,10 +2,12 @@ import Image from 'next/image'
 import styles from '../styles/modules/Home.module.scss'
 import Layout from '../components/Layout'
 import ExtLink from '../components/ExtLink'
-
-import iconDiscord from '../public/images/svg/discord-black.svg'
-import iconTwitter from '../public/images/svg/twitter-black.svg'
+import { DiscordIcon, EtherscanIcon, TwitterIcon } from '../components/Icons'
 import mferPic from '../public/images/mfer-full.png'
+
+const DISCORD_LINK = 'https://discord.com/invite/tjp9YrwZ'
+const ETHERSCAN_LINK = ''
+const TWITTER_LINK = 'https://twitter.com/unofficialmfers'
 
 const Home = () => {
 	return (
@@ -17,15 +19,16 @@ const Home = () => {
 				</p>
 			</div>
 			<div className={styles.linkGroup}>
-				<ExtLink href="https://discord.com/invite/tjp9YrwZ">
-					<Image src={iconDiscord} width="50px" height="50px" />
-				</ExtLink>
-				<ExtLink href="https://twitter.com/unofficialmfers">
-					<Image src={iconTwitter} width="50px" height="50px" />
-				</ExtLink>
+				<DiscordIcon className={styles.iconLink} />
+				<EtherscanIcon className={styles.iconLink} />
+				<TwitterIcon className={styles.iconLink} />
 			</div>
 			<span className={styles.mferPic}>
-				<Image src={mferPic} placeholder="blur" />
+				<Image
+					src={mferPic}
+					alt="sartoshi smiling and vibing with headphones in their chair, facing to the right"
+					placeholder="blur"
+				/>
 			</span>
 		</Layout>
 	)

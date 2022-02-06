@@ -8,12 +8,12 @@
 	p {
 		margin: 0;
 		line-height: 1.5em;
-		letter-spacing: -0.03em;
 	}
 
 	h1 {
 		font-size: 3rem;
 		font-family: $font-header;
+		letter-spacing: -0.02em;
 
 		@media (min-width: $breakpoint-md) {
 			font-size: 5rem;
@@ -22,6 +22,7 @@
 
 	p {
 		font-size: 1rem;
+		letter-spacing: -0.03em;
 
 		@media (min-width: $breakpoint-md) {
 			font-size: 1.65rem;
@@ -34,6 +35,10 @@
 	display: flex;
 	justify-content: space-around;
 	align-items: flex-start;
+
+	& > .iconLink {
+		width: 2.5rem;
+	}
 }
 
 .mferPic {
