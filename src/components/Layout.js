@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import styles from '../styles/modules/Layout.module.scss'
 
 const Layout = ({ pageTitle, children }) => {
@@ -13,7 +12,7 @@ const Layout = ({ pageTitle, children }) => {
 			<main className={styles.content}>{children}</main>
 
 			{/* if we ever need a footer... */}
-			
+
 			{/* <footer className={styles.footer}>
 				<small>sup mfers</small>
 			</footer> */}
