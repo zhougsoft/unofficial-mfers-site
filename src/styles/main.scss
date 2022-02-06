@@ -111,23 +111,31 @@ a {
 	}
 
 	p {
-		font-size: 1rem;
+		font-size: 1.05rem;
 		letter-spacing: -0.03em;
 
 		@media (min-width: $breakpoint-md) {
-			font-size: 1.65rem;
+			font-size: 1.75rem;
 		}
 	}
 }
 
 .linkGroup {
-	width: 20rem;
+	width: 18rem;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 
-	& > .iconLink {
-		width: 2.5rem;
+	@media (min-width: $breakpoint-md) {
+		width: 25rem;
+	}
+
+	& img {
+		width: 3rem;
+
+		@media (min-width: $breakpoint-md) {
+			width: 4rem;
+		}
 	}
 }
 
@@ -136,6 +144,6 @@ a {
 	bottom: 0;
 	right: 0;
 	z-index: 0;
-	width: 200px;
+	width: 33%;
 	line-height: 0;
 }

@@ -7,8 +7,9 @@ const Layout = ({ pageTitle, children }) => {
 	return (
 		<div className="container">
 			<Helmet>
-				<title>{pageTitle}</title>
 				<meta name="description" content="unofficial mfers website" />
+				<meta name="icon" href="/favicon.ico" />
+				<title>{pageTitle}</title>
 			</Helmet>
 
 			<main className="content">{children}</main>
