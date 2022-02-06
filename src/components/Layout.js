@@ -1,19 +1,21 @@
-import styles from '../styles/modules/Layout.module.scss'
+import * as React from 'react'
+import { Helmet } from 'react-helmet'
+
+import '../styles/main.scss'
 
 const Layout = ({ pageTitle, children }) => {
 	return (
-		<div className={styles.container}>
-			<Head>
+		<div className="container">
+			<Helmet>
 				<title>{pageTitle}</title>
 				<meta name="description" content="unofficial mfers website" />
-				<link rel="icon" href="/favicon.ico" />
-			</Head>
+			</Helmet>
 
-			<main className={styles.content}>{children}</main>
+			<main className="content">{children}</main>
 
 			{/* if we ever need a footer... */}
 
-			{/* <footer className={styles.footer}>
+			{/* <footer className='footer'>
 				<small>sup mfers</small>
 			</footer> */}
 		</div>
