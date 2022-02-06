@@ -12,9 +12,11 @@ const Layout = ({ pageTitle, children }) => {
 
 			<main className={styles.content}>{children}</main>
 
-			<footer className={styles.footer}>
+			{/* if we ever need a footer... */}
+			
+			{/* <footer className={styles.footer}>
 				<small>sup mfers</small>
-			</footer>
+			</footer> */}
 		</div>
 	)
 }

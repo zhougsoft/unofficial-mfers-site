@@ -1,27 +1,46 @@
 @import '../variables';
 
 .titleSection {
-	margin-bottom: 4rem;
+	margin-bottom: 2rem;
 	text-align: center;
 
 	h1,
 	p {
 		margin: 0;
-		line-height: 1.25;
-		letter-spacing: -0.02em;
+		line-height: 1.5em;
+		letter-spacing: -0.03em;
 	}
 
 	h1 {
-		font-size: 4rem;
+		font-size: 3rem;
+		font-family: $font-header;
+
+		@media (min-width: $breakpoint-md) {
+			font-size: 5rem;
+		}
 	}
 
 	p {
-		font-size: 1.25rem;
+		font-size: 1rem;
+
+		@media (min-width: $breakpoint-md) {
+			font-size: 1.65rem;
+		}
 	}
 }
 
 .linkGroup {
-	width: 20rem;
+	width: 15rem;
 	display: flex;
 	justify-content: space-around;
+	align-items: flex-start;
+}
+
+.mferPic {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: 0;
+	width: 25%;
+	line-height: 0;
 }
