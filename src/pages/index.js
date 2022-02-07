@@ -1,8 +1,8 @@
 import * as React from 'react'
 import Layout from '../components/Layout'
 import ExtLink from '../components/ExtLink'
-import sartoshiImg from '../assets/images/sartoshi.png'
 
+import sartoshiImg from '../assets/images/sartoshi.png'
 import svgDiscordLogo from '../assets/svg/discord-logo.svg'
 import svgEtherscanLogo from '../assets/svg/etherscan-logo.svg'
 import svgTwitterLogo from '../assets/svg/twitter-logo.svg'
