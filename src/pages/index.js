@@ -20,7 +20,7 @@ const IndexPage = () => {
 			<div className="titleSection">
 				<h1>unofficial mfers</h1>
 				<p>
-					the <b>official</b> website of the <b>unofficial mfers</b>
+					the <b>officially unofficial</b> website of the <b>mfers</b>
 				</p>
 			</div>
 			<div className="linkGroup">
