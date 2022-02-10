@@ -3,6 +3,7 @@ import Layout from '../components/Layout'
 import ExtLink from '../components/ExtLink'
 
 import sartoshiImg from '../assets/images/sartoshi.png'
+import openseaLogoImg from '../assets/images/os.png'
 import svgDiscordLogo from '../assets/svg/discord-logo.svg'
 import svgEtherscanLogo from '../assets/svg/etherscan-logo.svg'
 import svgTwitterLogo from '../assets/svg/twitter-logo.svg'
@@ -11,6 +12,7 @@ const DISCORD_LINK = 'https://discord.com/invite/tjp9YrwZ'
 const ETHERSCAN_LINK =
 	'https://etherscan.io/address/0x79FCDEF22feeD20eDDacbB2587640e45491b757f'
 const TWITTER_LINK = 'https://twitter.com/unofficialmfers'
+const OPENSEA_LINK = 'https://opensea.io/collection/mfers'
 
 const IndexPage = () => {
 	return (
@@ -18,12 +20,15 @@ const IndexPage = () => {
 			<div className="titleSection">
 				<h1>unofficial mfers</h1>
 				<p>
-					the <b>official</b> website of the <b>unofficial mfers</b>
+					the <b>officially unofficial</b> website of the <b>mfers</b>
 				</p>
 			</div>
 			<div className="linkGroup">
 				<ExtLink href={DISCORD_LINK}>
 					<img src={svgDiscordLogo} alt="Discord logo icon" />
+				</ExtLink>
+				<ExtLink href={OPENSEA_LINK}>
+					<img src={openseaLogoImg} alt="Opensea logo icon" />
 				</ExtLink>
 				<ExtLink href={ETHERSCAN_LINK}>
 					<img src={svgEtherscanLogo} alt="Etherscan logo icon" />
