@@ -73,16 +73,15 @@ a {
 
 .content {
 	min-height: 100vh;
-	// flex: 1;
+	// flex: 1; // uncomment if using the footer
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	padding-bottom: 10rem; // probably remove when adding in footer
 }
 
-
-// TODO: uncomment wen footer tiem
-
+// TODO: uncomment if we ever need a footer
 // .footer {
 // 	display: flex;
 // 	flex: 1;
@@ -124,17 +123,18 @@ a {
 }
 
 .linkGroup {
-	width: 18rem;
+	width: 22rem;
 	display: flex;
-	justify-content: space-around;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
 	align-items: center;
 
 	@media (min-width: $breakpoint-md) {
-		width: 25rem;
+		width: 35rem;
 	}
 
 	& img {
-		width: 3rem;
+		width: 2.8rem;
 
 		@media (min-width: $breakpoint-md) {
 			width: 4rem;
