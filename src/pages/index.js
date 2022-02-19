@@ -2,20 +2,20 @@ import * as React from 'react'
 import Layout from '../components/Layout'
 import ExtLink from '../components/ExtLink'
 
+import {
+	DISCORD_LINK,
+	OPENSEA_LINK,
+	LOOKSRARE_LINK,
+	ETHERSCAN_LINK,
+	TWITTER_LINK,
+} from '../constants'
+
 import sartoshiImg from '../assets/images/sartoshi.png'
 import svgDiscordLogo from '../assets/svg/discord-logo.svg'
 import svgOpenSeaLogo from '../assets/svg/os-logo.svg'
 import svgLooksRareLogo from '../assets/svg/looksrare-logo.svg'
 import svgEtherscanLogo from '../assets/svg/etherscan-logo.svg'
 import svgTwitterLogo from '../assets/svg/twitter-logo.svg'
-
-const DISCORD_LINK = 'https://discord.com/invite/tjp9YrwZ'
-const OPENSEA_LINK = 'https://opensea.io/collection/mfers'
-const LOOKSRARE_LINK =
-	'https://looksrare.org/collections/0x79FCDEF22feeD20eDDacbB2587640e45491b757f'
-const ETHERSCAN_LINK =
-	'https://etherscan.io/address/0x79FCDEF22feeD20eDDacbB2587640e45491b757f'
-const TWITTER_LINK = 'https://twitter.com/unofficialmfers'
 
 const IndexPage = () => {
 	return (
