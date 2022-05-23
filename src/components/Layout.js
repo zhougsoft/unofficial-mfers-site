@@ -11,7 +11,10 @@ const Layout = ({ pageTitle, children }) => {
 				<meta name="icon" href="/favicon.ico" />
 				<title>{pageTitle}</title>
 			</Helmet>
-
+			<img
+				id="easter-egg-mfer"
+				src="https://lh3.googleusercontent.com/yPnxS4yRsN7krSuKAqy0HtdyHSxA5VdKPUuLAKQQidoeEulYSGA1wq0rYfDLgM96PogiF0AjhbIAi27_NNNTm9eN2fjMcESxwbg0Zw=w600"
+			/>
 			<main className="content">{children}</main>
 
 			{/* if we ever need a footer... */}

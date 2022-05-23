@@ -150,3 +150,15 @@ a {
 	width: 33%;
 	line-height: 0;
 }
+
+#easter-egg {
+	width:10px;
+	height:10px;
+}
+#easter-egg-mfer {
+  display: none;
+}
+
+#easter-egg:hover + .container > #easter-egg-mfer {
+  display: block;
+}
