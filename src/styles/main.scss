@@ -1,5 +1,29 @@
+// this is the main styles file!
+// load .scss partials like so below
 @import 'typography';
 @import 'variables';
+
+
+
+//~*~*~ media query paste-ables ~*~*~
+
+// @media (min-width: $breakpoint-sm) {
+// 	/**/
+// }
+
+// @media (min-width: $breakpoint-md) {
+// 	/**/
+// }
+
+// @media (min-width: $breakpoint-lg) {
+// 	/**/
+// }
+
+// @media (min-width: $breakpoint-xl) {
+// 	/**/
+// }
+
+
 
 // --- RESETS ---
 *,
@@ -53,43 +77,18 @@ a {
 	}
 }
 
-//~*~*~ media query paste-ables ~*~*~
-
-// @media (min-width: $breakpoint-sm) {
-// 	/**/
-// }
-
-// @media (min-width: $breakpoint-md) {
-// 	/**/
-// }
-
-// @media (min-width: $breakpoint-lg) {
-// 	/**/
-// }
-
-// @media (min-width: $breakpoint-xl) {
-// 	/**/
-// }
-
 .content {
 	min-height: 100vh;
-	// flex: 1; // uncomment if using the footer
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding-bottom: 10rem; // probably remove when adding in footer
+	padding-bottom: 10rem;
 }
 
-// TODO: uncomment if we ever need a footer
-// .footer {
-// 	display: flex;
-// 	flex: 1;
-// 	padding: 2rem 0;
-// 	border-top: 1px solid $font-body;
-// 	justify-content: center;
-// 	align-items: center;
-// }
+.main-nav {
+	outline: 1px solid red;
+}
 
 // --- INDEX PAGE ---
 .titleSection {
