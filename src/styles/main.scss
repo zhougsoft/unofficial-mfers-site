@@ -1,12 +1,9 @@
 // this is the main styles file!
-// load .scss partials like so below
+
 @import 'typography';
 @import 'variables';
 
-
-
 //~*~*~ media query paste-ables ~*~*~
-
 // @media (min-width: $breakpoint-sm) {
 // 	/**/
 // }
@@ -22,8 +19,6 @@
 // @media (min-width: $breakpoint-xl) {
 // 	/**/
 // }
-
-
 
 // --- RESETS ---
 *,
@@ -55,7 +50,7 @@ a {
 	}
 }
 
-// --- LAYOUT ---
+// --- SHARED ---
 .container {
 	max-width: 100%;
 	padding-right: 2rem;
@@ -77,21 +72,31 @@ a {
 	}
 }
 
-.content {
+// --- LAYOUT ---
+.layout-wrapper {
+	position: relative;
 	min-height: 100vh;
+}
+
+.main-nav {
+	background-color: white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	border-bottom: 0.2em solid black;
+}
+
+// --- HOME PAGE ---
+.home-content {
+	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding-bottom: 10rem;
 }
 
-.main-nav {
-	outline: 1px solid red;
-}
-
-// --- INDEX PAGE ---
-.titleSection {
+.home-title {
 	margin-bottom: 2rem;
 	text-align: center;
 
@@ -102,7 +107,7 @@ a {
 	}
 
 	h1 {
-		font-size: 3rem;
+		font-size: 4rem;
 		font-family: $font-header;
 		letter-spacing: -0.02em;
 
@@ -112,16 +117,16 @@ a {
 	}
 
 	p {
-		font-size: 1.05rem;
+		font-size: 1.25rem;
 		letter-spacing: -0.03em;
 
 		@media (min-width: $breakpoint-md) {
-			font-size: 1.75rem;
+			font-size: 1.5rem;
 		}
 	}
 }
 
-.linkGroup {
+.home-links {
 	width: 22rem;
 	display: flex;
 	flex-wrap: wrap;
@@ -129,7 +134,7 @@ a {
 	align-items: center;
 
 	@media (min-width: $breakpoint-md) {
-		width: 35rem;
+		width: 32rem;
 	}
 
 	& img {
@@ -141,7 +146,7 @@ a {
 	}
 }
 
-.mferPic {
+.mfer-pic {
 	position: absolute;
 	bottom: 0;
 	right: 0;

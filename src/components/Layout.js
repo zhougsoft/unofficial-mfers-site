@@ -6,7 +6,7 @@ import '../styles/main.scss'
 const MainNav = () => {
 	return (
 		<nav className="main-nav">
-			<h1>unofficial mfers</h1>
+			<div>unofficial mfers</div>
 			<ul>
 				<Link to="/">
 					<li>home</li>
@@ -27,17 +27,15 @@ const MainNav = () => {
 
 const Layout = ({ pageTitle, children }) => {
 	return (
-		<>
+		<div className="layout-wrapper">
 			<Helmet>
 				<meta name="description" content="unofficial mfers website" />
 				<meta name="icon" href="/favicon.ico" />
 				<title>{pageTitle}</title>
 			</Helmet>
 			<MainNav />
-			<div className="container">
-				<main className="content">{children}</main>
-			</div>
-		</>
+			<main>{children}</main>
+		</div>
 	)
 }
 
