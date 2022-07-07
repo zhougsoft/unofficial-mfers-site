@@ -1,29 +1,8 @@
 import * as React from 'react'
 import { Helmet } from 'react-helmet'
-import { Link } from 'gatsby'
+import MainNav from './MainNav'
 import '../styles/main.scss'
 
-const MainNav = () => {
-	return (
-		<nav className="main-nav">
-			<div>unofficial mfers</div>
-			<ul>
-				<Link to="/">
-					<li>home</li>
-				</Link>
-				<Link to="/about">
-					<li>about</li>
-				</Link>
-				<Link to="/governance">
-					<li>governance</li>
-				</Link>
-				<Link to="/links">
-					<li>links</li>
-				</Link>
-			</ul>
-		</nav>
-	)
-}
 
 const Layout = ({ pageTitle, children }) => {
 	return (

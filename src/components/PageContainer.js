@@ -1,11 +1,15 @@
 import React from 'react'
 
-// top over page padding to offset the nav bar height
-const PADDING_TOP = '10rem'
+// padding to offset the nav bar height & lack of footer
+const PADDING_TOP = '7.5rem'
+const PADDING_BOTTOM = '7.5rem'
 
 const PageContainer = ({ children }) => {
 	return (
-		<div className="container" style={{ paddingTop: PADDING_TOP }}>
+		<div
+			className="container"
+			style={{ paddingTop: PADDING_TOP, paddingBottom: PADDING_BOTTOM }}
+		>
 			{children}
 		</div>
 	)
