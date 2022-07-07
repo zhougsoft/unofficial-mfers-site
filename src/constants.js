@@ -1,4 +1,4 @@
-export const DISCORD_LINK = 'https://discord.gg/U6nxxsWBRa'
+export const DISCORD_LINK = 'https://discord.gg/unofficialmfers'
 export const TWITTER_LINK = 'https://twitter.com/unofficialmfers'
 export const OPENSEA_LINK = 'https://opensea.io/collection/mfers'
 export const LOOKSRARE_LINK =
