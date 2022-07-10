@@ -1,36 +1,63 @@
 import React from 'react'
+import { TREASURY_SIGNERS } from '../constants'
 import Layout from '../components/Layout'
 import PageContainer from '../components/PageContainer'
+import ExtLink from '../components/ExtLink'
+
+// TODO: port all JSX inline styling on this page to the src/styles/main.scss file, along with some tighter typography layout & sizing
+const HEADING_SIZE = '4rem'
+const SUBHEADING_SIZE = '2.5rem'
+const SUMMARY_SIZE = '1.25rem'
 
 const GovernancePage = () => {
 	return (
 		<Layout pageTitle="governance | unofficial mfers">
 			<PageContainer>
-				<h1>governance</h1>
+				<h1 style={{ fontSize: HEADING_SIZE }}>governance</h1>
 
-				<p>
-					the following is the most current information related to governance
-					and internal workings of the unofficial mfers community.
-				</p>
+				<div style={{ fontSize: SUMMARY_SIZE }}>
+					<p>
+						This page contains the most current information related to
+						governance and internal workings of the unofficial mfers community.
+					</p>
 
-				<h2>community treasury</h2>
+					<p>
+						The unofficial mfers governance mechanism is a constantly evolving
+						and self-improving social machine - think{' '}
+						<ExtLink href="https://en.wikipedia.org/wiki/Ant#Learning">
+							ants
+						</ExtLink>
+						! <strong>This is not our final form...</strong>
+					</p>
+
+					<p>
+						We're a bottom-up led effort, so please share any feedback points or
+						ideas with the community! Welcome to the movement, mfer.
+					</p>
+				</div>
+
+				<h2 style={{ fontSize: SUBHEADING_SIZE }}>community treasury</h2>
 				<p>
-					the unofficial mfers community treasury is a Gnosis safe multi-sig
+					The unofficial mfers community treasury is a Gnosis safe multi-sig
 					secured by the following signers:
 				</p>
-				<ul>
-					<li>imp0ster</li>
-					<li>zhoug</li>
-					<li>masterchan</li>
-					<li>metabananas</li>
-					<li>lexito</li>
-					<li>mleejr</li>
-					<li>kml</li>
-				</ul>
 
-				<p>the treasury address is located on the Ethereum mainnet at:</p>
+				<ul>
+					{TREASURY_SIGNERS.map(signer => (
+						<li>
+							<ExtLink href={signer.twitter}>{signer.name}</ExtLink>
+						</li>
+					))}
+				</ul>
+				<br />
+
+				<p>
+					<strong>
+						The treasury address is located on the Ethereum mainnet at:
+					</strong>
+				</p>
 				<code>unofficialmfers.eth</code>
-				<p>which resolves to address:</p>
+				<br />
 				<code>0x21130e908bba2d41b63fbca7caa131285b8724f8</code>
 
 				<p>
@@ -38,37 +65,46 @@ const GovernancePage = () => {
 					<code>unofficialmfers.eth</code>. Each sub-treasury is also a Gnosis
 					safe with three signers each.
 				</p>
+
+				{/* TODO: replace lazy <br/>s with proper margin/padding if/when styles on this page are moved to the stylesheets */}
 				<ul>
 					<li>
 						<code>discord.unofficialmfers.eth</code>
 						<br />
 						<code>0xaefb75fca15bdf0292c34ef42a4378fbb226f0ee</code>
+						<br />
+						<br />
 					</li>
 					<li>
 						<code>charity.unofficialmfers.eth</code>
 						<br />
 						<code>0x059f171fe3e64c0724b012a4511c93e968a06342</code>
+						<br />
+						<br />
 					</li>
 					<li>
 						<code>nftnyc.unofficialmfers.eth</code>
 						<br />
 						<code>0x104924f017e70166c2deccbf948a39d3f6c6e94f</code>
+						<br />
+						<br />
 					</li>
 				</ul>
 
-				<h2>proposal process</h2>
+				<h2 style={{ fontSize: SUBHEADING_SIZE }}>proposal process</h2>
 				<p>
-					when taking actions such as transacting with the community multi-sig
-					or altering core governance processes, a proposal is required
-					outlining the action to take. Below are the <em>current formal</em>{' '}
-					steps of the unofficial mfers proposal pipeline.
+					When taking actions such as transacting with the community multi-sig
+					or altering core governance processes, a proposal is required to
+					outline the action to take and the plan on how to execute it.
 				</p>
+
 				<p>
-					NOTE: the unofficial mfers governance mechanism is a constantly
-					evolving machine, this is not the final phase. Please share any
-					feedback points with the community! The is a bottom-up effort, mfer
-					:handshake:
+					<strong>
+						Here are the <em>current formal steps</em> of the unofficial mfers
+						proposal pipeline:
+					</strong>
 				</p>
+
 				<ol>
 					<li>
 						<p>
@@ -124,9 +160,9 @@ const GovernancePage = () => {
 					</li>
 				</ol>
 
-				<h2>snapshot</h2>
+				<h2 style={{ fontSize: SUBHEADING_SIZE }}>snapshot</h2>
 				<p>
-					the unofficial mfers SnapShot space is where we vote on important
+					The unofficial mfers SnapShot space is where we vote on important
 					community proposals! It's located here:
 				</p>
 				<code>https://snapshot.org/#/unofficialmfers.eth</code>

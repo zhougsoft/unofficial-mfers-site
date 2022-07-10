@@ -32,9 +32,9 @@ body {
 	font-size: 14px;
 	padding: 0;
 	margin: 0;
-	font-family: $font-body;
-	color: $text-color;
-	background: $bg-color;
+	font-family: $font-main;
+	color: $color-text;
+	background: $color-bg;
 
 	@media (min-width: $breakpoint-sm) {
 		font-size: 16px;
@@ -42,7 +42,7 @@ body {
 }
 
 a {
-	color: inherit;
+	color: $color-link;
 	text-decoration: none;
 
 	&:hover {
@@ -85,7 +85,7 @@ a {
 	left: 0;
 	width: 100%;
 	padding: 1.5rem 0;
-	border-bottom: 0.2em solid $text-color;
+	border-bottom: 0.2em solid $color-text;
 
 	.nav-content {
 		display: flex;
@@ -93,9 +93,11 @@ a {
 		align-items: center;
 	}
 
-	.nav-brand {
-		font-weight: bold;
+	.nav-brand a {
 		font-size: 1.25rem;
+		font-weight: bold;
+		letter-spacing: -0.03em;
+		color: $color-text;
 	}
 
 	ul {
@@ -106,6 +108,12 @@ a {
 
 		li:not(:last-child) {
 			margin-right: 2rem;
+		}
+
+		a {
+			font-size: 1.1rem;
+			letter-spacing: -0.03em;
+			color: $color-text;
 		}
 	}
 }
@@ -131,7 +139,7 @@ a {
 
 	h1 {
 		font-size: 4rem;
-		font-family: $font-header;
+		font-family: $font-fancy;
 		letter-spacing: -0.02em;
 
 		@media (min-width: $breakpoint-md) {

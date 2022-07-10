@@ -1,8 +1,15 @@
-$font-header: 'Lobster';
-$font-body: 'Comic Neue';
+$mfers-bg-blue: #5dd3ff;
+$mfers-bg-green: #cafe80;
+$mfers-bg-orange: #ffb470;
+$mfers-bg-red: #ff7077;
+$mfers-bg-yellow: #ffe260;
 
-$text-color: #111;
-$bg-color: #ffb470;
+$font-main: 'Comic Neue';
+$font-fancy: 'Lobster';
+
+$color-bg: $mfers-bg-orange;
+$color-text: #111;
+$color-link: dodgerblue;
 
 $breakpoint-sm: 576px;
 $breakpoint-md: 768px;
