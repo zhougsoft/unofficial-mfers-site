@@ -1,5 +1,5 @@
 import React from 'react'
-import { TREASURY_SIGNERS } from '../constants'
+import { TREASURY_SIGNERS, SNAPSHOT_LINK } from '../constants'
 import Layout from '../components/Layout'
 import PageContainer from '../components/PageContainer'
 import ExtLink from '../components/ExtLink'
@@ -17,7 +17,7 @@ const GovernancePage = () => {
 
 				<div style={{ fontSize: SUMMARY_SIZE }}>
 					<p>
-						This page contains the most current information related to
+						This page contains the most current information related to the
 						governance and internal workings of the unofficial mfers community.
 					</p>
 
@@ -31,14 +31,22 @@ const GovernancePage = () => {
 					</p>
 
 					<p>
-						We're a bottom-up led effort, so please share any feedback points or
+						We're a bottom-up effort, so please share any feedback points or
 						ideas with the community! Welcome to the movement, mfer.
 					</p>
+
+					<small>
+						<em>
+							*** everything you see on this page should considered a
+							"work-in-progress", thank you for being patient while the
+							community contributors do their work! ***
+						</em>
+					</small>
 				</div>
 
 				<h2 style={{ fontSize: SUBHEADING_SIZE }}>community treasury</h2>
 				<p>
-					The unofficial mfers community treasury is a Gnosis safe multi-sig
+					The unofficial mfers community treasury is a Gnosis-safe multi-sig
 					secured by the following signers:
 				</p>
 
@@ -61,9 +69,9 @@ const GovernancePage = () => {
 				<code>0x21130e908bba2d41b63fbca7caa131285b8724f8</code>
 
 				<p>
-					Three use-specific sub-treasuries exist as subdomains on{' '}
-					<code>unofficialmfers.eth</code>. Each sub-treasury is also a Gnosis
-					safe with three signers each.
+					Three use-specific subdomains exist under{' '}
+					<code>unofficialmfers.eth</code>. Each sub-domain is also connected to
+					a Gnosis safe multi-sig with three signers each.
 				</p>
 
 				{/* TODO: replace lazy <br/>s with proper margin/padding if/when styles on this page are moved to the stylesheets */}
@@ -129,20 +137,20 @@ const GovernancePage = () => {
 					<li>
 						<p>
 							If selected, the proposal will be presented to the community in
-							the official mfers Discord for a "soft pass", minimum 48 hours,
-							majority vote amongst mfer holders.
+							the unofficial mfers Discord for a "soft pass" with a minimum
+							voting time of 48 hours and a majority vote amongst mfer holders.
 						</p>
 						<p>
 							This "soft pass" notifies the community of a potential upcoming
 							governance action and allows for feedback. The "soft pass"
 							proposal may be amended and re-submitted if it does not pass in
-							the vote.
+							the vote or if mfers would like amendments.
 						</p>
 					</li>
 					<li>
 						<p>
 							Should the soft pass reach majority vote upon completion of the
-							voting timeframe, the proposal (in it's soft-passed form) can then
+							voting timeframe, the proposal (in its soft-passed form) can then
 							be posted to SnapShot for a token-weighted vote (1 mfer = 1 vote)
 							for a voting period open for a minimum of 72 hours.
 						</p>
@@ -154,7 +162,7 @@ const GovernancePage = () => {
 						</p>
 						<p>
 							If the action involves any transactions using the community
-							treasury, or it's sub-treasuries, the signers securing those
+							treasury, or its sub-treasuries, the signers securing those
 							multi-sigs shall execute those transactions.
 						</p>
 					</li>
@@ -162,10 +170,13 @@ const GovernancePage = () => {
 
 				<h2 style={{ fontSize: SUBHEADING_SIZE }}>snapshot</h2>
 				<p>
-					The unofficial mfers SnapShot space is where we vote on important
-					community proposals! It's located here:
+					The{' '}
+					<ExtLink href={SNAPSHOT_LINK}>
+						unofficial mfers SnapShot space
+					</ExtLink>{' '}
+					is where we vote on important community proposals! It's located at:
 				</p>
-				<code>https://snapshot.org/#/unofficialmfers.eth</code>
+				<code>{SNAPSHOT_LINK}</code>
 			</PageContainer>
 		</Layout>
 	)

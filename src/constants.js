@@ -5,6 +5,7 @@ export const LOOKSRARE_LINK =
 	'https://looksrare.org/collections/0x79FCDEF22feeD20eDDacbB2587640e45491b757f'
 export const ETHERSCAN_LINK =
 	'https://etherscan.io/address/0x79FCDEF22feeD20eDDacbB2587640e45491b757f'
+export const SNAPSHOT_LINK = 'https://snapshot.org/#/unofficialmfers.eth'
 
 export const TREASURY_SIGNERS = [
 	{
