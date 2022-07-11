@@ -1,5 +1,24 @@
+// this is the main styles file!
+
 @import 'typography';
 @import 'variables';
+
+//~*~*~ media query paste-ables ~*~*~
+// @media (min-width: $breakpoint-sm) {
+// 	/**/
+// }
+
+// @media (min-width: $breakpoint-md) {
+// 	/**/
+// }
+
+// @media (min-width: $breakpoint-lg) {
+// 	/**/
+// }
+
+// @media (min-width: $breakpoint-xl) {
+// 	/**/
+// }
 
 // --- RESETS ---
 *,
@@ -13,9 +32,9 @@ body {
 	font-size: 14px;
 	padding: 0;
 	margin: 0;
-	font-family: $font-body;
-	color: $text-color;
-	background: $bg-color;
+	font-family: $font-main;
+	color: $color-text;
+	background: $color-bg;
 
 	@media (min-width: $breakpoint-sm) {
 		font-size: 16px;
@@ -23,7 +42,7 @@ body {
 }
 
 a {
-	color: inherit;
+	color: $color-link;
 	text-decoration: none;
 
 	&:hover {
@@ -31,7 +50,7 @@ a {
 	}
 }
 
-// --- LAYOUT ---
+// --- SHARED ---
 .container {
 	max-width: 100%;
 	padding-right: 2rem;
@@ -53,46 +72,62 @@ a {
 	}
 }
 
-//~*~*~ media query paste-ables ~*~*~
-
-// @media (min-width: $breakpoint-sm) {
-// 	/**/
-// }
-
-// @media (min-width: $breakpoint-md) {
-// 	/**/
-// }
-
-// @media (min-width: $breakpoint-lg) {
-// 	/**/
-// }
-
-// @media (min-width: $breakpoint-xl) {
-// 	/**/
-// }
-
-.content {
+// --- LAYOUT ---
+.layout-wrapper {
+	position: relative;
 	min-height: 100vh;
-	// flex: 1; // uncomment if using the footer
+}
+
+.main-nav {
+	background-color: white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 1.5rem 0;
+	border-bottom: 0.2em solid $color-text;
+
+	.nav-content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.nav-brand a {
+		font-size: 1.25rem;
+		font-weight: bold;
+		letter-spacing: -0.03em;
+		color: $color-text;
+	}
+
+	ul {
+		list-style: none;
+		display: flex;
+		margin: 0;
+		padding: 0;
+
+		li:not(:last-child) {
+			margin-right: 2rem;
+		}
+
+		a {
+			font-size: 1.1rem;
+			letter-spacing: -0.03em;
+			color: $color-text;
+		}
+	}
+}
+
+// --- HOME PAGE ---
+.home-content {
+	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding-bottom: 10rem; // probably remove when adding in footer
 }
 
-// TODO: uncomment if we ever need a footer
-// .footer {
-// 	display: flex;
-// 	flex: 1;
-// 	padding: 2rem 0;
-// 	border-top: 1px solid $font-body;
-// 	justify-content: center;
-// 	align-items: center;
-// }
-
-// --- INDEX PAGE ---
-.titleSection {
+.home-title {
 	margin-bottom: 2rem;
 	text-align: center;
 
@@ -103,8 +138,8 @@ a {
 	}
 
 	h1 {
-		font-size: 3rem;
-		font-family: $font-header;
+		font-size: 4rem;
+		font-family: $font-fancy;
 		letter-spacing: -0.02em;
 
 		@media (min-width: $breakpoint-md) {
@@ -113,16 +148,16 @@ a {
 	}
 
 	p {
-		font-size: 1.05rem;
+		font-size: 1.25rem;
 		letter-spacing: -0.03em;
 
 		@media (min-width: $breakpoint-md) {
-			font-size: 1.75rem;
+			font-size: 1.5rem;
 		}
 	}
 }
 
-.linkGroup {
+.home-links {
 	width: 22rem;
 	display: flex;
 	flex-wrap: wrap;
@@ -130,7 +165,7 @@ a {
 	align-items: center;
 
 	@media (min-width: $breakpoint-md) {
-		width: 35rem;
+		width: 32rem;
 	}
 
 	& img {
@@ -142,11 +177,11 @@ a {
 	}
 }
 
-.mferPic {
+.mfer-pic {
 	position: absolute;
 	bottom: 0;
 	right: 0;
 	z-index: 0;
-	width: 33%;
+	width: 25%;
 	line-height: 0;
 }
