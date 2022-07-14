@@ -20,6 +20,9 @@ const MainNav = () => {
 						<li>
 							<Link to="/links">links</Link>
 						</li>
+						<li>
+							<Link to="/links">meme craftor (coming soon)</Link>
+						</li>
 					</ul>
 				</div>
 			</Container>
