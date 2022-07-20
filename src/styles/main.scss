@@ -86,7 +86,6 @@ a {
 	width: 100%;
 	padding: 1.5rem 0;
 	border-bottom: 0.2em solid $color-text;
-	
 
 	.nav-content {
 		display: flex;
@@ -125,10 +124,10 @@ a {
 
 // --- HOME PAGE ---
 .home-content {
-	height: 50vh;
+	height: 38vh;
 	display: flex;
 	flex-direction: column;
-	// justify-content: center;
+	margin-top: 70px;
 	align-items: center;
 }
 
@@ -146,6 +145,7 @@ a {
 		font-size: 4rem;
 		font-family: $font-main;
 		letter-spacing: -0.02em;
+		font-weight: 700;
 
 		@media (min-width: $breakpoint-md) {
 			font-size: 5rem;
@@ -278,6 +278,15 @@ $animationSpeed: 40s;
 	font-style: normal;
 	font-weight: 700;
 	font-size: 20px;
-line-height: 24px;
+	line-height: 24px;
+	color: inherit
 }
 
+.spacing {
+	padding-left: 12px !important;
+	padding-right: 12px !important;
+}
+
+.what-are-mfers{
+	box-shadow: 0px 6px 20px 2px rgba(0, 0, 0, 0.06);
+}

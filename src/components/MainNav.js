@@ -1,5 +1,6 @@
 import React from 'react'
 import { Navbar, Container, Nav } from 'react-bootstrap'
+import { Link } from 'gatsby'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '../styles/main.scss'
 import {
@@ -20,33 +21,44 @@ const MainNav = () => {
 					<Navbar.Toggle aria-controls="basic-navbar-nav" />
 					<Navbar.Collapse id="basic-navbar-nav">
 						<Nav className="me-auto">
-							<Nav.Link
-								href="https://twitter.com/chickenswhocode"
-								target="_blank"
-								className="main-nav-text-color"
-							>
-								mfer hub
+							<Nav.Link href="/" className="main-nav-text-color">
+								home
 							</Nav.Link>
-							<Nav.Link
-								href="https://discord.gg/sbBvgAQz8r"
-								target="_blank"
-								className="main-nav-text-color"
-							>
+							<Nav.Link href="/governance" className="main-nav-text-color">
 								mfer governance
 							</Nav.Link>
+							<Nav.Link href="/links" className="main-nav-text-color">
+								links
+							</Nav.Link>
 						</Nav>
-						<Nav id="basic-navbar-nav">
-							<Nav.Link href="#connect-wallet" className="text-color">
-								<img src="/discord_icon.png" />
+						<Nav id="basic-navbar-nav mx-3">
+							<Nav.Link
+								href="https://discord.gg/9vWnDfUnN6"
+								className="text-color spacing"
+								target="_blank"
+							>
+								<img src="/Discord.svg" />
 							</Nav.Link>
-							<Nav.Link href="#connect-wallet" className="text-color">
-								<img src="/twitter_icon.png" />
+							<Nav.Link
+								href="https://twitter.com/unofficialmfers"
+								className="text-color spacing"
+								target="_blank"
+							>
+								<img src="/Twitter.svg" />
 							</Nav.Link>
-							<Nav.Link href="#connect-wallet" className="text-color">
-								<img src="/twitter_icon.png" />
+							<Nav.Link
+								href="https://opensea.io/collection/mfers"
+								className="text-color spacing"
+								target="_blank"
+							>
+								<img src="/Opensea.svg" />
 							</Nav.Link>
-							<Nav.Link href="#connect-wallet" className="text-color">
-								<img src="/twitter_icon.png" />
+							<Nav.Link
+								href="https://looksrare.org/collections/0x79FCDEF22feeD20eDDacbB2587640e45491b757f"
+								className="text-color spacing"
+								target="_blank"
+							>
+								<img src="/Looksrare.svg" />
 							</Nav.Link>
 						</Nav>
 					</Navbar.Collapse>
