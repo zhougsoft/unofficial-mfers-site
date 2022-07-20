@@ -86,6 +86,7 @@ a {
 	width: 100%;
 	padding: 1.5rem 0;
 	border-bottom: 0.2em solid $color-text;
+	
 
 	.nav-content {
 		display: flex;
@@ -118,12 +119,16 @@ a {
 	}
 }
 
+.new-nav {
+	box-shadow: 0px 6px 20px 2px rgba(0, 0, 0, 0.06);
+}
+
 // --- HOME PAGE ---
 .home-content {
-	height: 100vh;
+	height: 50vh;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	// justify-content: center;
 	align-items: center;
 }
 
@@ -139,7 +144,7 @@ a {
 
 	h1 {
 		font-size: 4rem;
-		font-family: $font-fancy;
+		font-family: $font-main;
 		letter-spacing: -0.02em;
 
 		@media (min-width: $breakpoint-md) {
@@ -150,7 +155,7 @@ a {
 	p {
 		font-size: 1.25rem;
 		letter-spacing: -0.03em;
-
+		font-family: $font-main;
 		@media (min-width: $breakpoint-md) {
 			font-size: 1.5rem;
 		}
@@ -185,3 +190,94 @@ a {
 	width: 25%;
 	line-height: 0;
 }
+
+.nav-bar-background-color {
+	background-color: white;
+}
+
+.nav-link {
+	color: #0c0b0b;
+}
+
+@mixin white-gradient {
+	background: linear-gradient(
+		to right,
+		rgba(255, 255, 255, 1) 0%,
+		rgba(255, 255, 255, 0) 100%
+	);
+}
+
+$animationSpeed: 40s;
+
+// Animation
+@keyframes scroll {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(calc(-144px * 2));
+	}
+}
+
+@keyframes scroll-right {
+	0% {
+		transform: translateX(-144px * 2);
+	}
+	100% {
+		transform: translateX(calc(0));
+	}
+}
+
+// Styling
+.slider {
+	background: $color-bg;
+	overflow: hidden;
+	position: relative;
+
+	&::before,
+	&::after {
+	}
+
+	&::after {
+		right: 0;
+		top: 0;
+		transform: rotateZ(180deg);
+	}
+
+	&::before {
+		left: 0;
+		top: 0;
+	}
+
+	.slide-track {
+		animation: scroll $animationSpeed linear infinite;
+		display: flex;
+		width: calc(120px * 14);
+	}
+
+	.slide-track-right {
+		animation: scroll-right $animationSpeed linear infinite;
+		display: flex;
+		width: calc(120px * 14);
+	}
+
+	.slide {
+		height: 120px;
+		width: 120px;
+		img {
+			border-radius: 12px;
+			height: 120px;
+			width: 120px;
+		}
+		margin: 12px;
+	}
+}
+
+.card-props {
+	font-family: 'Comic Neue';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+line-height: 24px;
+}
+
