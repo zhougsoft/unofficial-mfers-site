@@ -16,7 +16,9 @@ const MainNav = () => {
 			<Navbar expand="sm" className="nav-bar-background-color new-nav">
 				<Container>
 					<Navbar.Brand>
-						<img src="/head-base-smokeless.png" width="45" height="45" />
+						<Nav.Link href="/" className="main-nav-text-color">
+							<img src="/head-base-smokeless.png" width="45" height="45" />
+						</Nav.Link>
 					</Navbar.Brand>
 					<Navbar.Toggle aria-controls="basic-navbar-nav" />
 					<Navbar.Collapse id="basic-navbar-nav">
