@@ -111,7 +111,6 @@ a {
 		}
 
 		a {
-			font-size: 1.1rem;
 			letter-spacing: -0.03em;
 			color: $color-text;
 		}
@@ -320,6 +319,9 @@ $animationSpeed: 95s;
 
 }
 
+a {
+	font-size: 24px;
+}
 p {
 	font-size: 24px;
 }
