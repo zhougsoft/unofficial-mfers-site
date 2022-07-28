@@ -126,8 +126,8 @@ a {
 .home-content {
 	height: 38vh;
 	display: flex;
-	margin-top: 50px;
 	flex-direction: column;
+	justify-content: center;
 	align-items: center;
 }
 
@@ -154,7 +154,6 @@ a {
 	}
 
 	p {
-		font-size: 20px;
 		letter-spacing: -0.03em;
 		font-family: $font-main;
 		@media (min-width: $breakpoint-md) {
@@ -315,34 +314,24 @@ $animationSpeed: 95s;
 		padding-left: 0px !important;
 	}
 
-	.home-content {
-		margin-top: 0px;
-	}
-}
-@media only screen and (max-height: 700px) {
-	.home-content {
-		margin-top: 0px;
-	}
 }
 
-.slider-section {
-	position: fixed;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	background-color: red;
-	color: white;
-	text-align: center;
+@media only screen and (max-height: 700px) {
+
 }
 
 p {
-	font-size: 20px;
+	font-size: 24px;
 }
 
 li {
 	font-size: 16px !important;
 }
 
-code {
-	// font-size: 16px;
+.main {
+	height: 90vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }

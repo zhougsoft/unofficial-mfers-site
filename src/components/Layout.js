@@ -13,7 +13,7 @@ const Layout = ({ pageTitle, children }) => {
 				<title>{pageTitle}</title>
 			</Helmet>
 			<MainNav />
-			<main>{children}</main>
+			<main >{children}</main>
 		</div>
 	)
 }

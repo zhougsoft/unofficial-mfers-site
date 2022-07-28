@@ -1,6 +1,6 @@
 import * as React from 'react'
 import Layout from '../components/Layout'
-import { Card } from 'react-bootstrap'
+import { Card, Container, Row, Col } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 const IndexPage = () => {
 
@@ -99,41 +99,44 @@ const IndexPage = () => {
 
 	return (
 		<Layout pageTitle="unofficial mfers">
-			<section className="home-content">
-				<div className="home-title">
-					<h1>
-						gm mfers <img className="rotate" src="/Sun.svg" />
-					</h1>
-					<p>
-						you can state a roadmap that says where you will go, but you can
-						also plant seeds and see where they grow
-					</p>
-				</div>
-				<Card className="d-flex what-are-mfers">
-					{' '}
-					<Card.Body>
-						<Card.Link
-							className="card-props"
-							href="https://mirror.xyz/sartoshi.eth/QukjtL1076-1SEoNJuqyc-x4Ut2v8_TocKkszo-S_nU"
-							target="_blank"
-						>
-							What are mfers? <img src="/external-link.svg" width="16" />
-						</Card.Link>
-					</Card.Body>
-				</Card>
-			</section>
-			<footer className="slider-section">
-				<div class="slider">
-					<div class="slide-track">
-						{makeTopCarousel()}
+			<div  className='main'>
+				<div></div>
+				<section className="home-content">
+					<div className="home-title">
+						<h1>
+							gm mfers <img className="rotate" src="/Sun.svg" />
+						</h1>
+						<p>
+							you can state a roadmap that says where you will go, but you can
+							also plant seeds and see where they grow
+						</p>
 					</div>
-				</div>
-				<div class="slider">
-					<div class="slide-track-right">
-						{makeBottomCarousel()}
+					<Card className="d-flex what-are-mfers">
+						{' '}
+						<Card.Body>
+							<Card.Link
+								className="card-props"
+								href="https://mirror.xyz/sartoshi.eth/QukjtL1076-1SEoNJuqyc-x4Ut2v8_TocKkszo-S_nU"
+								target="_blank"
+							>
+								What are mfers? <img src="/external-link.svg" width="16" />
+							</Card.Link>
+						</Card.Body>
+					</Card>
+				</section>
+				<footer className="slider-section">
+					<div class="slider">
+						<div class="slide-track">
+							{makeTopCarousel()}
+						</div>
 					</div>
-				</div>
-			</footer>
+					<div class="slider">
+						<div class="slide-track-right">
+							{makeBottomCarousel()}
+						</div>
+					</div>
+				</footer>
+			</div>
 		</Layout>
 	)
 }
