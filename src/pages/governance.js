@@ -64,36 +64,46 @@ const GovernancePage = () => {
 						The treasury address is located on the Ethereum mainnet at:
 					</strong>
 				</p>
-				<code>unofficialmfers.eth</code>
-				<br />
-				<code>0x21130e908bba2d41b63fbca7caa131285b8724f8</code>
+				<ul>
+					<a href="0x21130e908bba2d41b63fbca7caa131285b8724f8">
+						unofficialmfers.eth
+						<br></br>
+						0x21130e908bba2d41b63fbca7caa131285b8724f8
+					</a>
+				</ul>
 
 				<p>
-					Three use-specific subdomains exist under{' '}
-					<code>unofficialmfers.eth</code>. Each sub-domain is also connected to
-					a Gnosis safe multi-sig with three signers each.
+					Three use-specific subdomains exist under unofficialmfers.eth. Each
+					sub-domain is also connected to a Gnosis safe multi-sig with three
+					signers each.
 				</p>
 
 				{/* TODO: replace lazy <br/>s with proper margin/padding if/when styles on this page are moved to the stylesheets */}
 				<ul>
 					<li>
-						<code>discord.unofficialmfers.eth</code>
-						<br />
-						<code>0xaefb75fca15bdf0292c34ef42a4378fbb226f0ee</code>
-						<br />
-						<br />
-					</li>
-					<li>
-						<code>charity.unofficialmfers.eth</code>
-						<br />
-						<code>0x059f171fe3e64c0724b012a4511c93e968a06342</code>
+						<a href="https://etherscan.io/address/0xaefb75fca15bdf0292c34ef42a4378fbb226f0ee">
+							discord.unofficialmfers.eth
+							<br />
+							0xaefb75fca15bdf0292c34ef42a4378fbb226f0ee
+						</a>
 						<br />
 						<br />
 					</li>
 					<li>
-						<code>nftnyc.unofficialmfers.eth</code>
+						<a href="https://etherscan.io/address/0x059f171fe3e64c0724b012a4511c93e968a06342">
+							charity.unofficialmfers.eth
+							<br />
+							0x059f171fe3e64c0724b012a4511c93e968a06342
+						</a>
 						<br />
-						<code>0x104924f017e70166c2deccbf948a39d3f6c6e94f</code>
+						<br />
+					</li>
+					<li>
+						<a href="https://etherscan.io/address/0x104924f017e70166c2deccbf948a39d3f6c6e94f">
+							nftnyc.unofficialmfers.eth
+							<br />
+							0x104924f017e70166c2deccbf948a39d3f6c6e94f
+						</a>
 						<br />
 						<br />
 					</li>
@@ -176,7 +186,7 @@ const GovernancePage = () => {
 					</ExtLink>{' '}
 					is where we vote on important community proposals! It's located at:
 				</p>
-				<code>{SNAPSHOT_LINK}</code>
+				{SNAPSHOT_LINK}
 			</PageContainer>
 		</Layout>
 	)
