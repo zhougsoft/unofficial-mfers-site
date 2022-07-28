@@ -207,7 +207,7 @@ a {
 	);
 }
 
-$animationSpeed: 40s;
+$animationSpeed: 95s;
 
 // Animation
 @keyframes scroll {
@@ -215,13 +215,13 @@ $animationSpeed: 40s;
 		transform: translateX(0);
 	}
 	100% {
-		transform: translateX(calc(-144px * 2));
+		transform: translateX(calc(-144px * 14));
 	}
 }
 
 @keyframes scroll-right {
 	0% {
-		transform: translateX(-144px * 2);
+		transform: translateX(-144px * 14);
 	}
 	100% {
 		transform: translateX(calc(0));
@@ -252,13 +252,13 @@ $animationSpeed: 40s;
 	.slide-track {
 		animation: scroll $animationSpeed linear infinite;
 		display: flex;
-		width: calc(120px * 14);
+		width: calc(120px * 28);
 	}
 
 	.slide-track-right {
 		animation: scroll-right $animationSpeed linear infinite;
 		display: flex;
-		width: calc(120px * 14);
+		width: calc(120px * 28);
 	}
 
 	.slide {
@@ -279,7 +279,7 @@ $animationSpeed: 40s;
 	font-weight: 700;
 	font-size: 20px;
 	line-height: 24px;
-	color: inherit
+	color: inherit;
 }
 
 .spacing {
@@ -287,6 +287,6 @@ $animationSpeed: 40s;
 	padding-right: 12px !important;
 }
 
-.what-are-mfers{
+.what-are-mfers {
 	box-shadow: 0px 6px 20px 2px rgba(0, 0, 0, 0.06);
 }
