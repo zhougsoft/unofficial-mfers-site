@@ -131,7 +131,6 @@ a {
 }
 
 .home-title {
-	margin-bottom: 2rem;
 	text-align: center;
 
 	h1,
@@ -142,7 +141,7 @@ a {
 	}
 
 	h1 {
-		font-size: 4rem;
+		font-size: 3rem;
 		font-family: $font-main;
 		letter-spacing: -0.02em;
 		font-weight: 700;
@@ -319,14 +318,10 @@ $animationSpeed: 95s;
 }
 
 a {
-	font-size: 24px;
+	font-size: 24px !important;
 }
 p {
 	font-size: 24px;
-}
-
-li {
-	font-size: 16px !important;
 }
 
 .main {
