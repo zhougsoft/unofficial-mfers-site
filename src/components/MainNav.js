@@ -33,7 +33,7 @@ const MainNav = () => {
 								links
 							</Nav.Link>
 						</Nav>
-						<Nav id="basic-navbar-nav mx-3">
+						<Nav className="icon-nav-bar" id="mx-3">
 							<Nav.Link
 								href="https://discord.gg/9vWnDfUnN6"
 								className="text-color spacing"

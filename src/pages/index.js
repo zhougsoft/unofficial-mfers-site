@@ -102,7 +102,7 @@ const IndexPage = () => {
 			<section className="home-content">
 				<div className="home-title">
 					<h1>
-						gm mfers <img src="/Sun.svg" />
+						gm mfers <img className="rotate" src="/Sun.svg" />
 					</h1>
 					<p>
 						you can state a roadmap that says where you will go, but you can
@@ -122,7 +122,7 @@ const IndexPage = () => {
 					</Card.Body>
 				</Card>
 			</section>
-			<section className="slider-section">
+			<footer className="slider-section">
 				<div class="slider">
 					<div class="slide-track">
 						{makeTopCarousel()}
@@ -133,7 +133,7 @@ const IndexPage = () => {
 						{makeBottomCarousel()}
 					</div>
 				</div>
-			</section>
+			</footer>
 		</Layout>
 	)
 }

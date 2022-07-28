@@ -126,8 +126,8 @@ a {
 .home-content {
 	height: 38vh;
 	display: flex;
+	margin-top: 60px;
 	flex-direction: column;
-	margin-top: 70px;
 	align-items: center;
 }
 
@@ -137,7 +137,8 @@ a {
 
 	h1,
 	p {
-		margin: 0;
+		margin-left: 16px;
+		margin-right: 16px;
 		line-height: 1.5em;
 	}
 
@@ -289,4 +290,38 @@ $animationSpeed: 95s;
 
 .what-are-mfers {
 	box-shadow: 0px 6px 20px 2px rgba(0, 0, 0, 0.06);
+}
+
+@keyframes rotation {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(359deg);
+	}
+}
+
+.rotate {
+	animation: rotation 4s infinite linear;
+}
+
+@media only screen and (max-width: 600px) {
+	.icon-nav-bar {
+		display: flex !important;
+		flex-direction: row !important;
+	}
+
+	.icon-nav-bar a:first-child {
+		padding-left: 0px !important;
+	}
+}
+
+.slider-section {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: red;
+	color: white;
+	text-align: center;
 }
