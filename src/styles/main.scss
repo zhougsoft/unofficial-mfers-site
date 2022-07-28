@@ -154,7 +154,7 @@ a {
 	}
 
 	p {
-		font-size: 1.25rem;
+		font-size: 24px;
 		letter-spacing: -0.03em;
 		font-family: $font-main;
 		@media (min-width: $breakpoint-md) {
@@ -324,4 +324,8 @@ $animationSpeed: 95s;
 	background-color: red;
 	color: white;
 	text-align: center;
+}
+
+p {
+	font-size: 24px;
 }
