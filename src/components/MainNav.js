@@ -1,14 +1,19 @@
 import React from 'react'
 import { Navbar, Container, Nav } from 'react-bootstrap'
 import { Link } from 'gatsby'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import '../styles/main.scss'
+
 import {
 	DISCORD_LINK,
 	OPENSEA_LINK,
 	LOOKSRARE_LINK,
 	TWITTER_LINK,
 } from '../constants'
+
+import svgDiscord from '../assets/svg/discord-logo.svg'
+import svgTwitter from '../assets/svg/twitter-logo.svg'
+import svgOpensea from '../assets/svg/opensea-logo.svg'
+import svgLooksrare from '../assets/svg/looksrare-logo.svg'
+
 const MainNav = () => {
 	return (
 		<Navbar id="nav" expand="sm" className="nav-bar-background-color">
@@ -31,34 +36,34 @@ const MainNav = () => {
 							links
 						</Link>
 					</Nav>
-					<Nav className="icon-nav-bar" id="mx-3">
+					<Nav className="icon-nav-bar">
 						<Nav.Link
 							href={DISCORD_LINK}
 							className="text-color spacing"
 							target="_blank"
 						>
-							<img src="/Discord.svg" />
+							<img src={svgDiscord} />
 						</Nav.Link>
 						<Nav.Link
 							href={TWITTER_LINK}
 							className="text-color spacing"
 							target="_blank"
 						>
-							<img src="/Twitter.svg" />
+							<img src={svgTwitter} />
 						</Nav.Link>
 						<Nav.Link
 							href={OPENSEA_LINK}
 							className="text-color spacing"
 							target="_blank"
 						>
-							<img src="/Opensea.svg" />
+							<img src={svgOpensea} />
 						</Nav.Link>
 						<Nav.Link
 							href={LOOKSRARE_LINK}
 							className="text-color spacing"
 							target="_blank"
 						>
-							<img src="/Looksrare.svg" />
+							<img src={svgLooksrare} />
 						</Nav.Link>
 					</Nav>
 				</Navbar.Collapse>
