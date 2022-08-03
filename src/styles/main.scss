@@ -78,47 +78,24 @@ a {
 	min-height: 100vh;
 }
 
-.main-nav {
-	background-color: white;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	padding: 1.5rem 0;
-	border-bottom: 0.2em solid $color-text;
+#nav {
+	z-index: 999;
+	box-shadow: 0 0.25rem 1.15rem 0.1rem rgba(0, 0, 0, 0.06);
 
-	.nav-content {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-
-	.nav-brand a {
-		font-size: 1.25rem;
-		font-weight: bold;
-		letter-spacing: -0.03em;
+	& a.internal-nav-link {
 		color: $color-text;
-	}
+		border-left: none;
+		line-height: 1rem;
+		padding: 1.5rem 0;
 
-	ul {
-		list-style: none;
-		display: flex;
-		margin: 0;
-		padding: 0;
+		@media (min-width: $breakpoint-sm) {
+			padding: 0 1rem;
 
-		li:not(:last-child) {
-			margin-right: 2rem;
-		}
-
-		a {
-			letter-spacing: -0.03em;
-			color: $color-text;
+			&:not(:first-child) {
+				border-left: 0.15rem solid $color-text;
+			}
 		}
 	}
-}
-
-.new-nav {
-	box-shadow: 0px 6px 20px 2px rgba(0, 0, 0, 0.06);
 }
 
 // --- HOME PAGE ---
@@ -232,10 +209,6 @@ $animationSpeed: 95s;
 	overflow: hidden;
 	position: relative;
 
-	&::before,
-	&::after {
-	}
-
 	&::after {
 		right: 0;
 		top: 0;
@@ -310,11 +283,9 @@ $animationSpeed: 95s;
 	.icon-nav-bar a:first-child {
 		padding-left: 0px !important;
 	}
-
 }
 
 @media only screen and (max-height: 700px) {
-
 }
 
 a {
