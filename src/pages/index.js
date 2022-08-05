@@ -21,26 +21,28 @@ const IndexPage = () => {
 	return (
 		<Layout pageTitle="unofficial mfers">
 			<div className="main">
-				<div></div>
 				<section className="home-content">
 					<div className="home-title">
 						<h1>
-							gm mfers <img className="rotate" src={svgSun} />
+							gm mfers{' '}
+							<img className="rotate" src={svgSun} alt="yellow shining sun" />
 						</h1>
 						<p>
 							you can state a roadmap that says where you will go, but you can
 							also plant seeds and see where they grow
 						</p>
 					</div>
-					<Card className="d-flex what-are-mfers">
-						{' '}
+					<Card className="d-flex box-shadow">
 						<Card.Body>
 							<Card.Link
+								id="sartoshi-mirror-link"
 								className="card-props"
 								href={WHAT_ARE_MFERS_LINK}
 								target="_blank"
+								rel="noopener"
 							>
-								What are mfers? <img src={svgExternalLink} />
+								what are mfers?{' '}
+								<img src={svgExternalLink} alt="external link icon" />
 							</Card.Link>
 						</Card.Body>
 					</Card>

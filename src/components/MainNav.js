@@ -16,7 +16,7 @@ import svgLooksrare from '../assets/svg/looksrare-logo.svg'
 
 const MainNav = () => {
 	return (
-		<Navbar id="nav" expand="sm" className="nav-bar-background-color">
+		<Navbar id="nav" expand="sm" className="nav-bar-background-color box-shadow">
 			<Container>
 				<Navbar.Brand>
 					<Nav.Link href="/" className="main-nav-text-color">
