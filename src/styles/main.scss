@@ -78,65 +78,44 @@ a {
 	min-height: 100vh;
 }
 
-.main-nav {
-	background-color: white;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	padding: 1.5rem 0;
-	border-bottom: 0.2em solid $color-text;
+#nav {
+	z-index: 999;
+	background: $color-bg;
 
-	.nav-content {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-
-	.nav-brand a {
-		font-size: 1.25rem;
-		font-weight: bold;
-		letter-spacing: -0.03em;
+	& a.internal-nav-link {
+		font-size: 2rem;
 		color: $color-text;
-	}
+		border-left: none;
+		line-height: 1rem;
+		padding: 2rem 0;
+		
+		@media (min-width: $breakpoint-sm) {
+			padding: 0 1rem;
+			font-size: 1.25rem;
 
-	ul {
-		list-style: none;
-		display: flex;
-		margin: 0;
-		padding: 0;
-
-		li:not(:last-child) {
-			margin-right: 2rem;
-		}
-
-		a {
-			letter-spacing: -0.03em;
-			color: $color-text;
+			&:not(:first-child) {
+				border-left: 0.15rem solid $color-text;
+			}
 		}
 	}
-}
-
-.new-nav {
-	box-shadow: 0px 6px 20px 2px rgba(0, 0, 0, 0.06);
 }
 
 // --- HOME PAGE ---
 .home-content {
-	height: 38vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	padding: 2rem 0;
 }
 
 .home-title {
 	text-align: center;
+	margin-bottom: 1.5rem
 
 	h1,
 	p {
-		margin-left: 16px;
-		margin-right: 16px;
+		margin: 0 1rem;
 		line-height: 1.5em;
 	}
 
@@ -152,6 +131,7 @@ a {
 	}
 
 	p {
+		font-size: 1.5rem;
 		letter-spacing: -0.03em;
 		font-family: $font-main;
 		@media (min-width: $breakpoint-md) {
@@ -160,37 +140,8 @@ a {
 	}
 }
 
-.home-links {
-	width: 22rem;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
-	align-items: center;
-
-	@media (min-width: $breakpoint-md) {
-		width: 32rem;
-	}
-
-	& img {
-		width: 2.8rem;
-
-		@media (min-width: $breakpoint-md) {
-			width: 4rem;
-		}
-	}
-}
-
-.mfer-pic {
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	z-index: 0;
-	width: 25%;
-	line-height: 0;
-}
-
-.nav-bar-background-color {
-	background-color: white;
+#sartoshi-mirror-link {
+	font-size: 1.5rem;
 }
 
 .nav-link {
@@ -231,10 +182,6 @@ $animationSpeed: 95s;
 	background: $color-bg;
 	overflow: hidden;
 	position: relative;
-
-	&::before,
-	&::after {
-	}
 
 	&::after {
 		right: 0;
@@ -284,8 +231,8 @@ $animationSpeed: 95s;
 	padding-right: 12px !important;
 }
 
-.what-are-mfers {
-	box-shadow: 0px 6px 20px 2px rgba(0, 0, 0, 0.06);
+.box-shadow {
+	box-shadow: 0 0.25rem 1.15rem 0.1rem rgba(0, 0, 0, 0.06);
 }
 
 @keyframes rotation {
@@ -310,18 +257,6 @@ $animationSpeed: 95s;
 	.icon-nav-bar a:first-child {
 		padding-left: 0px !important;
 	}
-
-}
-
-@media only screen and (max-height: 700px) {
-
-}
-
-a {
-	font-size: 24px !important;
-}
-p {
-	font-size: 24px;
 }
 
 .main {
