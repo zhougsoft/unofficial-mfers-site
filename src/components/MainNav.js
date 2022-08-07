@@ -16,11 +16,15 @@ import svgLooksrare from '../assets/svg/looksrare-logo.svg'
 
 const MainNav = () => {
 	return (
-		<Navbar id="nav" expand="sm" className="nav-bar-background-color box-shadow">
+		<Navbar
+			id="nav"
+			expand="sm"
+			className="nav-bar-background-color box-shadow"
+		>
 			<Container>
 				<Navbar.Brand>
 					<Nav.Link href="/" className="main-nav-text-color">
-						<img src="/head-base-smokeless.png" width="45" height="45" />
+						<img src="/head-base-smokeless.png" alt="mfer head non-smoking" />
 					</Nav.Link>
 				</Navbar.Brand>
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -42,28 +46,28 @@ const MainNav = () => {
 							className="text-color spacing"
 							target="_blank"
 						>
-							<img src={svgDiscord} />
+							<img src={svgDiscord} alt="discord icon" />
 						</Nav.Link>
 						<Nav.Link
 							href={TWITTER_LINK}
 							className="text-color spacing"
 							target="_blank"
 						>
-							<img src={svgTwitter} />
+							<img src={svgTwitter} alt="twitter icon" />
 						</Nav.Link>
 						<Nav.Link
 							href={OPENSEA_LINK}
 							className="text-color spacing"
 							target="_blank"
 						>
-							<img src={svgOpensea} />
+							<img src={svgOpensea} alt="opensea icon" />
 						</Nav.Link>
 						<Nav.Link
 							href={LOOKSRARE_LINK}
 							className="text-color spacing"
 							target="_blank"
 						>
-							<img src={svgLooksrare} />
+							<img src={svgLooksrare} alt="looksrare icon" />
 						</Nav.Link>
 					</Nav>
 				</Navbar.Collapse>
