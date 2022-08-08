@@ -270,6 +270,21 @@ $animationSpeed: 15s;
 		font-size: 1.25em;
 	}
 
+	a {
+		font-family: $font-script;
+		font-size: 1.25em;
+		font-weight: bold;
+	}
+
+	small {
+		font-family: $font-script;
+		font-size: 1.1em;
+	}
+
+	// a {
+	// 	font-size: inherit;
+	// }
+
 	ul,
 	ol {
 		margin: 0;
