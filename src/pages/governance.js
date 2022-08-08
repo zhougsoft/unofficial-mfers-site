@@ -16,32 +16,32 @@ const GovernancePage = () => {
 				<div style={{ fontSize: SUMMARY_SIZE }}>
 					<h1 style={{ fontSize: HEADING_SIZE }}>governance</h1>
 
-						<p>
-							This page contains the most current information related to the
-							governance and internal workings of the unofficial mfers community.
-						</p>
+					<p>
+						This page contains the most current information related to the
+						governance and internal workings of the unofficial mfers community.
+					</p>
 
-						<p>
-							The unofficial mfers governance mechanism is a constantly evolving
-							and self-improving social machine - think{' '}
-							<ExtLink href="https://en.wikipedia.org/wiki/Ant#Learning">
-								ants
-							</ExtLink>
-							! <strong>This is not our final form...</strong>
-						</p>
+					<p>
+						The unofficial mfers governance mechanism is a constantly evolving
+						and self-improving social machine - think{' '}
+						<ExtLink href="https://en.wikipedia.org/wiki/Ant#Learning">
+							ants
+						</ExtLink>
+						! <strong>This is not our final form...</strong>
+					</p>
 
-						<p>
-							We're a bottom-up effort, so please share any feedback points or
-							ideas with the community! Welcome to the movement, mfer.
-						</p>
+					<p>
+						We're a bottom-up effort, so please share any feedback points or
+						ideas with the community! Welcome to the movement, mfer.
+					</p>
 
-						<small>
-							<em>
-								*** everything you see on this page should considered a
-								"work-in-progress", thank you for being patient while the
-								community contributors do their work! ***
-							</em>
-						</small>
+					<small>
+						<em>
+							*** everything you see on this page should considered a
+							"work-in-progress", thank you for being patient while the
+							community contributors do their work! ***
+						</em>
+					</small>
 
 					<h2 style={{ fontSize: SUBHEADING_SIZE }}>community treasury</h2>
 					<p>
@@ -64,7 +64,10 @@ const GovernancePage = () => {
 						</strong>
 					</p>
 					<ul>
-						<a href="0x21130e908bba2d41b63fbca7caa131285b8724f8">
+						<a
+							href="https://etherscan.io/address/0x21130e908bba2d41b63fbca7caa131285b8724f8"
+							target="_blank"
+						>
 							unofficialmfers.eth
 							<br></br>
 							0x21130e908bba2d41b63fbca7caa131285b8724f8
@@ -80,7 +83,10 @@ const GovernancePage = () => {
 					{/* TODO: replace lazy <br/>s with proper margin/padding if/when styles on this page are moved to the stylesheets */}
 					<ul>
 						<li>
-							<a href="https://etherscan.io/address/0xaefb75fca15bdf0292c34ef42a4378fbb226f0ee">
+							<a
+								href="https://etherscan.io/address/0xaefb75fca15bdf0292c34ef42a4378fbb226f0ee"
+								target="_blank"
+							>
 								discord.unofficialmfers.eth
 								<br />
 								0xaefb75fca15bdf0292c34ef42a4378fbb226f0ee
@@ -89,7 +95,10 @@ const GovernancePage = () => {
 							<br />
 						</li>
 						<li>
-							<a href="https://etherscan.io/address/0x059f171fe3e64c0724b012a4511c93e968a06342">
+							<a
+								href="https://etherscan.io/address/0x059f171fe3e64c0724b012a4511c93e968a06342"
+								target="_blank"
+							>
 								charity.unofficialmfers.eth
 								<br />
 								0x059f171fe3e64c0724b012a4511c93e968a06342
@@ -98,7 +107,10 @@ const GovernancePage = () => {
 							<br />
 						</li>
 						<li>
-							<a href="https://etherscan.io/address/0x104924f017e70166c2deccbf948a39d3f6c6e94f">
+							<a
+								href="https://etherscan.io/address/0x104924f017e70166c2deccbf948a39d3f6c6e94f"
+								target="_blank"
+							>
 								nftnyc.unofficialmfers.eth
 								<br />
 								0x104924f017e70166c2deccbf948a39d3f6c6e94f
@@ -125,29 +137,33 @@ const GovernancePage = () => {
 					<ol>
 						<li>
 							<p>
-								An initiative is surfaced and discussed within the mfers community
-								across social platforms.
+								An initiative is surfaced and discussed within the mfers
+								community across social platforms.
 							</p>
 						</li>
 						<li>
 							<p>
 								A proposal is drafted by the initiative organizers with details
 								about their plan of execution and requirements they need. This
-								proposal is submitted to the signers via the intake form <a href="https://www.submitmfer.xyz" target="_blank">here</a> and considered on a basis it
-								is not damaging and the action makes sense for the unofficial
-								mfers to take at the time.
+								proposal is submitted to the signers via the intake form{' '}
+								<a href="https://www.submitmfer.xyz" target="_blank">
+									here
+								</a>{' '}
+								and considered on a basis it is not damaging and the action
+								makes sense for the unofficial mfers to take at the time.
 							</p>
 							<p>
 								This selection process is a current veto power held by the
-								signers, as the signers select which proposals move forward in the
-								pipeline.
+								signers, as the signers select which proposals move forward in
+								the pipeline.
 							</p>
 						</li>
 						<li>
 							<p>
 								If selected, the proposal will be presented to the community in
 								the unofficial mfers Discord for a "soft pass" with a minimum
-								voting time of 48 hours and a majority vote amongst mfer holders.
+								voting time of 48 hours and a majority vote amongst mfer
+								holders.
 							</p>
 							<p>
 								This "soft pass" notifies the community of a potential upcoming
@@ -159,9 +175,9 @@ const GovernancePage = () => {
 						<li>
 							<p>
 								Should the soft pass reach majority vote upon completion of the
-								voting timeframe, the proposal (in its soft-passed form) can then
-								be posted to SnapShot for a token-weighted vote (1 mfer = 1 vote)
-								for a voting period open for a minimum of 72 hours.
+								voting timeframe, the proposal (in its soft-passed form) can
+								then be posted to SnapShot for a token-weighted vote (1 mfer = 1
+								vote) for a voting period open for a minimum of 72 hours.
 							</p>
 						</li>
 						<li>
@@ -184,9 +200,10 @@ const GovernancePage = () => {
 							unofficial mfers SnapShot space
 						</ExtLink>{' '}
 						is where we vote on important community proposals! It's located at:
-						<a href={SNAPSHOT_LINK} target="_blank">{SNAPSHOT_LINK}</a>
+						<a href={SNAPSHOT_LINK} target="_blank">
+							{SNAPSHOT_LINK}
+						</a>
 					</p>
-					
 				</div>
 			</PageContainer>
 		</Layout>
