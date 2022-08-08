@@ -1,8 +1,8 @@
 import * as React from 'react'
 import { Helmet } from 'react-helmet'
 import MainNav from './MainNav'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import '../styles/main.scss'
-
 
 const Layout = ({ pageTitle, children }) => {
 	return (

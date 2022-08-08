@@ -32,7 +32,7 @@ body {
 	font-size: 14px;
 	padding: 0;
 	margin: 0;
-	font-family: $font-main;
+	font-family: $font-script;
 	color: $color-text;
 	background: $color-bg;
 
@@ -72,75 +72,80 @@ a {
 	}
 }
 
+.nav-link {
+	color: #0c0b0b;
+}
+
+.box-shadow {
+	box-shadow: 0 0.25rem 1.15rem 0.1rem rgba(0, 0, 0, 0.06);
+}
+
 // --- LAYOUT ---
 .layout-wrapper {
 	position: relative;
 	min-height: 100vh;
 }
 
-.main-nav {
-	background-color: white;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	padding: 1.5rem 0;
-	border-bottom: 0.2em solid $color-text;
+#nav {
+	z-index: 999;
+	background: white;
+	padding: 0.5rem 0;
 
-	.nav-content {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-
-	.nav-brand a {
-		font-size: 1.25rem;
-		font-weight: bold;
-		letter-spacing: -0.03em;
+	& a.internal-nav-link {
+		font-size: 2rem;
 		color: $color-text;
-	}
+		border-left: none;
+		line-height: 1rem;
+		padding: 2rem 0;
 
-	ul {
-		list-style: none;
-		display: flex;
-		margin: 0;
-		padding: 0;
+		@media (min-width: $breakpoint-sm) {
+			padding: 0 1rem;
+			font-size: 1.25rem;
 
-		li:not(:last-child) {
-			margin-right: 2rem;
-		}
-
-		a {
-			font-size: 1.1rem;
-			letter-spacing: -0.03em;
-			color: $color-text;
+			&:not(:first-child) {
+				border-left: 0.15rem solid $color-text;
+			}
 		}
 	}
 }
 
 // --- HOME PAGE ---
-.home-content {
-	height: 100vh;
+.home-wrapper {
+	min-height: 90vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.home-section {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	padding: 4rem 0 6rem 0;
 }
 
-.home-title {
-	margin-bottom: 2rem;
+.home-info {
+	width: 100%;
 	text-align: center;
+	margin-bottom: 2rem;
+
+	@media (min-width: $breakpoint-md) {
+		width: 32rem;
+	}
 
 	h1,
 	p {
-		margin: 0;
+		margin: 0 1rem;
 		line-height: 1.5em;
 	}
 
 	h1 {
-		font-size: 4rem;
-		font-family: $font-fancy;
+		font-size: 3rem;
+		font-family: $font-script;
 		letter-spacing: -0.02em;
+		font-weight: 700;
 
 		@media (min-width: $breakpoint-md) {
 			font-size: 5rem;
@@ -148,40 +153,160 @@ a {
 	}
 
 	p {
-		font-size: 1.25rem;
+		font-size: 1.5rem;
 		letter-spacing: -0.03em;
-
+		font-family: $font-script;
 		@media (min-width: $breakpoint-md) {
 			font-size: 1.5rem;
 		}
 	}
 }
 
-.home-links {
-	width: 22rem;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
-	align-items: center;
+.article-link-card {
+	font-size: 1.5rem;
+	font-family: $font-script;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 1.25rem;
+	color: inherit;
+}
 
-	@media (min-width: $breakpoint-md) {
-		width: 32rem;
+// scrolling mfer footer
+$animationSpeed: 15s;
+
+@keyframes scroll-left {
+	0% {
+		transform: translateX(0);
 	}
-
-	& img {
-		width: 2.8rem;
-
-		@media (min-width: $breakpoint-md) {
-			width: 4rem;
-		}
+	100% {
+		transform: translateX(calc(-144px * 14));
 	}
 }
 
-.mfer-pic {
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	z-index: 0;
-	width: 25%;
-	line-height: 0;
+@keyframes scroll-right {
+	0% {
+		transform: translateX(-144px * 14);
+	}
+	100% {
+		transform: translateX(calc(0));
+	}
+}
+
+.slider {
+	background: $color-bg;
+	overflow: hidden;
+	position: relative;
+
+	&::after {
+		right: 0;
+		top: 0;
+		transform: rotateZ(180deg);
+	}
+
+	&::before {
+		left: 0;
+		top: 0;
+	}
+
+	.slide-track-left {
+		animation: scroll-left $animationSpeed linear infinite;
+		display: flex;
+		width: calc(120px * 28);
+	}
+
+	.slide-track-right {
+		animation: scroll-right $animationSpeed linear infinite;
+		display: flex;
+		width: calc(120px * 28);
+	}
+
+	.slide {
+		height: 120px;
+		width: 120px;
+		img {
+			border-radius: 12px;
+			height: 120px;
+			width: 120px;
+		}
+		margin: 12px;
+	}
+}
+
+.spacing {
+	padding-left: 12px !important;
+	padding-right: 12px !important;
+}
+
+@keyframes rotation {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(359deg);
+	}
+}
+
+.rotate {
+	animation: rotation 4s infinite linear;
+}
+
+@media only screen and (max-width: $breakpoint-sm) {
+	.icon-nav-bar {
+		display: flex !important;
+		flex-direction: row !important;
+	}
+
+	.icon-nav-bar a:first-child {
+		padding-left: 0px !important;
+	}
+}
+
+// --- GOVERNANCE PAGE ---
+
+// use 'em' to size fonts to leverage responsive styles in body
+.gov-wrapper {
+	p {
+		font-family: $font-main;
+		font-size: 1.25em;
+	}
+
+	a {
+		font-family: $font-script;
+		font-size: 1.25em;
+		font-weight: bold;
+	}
+
+	small {
+		font-family: $font-script;
+		font-size: 1.1em;
+	}
+
+	// a {
+	// 	font-size: inherit;
+	// }
+
+	ul,
+	ol {
+		margin: 0;
+	}
+}
+
+.gov-heading {
+	font-size: 5em;
+	letter-spacing: -0.03em;
+	font-weight: bold;
+	margin-bottom: 2rem;
+}
+
+.gov-subheading {
+	font-size: 3.5em;
+	letter-spacing: -0.03em;
+	font-weight: bold;
+	margin: 4rem 0 1.5rem 0;
+}
+
+.prop-process-list {
+	& li {
+		margin-top: 3rem;
+	}
 }

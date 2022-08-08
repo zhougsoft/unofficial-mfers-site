@@ -1,56 +1,64 @@
 import * as React from 'react'
+import { Card } from 'react-bootstrap'
 import Layout from '../components/Layout'
-import ExtLink from '../components/ExtLink'
 
 import {
-	DISCORD_LINK,
-	OPENSEA_LINK,
-	LOOKSRARE_LINK,
-	ETHERSCAN_LINK,
-	TWITTER_LINK,
+	WHAT_ARE_MFERS_LINK,
+	CAROUSEL_IMGS_TOP,
+	CAROUSEL_IMGS_BOTTOM,
 } from '../constants'
-
-import sartoshiImg from '../assets/images/sartoshi.png'
-import svgDiscordLogo from '../assets/svg/discord-logo.svg'
-import svgOpenSeaLogo from '../assets/svg/os-logo.svg'
-import svgLooksRareLogo from '../assets/svg/looksrare-logo.svg'
-import svgEtherscanLogo from '../assets/svg/etherscan-logo.svg'
-import svgTwitterLogo from '../assets/svg/twitter-logo.svg'
+import svgSun from '../assets/svg/sun.svg'
+import svgExternalLink from '../assets/svg/external-link.svg'
 
 const IndexPage = () => {
+	const makeCarousel = urls =>
+		urls.map(url => (
+			<div className="slide">
+				<img src={url} alt="carousel display mfer" />
+			</div>
+		))
+
 	return (
 		<Layout pageTitle="unofficial mfers">
-			<section className="home-content">
-				<div className="home-title">
-					<h1>unofficial mfers</h1>
-					<p>
-						the <strong>officially unofficial</strong> website of the{' '}
-						<strong>mfers</strong>
-					</p>
-				</div>
-				<div className="home-links">
-					<ExtLink href={DISCORD_LINK}>
-						<img src={svgDiscordLogo} alt="Discord logo icon" />
-					</ExtLink>
-					<ExtLink href={OPENSEA_LINK}>
-						<img src={svgOpenSeaLogo} alt="Opensea logo icon" />
-					</ExtLink>
-					<ExtLink href={LOOKSRARE_LINK}>
-						<img src={svgLooksRareLogo} alt="LooksRare logo icon" />
-					</ExtLink>
-					<ExtLink href={ETHERSCAN_LINK}>
-						<img src={svgEtherscanLogo} alt="Etherscan logo icon" />
-					</ExtLink>
-					<ExtLink href={TWITTER_LINK}>
-						<img src={svgTwitterLogo} alt="Twitter logo icon" />
-					</ExtLink>
-				</div>
-			</section>
-			<img
-				src={sartoshiImg}
-				alt="sartoshi smiling and vibing with headphones in their chair, facing to the right"
-				className="mfer-pic"
-			/>
+			<div className="home-wrapper">
+				<section className="home-section">
+					<div className="home-info">
+						<h1>
+							gm mfers{' '}
+							<img className="rotate" src={svgSun} alt="yellow shining sun" />
+						</h1>
+						<p>
+							you can state a roadmap that says where you will go, but you can
+							also plant seeds and see where they grow
+						</p>
+					</div>
+					<Card className="d-flex box-shadow">
+						<Card.Body>
+							<Card.Link
+								className="article-link-card"
+								href={WHAT_ARE_MFERS_LINK}
+								target="_blank"
+								rel="noopener"
+							>
+								what are mfers?{' '}
+								<img src={svgExternalLink} alt="external link icon" />
+							</Card.Link>
+						</Card.Body>
+					</Card>
+				</section>
+				<footer className="slider-section">
+					<div class="slider">
+						<div class="slide-track-left">
+							{makeCarousel(CAROUSEL_IMGS_TOP)}
+						</div>
+					</div>
+					<div class="slider">
+						<div class="slide-track-right">
+							{makeCarousel(CAROUSEL_IMGS_BOTTOM)}
+						</div>
+					</div>
+				</footer>
+			</div>
 		</Layout>
 	)
 }

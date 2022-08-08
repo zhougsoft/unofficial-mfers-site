@@ -1,7 +1,7 @@
 import React from 'react'
 
 // padding to offset the nav bar height & lack of footer
-const PADDING_TOP = '7.5rem'
+const PADDING_TOP = '5rem'
 const PADDING_BOTTOM = '7.5rem'
 
 const PageContainer = ({ children }) => {
