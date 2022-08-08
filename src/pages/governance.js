@@ -64,7 +64,10 @@ const GovernancePage = () => {
 						</strong>
 					</p>
 					<ul>
-						<a href="https://etherscan.io/address/0x21130e908bba2d41b63fbca7caa131285b8724f8">
+						<a
+							href="https://etherscan.io/address/0x21130e908bba2d41b63fbca7caa131285b8724f8"
+							target="_blank"
+						>
 							unofficialmfers.eth
 							<br></br>
 							0x21130e908bba2d41b63fbca7caa131285b8724f8
@@ -80,7 +83,10 @@ const GovernancePage = () => {
 					{/* TODO: replace lazy <br/>s with proper margin/padding if/when styles on this page are moved to the stylesheets */}
 					<ul>
 						<li>
-							<a href="https://etherscan.io/address/0xaefb75fca15bdf0292c34ef42a4378fbb226f0ee">
+							<a
+								href="https://etherscan.io/address/0xaefb75fca15bdf0292c34ef42a4378fbb226f0ee"
+								target="_blank"
+							>
 								discord.unofficialmfers.eth
 								<br />
 								0xaefb75fca15bdf0292c34ef42a4378fbb226f0ee
@@ -89,7 +95,10 @@ const GovernancePage = () => {
 							<br />
 						</li>
 						<li>
-							<a href="https://etherscan.io/address/0x059f171fe3e64c0724b012a4511c93e968a06342">
+							<a
+								href="https://etherscan.io/address/0x059f171fe3e64c0724b012a4511c93e968a06342"
+								target="_blank"
+							>
 								charity.unofficialmfers.eth
 								<br />
 								0x059f171fe3e64c0724b012a4511c93e968a06342
@@ -98,7 +107,10 @@ const GovernancePage = () => {
 							<br />
 						</li>
 						<li>
-							<a href="https://etherscan.io/address/0x104924f017e70166c2deccbf948a39d3f6c6e94f">
+							<a
+								href="https://etherscan.io/address/0x104924f017e70166c2deccbf948a39d3f6c6e94f"
+								target="_blank"
+							>
 								nftnyc.unofficialmfers.eth
 								<br />
 								0x104924f017e70166c2deccbf948a39d3f6c6e94f
