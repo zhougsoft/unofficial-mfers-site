@@ -184,7 +184,7 @@ const GovernancePage = () => {
 							unofficial mfers SnapShot space
 						</ExtLink>{' '}
 						is where we vote on important community proposals! It's located at:
-						<a href={SNAPSHOT_LINK}>{SNAPSHOT_LINK}</a>
+						<a href={SNAPSHOT_LINK} target="_blank">{SNAPSHOT_LINK}</a>
 					</p>
 					
 				</div>
