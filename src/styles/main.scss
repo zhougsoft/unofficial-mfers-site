@@ -32,7 +32,7 @@ body {
 	font-size: 14px;
 	padding: 0;
 	margin: 0;
-	font-family: $font-main;
+	font-family: $font-script;
 	color: $color-text;
 	background: $color-bg;
 
@@ -72,6 +72,14 @@ a {
 	}
 }
 
+.nav-link {
+	color: #0c0b0b;
+}
+
+.box-shadow {
+	box-shadow: 0 0.25rem 1.15rem 0.1rem rgba(0, 0, 0, 0.06);
+}
+
 // --- LAYOUT ---
 .layout-wrapper {
 	position: relative;
@@ -80,7 +88,8 @@ a {
 
 #nav {
 	z-index: 999;
-	background: $color-bg;
+	background: white;
+	padding: 0.5rem 0;
 
 	& a.internal-nav-link {
 		font-size: 2rem;
@@ -88,7 +97,7 @@ a {
 		border-left: none;
 		line-height: 1rem;
 		padding: 2rem 0;
-		
+
 		@media (min-width: $breakpoint-sm) {
 			padding: 0 1rem;
 			font-size: 1.25rem;
@@ -101,17 +110,30 @@ a {
 }
 
 // --- HOME PAGE ---
-.home-content {
+.home-wrapper {
+	min-height: 90vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.home-section {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 2rem 0;
+	padding: 4rem 0 6rem 0;
 }
 
-.home-title {
+.home-info {
+	width: 100%;
 	text-align: center;
-	margin-bottom: 1.5rem
+	margin-bottom: 2rem;
+
+	@media (min-width: $breakpoint-md) {
+		width: 32rem;
+	}
 
 	h1,
 	p {
@@ -121,7 +143,7 @@ a {
 
 	h1 {
 		font-size: 3rem;
-		font-family: $font-main;
+		font-family: $font-script;
 		letter-spacing: -0.02em;
 		font-weight: 700;
 
@@ -133,33 +155,26 @@ a {
 	p {
 		font-size: 1.5rem;
 		letter-spacing: -0.03em;
-		font-family: $font-main;
+		font-family: $font-script;
 		@media (min-width: $breakpoint-md) {
 			font-size: 1.5rem;
 		}
 	}
 }
 
-#sartoshi-mirror-link {
+.article-link-card {
 	font-size: 1.5rem;
+	font-family: $font-script;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 1.25rem;
+	color: inherit;
 }
 
-.nav-link {
-	color: #0c0b0b;
-}
-
-@mixin white-gradient {
-	background: linear-gradient(
-		to right,
-		rgba(255, 255, 255, 1) 0%,
-		rgba(255, 255, 255, 0) 100%
-	);
-}
-
+// scrolling mfer footer
 $animationSpeed: 95s;
 
-// Animation
-@keyframes scroll {
+@keyframes scroll-left {
 	0% {
 		transform: translateX(0);
 	}
@@ -177,7 +192,6 @@ $animationSpeed: 95s;
 	}
 }
 
-// Styling
 .slider {
 	background: $color-bg;
 	overflow: hidden;
@@ -194,8 +208,8 @@ $animationSpeed: 95s;
 		top: 0;
 	}
 
-	.slide-track {
-		animation: scroll $animationSpeed linear infinite;
+	.slide-track-left {
+		animation: scroll-left $animationSpeed linear infinite;
 		display: flex;
 		width: calc(120px * 28);
 	}
@@ -218,21 +232,9 @@ $animationSpeed: 95s;
 	}
 }
 
-.card-props {
-	font-family: $font-main;
-	font-style: normal;
-	font-weight: 700;
-	line-height: 24px;
-	color: inherit;
-}
-
 .spacing {
 	padding-left: 12px !important;
 	padding-right: 12px !important;
-}
-
-.box-shadow {
-	box-shadow: 0 0.25rem 1.15rem 0.1rem rgba(0, 0, 0, 0.06);
 }
 
 @keyframes rotation {
@@ -248,7 +250,7 @@ $animationSpeed: 95s;
 	animation: rotation 4s infinite linear;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: $breakpoint-sm) {
 	.icon-nav-bar {
 		display: flex !important;
 		flex-direction: row !important;
@@ -259,10 +261,37 @@ $animationSpeed: 95s;
 	}
 }
 
-.main {
-	height: 90vh;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+// --- GOVERNANCE PAGE ---
+
+// use 'em' to size fonts to leverage responsive styles in body
+.gov-wrapper {
+	p {
+		font-family: $font-main;
+		font-size: 1.25em;
+	}
+
+	ul,
+	ol {
+		margin: 0;
+	}
+}
+
+.gov-heading {
+	font-size: 5em;
+	letter-spacing: -0.03em;
+	font-weight: bold;
+	margin-bottom: 2rem;
+}
+
+.gov-subheading {
+	font-size: 3.5em;
+	letter-spacing: -0.03em;
+	font-weight: bold;
+	margin: 4rem 0 1.5rem 0;
+}
+
+.prop-process-list {
+	& li {
+		margin-top: 3rem;
+	}
 }

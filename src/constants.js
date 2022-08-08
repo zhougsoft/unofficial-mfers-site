@@ -6,8 +6,11 @@ export const LOOKSRARE_LINK =
 	'https://looksrare.org/collections/0x79FCDEF22feeD20eDDacbB2587640e45491b757f'
 export const ETHERSCAN_LINK =
 	'https://etherscan.io/address/0x79FCDEF22feeD20eDDacbB2587640e45491b757f'
+export const TREASURY_LINK =
+	'https://etherscan.io/address/0x79FCDEF22feeD20eDDacbB2587640e45491b757f'
 export const SNAPSHOT_LINK = 'https://snapshot.org/#/unofficialmfers.eth'
-export const WHAT_ARE_MFERS_LINK = 'https://mirror.xyz/sartoshi.eth/QukjtL1076-1SEoNJuqyc-x4Ut2v8_TocKkszo-S_nU'
+export const WHAT_ARE_MFERS_LINK =
+	'https://mirror.xyz/sartoshi.eth/QukjtL1076-1SEoNJuqyc-x4Ut2v8_TocKkszo-S_nU'
 
 // lists
 export const TREASURY_SIGNERS = [

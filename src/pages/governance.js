@@ -1,36 +1,34 @@
 import React from 'react'
-import { TREASURY_SIGNERS, SNAPSHOT_LINK } from '../constants'
+import {
+	TREASURY_SIGNERS,
+	SNAPSHOT_LINK,
+	DISCORD_LINK,
+	TREASURY_LINK,
+} from '../constants'
 import Layout from '../components/Layout'
 import PageContainer from '../components/PageContainer'
 import ExtLink from '../components/ExtLink'
-
-// TODO: port all JSX inline styling on this page to the src/styles/main.scss file, along with some tighter typography layout & sizing
-const HEADING_SIZE = '4rem'
-const SUBHEADING_SIZE = '2.5rem'
-const SUMMARY_SIZE = '1.5rem'
 
 const GovernancePage = () => {
 	return (
 		<Layout pageTitle="governance | unofficial mfers">
 			<PageContainer>
-				<div style={{ fontSize: SUMMARY_SIZE }}>
-					<h1 style={{ fontSize: HEADING_SIZE }}>governance</h1>
+				<div className="gov-wrapper">
+					<h1 className="gov-heading">governance</h1>
 
 					<p>
 						This page contains the most current information related to the
 						governance and internal workings of the unofficial mfers community.
-					</p>
-
-					<p>
+						<br />
+						<br />
 						The unofficial mfers governance mechanism is a constantly evolving
 						and self-improving social machine - think{' '}
 						<ExtLink href="https://en.wikipedia.org/wiki/Ant#Learning">
 							ants
 						</ExtLink>
 						! <strong>This is not our final form...</strong>
-					</p>
-
-					<p>
+						<br />
+						<br />
 						We're a bottom-up effort, so please share any feedback points or
 						ideas with the community! Welcome to the movement, mfer.
 					</p>
@@ -43,7 +41,7 @@ const GovernancePage = () => {
 						</em>
 					</small>
 
-					<h2 style={{ fontSize: SUBHEADING_SIZE }}>community treasury</h2>
+					<h2 className="gov-subheading">community treasury</h2>
 					<p>
 						The unofficial mfers community treasury is a Gnosis-safe multi-sig
 						secured by the following signers:
@@ -63,16 +61,15 @@ const GovernancePage = () => {
 							The treasury address is located on the Ethereum mainnet at:
 						</strong>
 					</p>
-					<ul>
-						<a
-							href="https://etherscan.io/address/0x21130e908bba2d41b63fbca7caa131285b8724f8"
-							target="_blank"
-						>
-							unofficialmfers.eth
-							<br></br>
-							0x21130e908bba2d41b63fbca7caa131285b8724f8
-						</a>
-					</ul>
+
+					<ExtLink href={TREASURY_LINK}>
+						unofficialmfers.eth
+						<br />
+						0x21130e908bba2d41b63fbca7caa131285b8724f8
+					</ExtLink>
+
+					<br />
+					<br />
 
 					<p>
 						Three use-specific subdomains exist under unofficialmfers.eth. Each
@@ -80,7 +77,6 @@ const GovernancePage = () => {
 						signers each.
 					</p>
 
-					{/* TODO: replace lazy <br/>s with proper margin/padding if/when styles on this page are moved to the stylesheets */}
 					<ul>
 						<li>
 							<a
@@ -115,12 +111,10 @@ const GovernancePage = () => {
 								<br />
 								0x104924f017e70166c2deccbf948a39d3f6c6e94f
 							</a>
-							<br />
-							<br />
 						</li>
 					</ul>
 
-					<h2 style={{ fontSize: SUBHEADING_SIZE }}>proposal process</h2>
+					<h2 className="gov-subheading">proposal process</h2>
 					<p>
 						When taking actions such as transacting with the community multi-sig
 						or altering core governance processes, a proposal is required to
@@ -134,7 +128,7 @@ const GovernancePage = () => {
 						</strong>
 					</p>
 
-					<ol>
+					<ol className='prop-process-list'>
 						<li>
 							<p>
 								An initiative is surfaced and discussed within the mfers
@@ -161,9 +155,10 @@ const GovernancePage = () => {
 						<li>
 							<p>
 								If selected, the proposal will be presented to the community in
-								the unofficial mfers Discord for a "soft pass" with a minimum
-								voting time of 48 hours and a majority vote amongst mfer
-								holders.
+								the{' '}
+								<ExtLink href={DISCORD_LINK}>unofficial mfers Discord</ExtLink>{' '}
+								for a "soft pass" with a minimum voting time of 48 hours and a
+								majority vote amongst mfer holders.
 							</p>
 							<p>
 								This "soft pass" notifies the community of a potential upcoming
@@ -182,8 +177,9 @@ const GovernancePage = () => {
 						</li>
 						<li>
 							<p>
-								If the SnapShot vote reaches a majority vote within the voting
-								timeframe, the action outlined in the proposal is executed.
+								If the <ExtLink href={SNAPSHOT_LINK}>SnapShot vote</ExtLink>{' '}
+								reaches a majority vote within the voting timeframe, the action
+								outlined in the proposal is executed.
 							</p>
 							<p>
 								If the action involves any transactions using the community
@@ -193,13 +189,14 @@ const GovernancePage = () => {
 						</li>
 					</ol>
 
-					<h2 style={{ fontSize: SUBHEADING_SIZE }}>snapshot</h2>
+					<h2 className="gov-subheading">snapshot</h2>
 					<p>
 						The{' '}
 						<ExtLink href={SNAPSHOT_LINK}>
 							unofficial mfers SnapShot space
 						</ExtLink>{' '}
 						is where we vote on important community proposals! It's located at:
+						<br />
 						<a href={SNAPSHOT_LINK} target="_blank">
 							{SNAPSHOT_LINK}
 						</a>
