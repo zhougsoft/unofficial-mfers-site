@@ -20,9 +20,9 @@ const IndexPage = () => {
 
 	return (
 		<Layout pageTitle="unofficial mfers">
-			<div className="main">
-				<section className="home-content">
-					<div className="home-title">
+			<div className="home-wrapper">
+				<section className="home-section">
+					<div className="home-info">
 						<h1>
 							gm mfers{' '}
 							<img className="rotate" src={svgSun} alt="yellow shining sun" />
@@ -36,7 +36,7 @@ const IndexPage = () => {
 						<Card.Body>
 							<Card.Link
 								id="sartoshi-mirror-link"
-								className="card-props"
+								className="article-link-card"
 								href={WHAT_ARE_MFERS_LINK}
 								target="_blank"
 								rel="noopener"
@@ -49,7 +49,9 @@ const IndexPage = () => {
 				</section>
 				<footer className="slider-section">
 					<div class="slider">
-						<div class="slide-track">{makeCarousel(CAROUSEL_IMGS_TOP)}</div>
+						<div class="slide-track-left">
+							{makeCarousel(CAROUSEL_IMGS_TOP)}
+						</div>
 					</div>
 					<div class="slider">
 						<div class="slide-track-right">

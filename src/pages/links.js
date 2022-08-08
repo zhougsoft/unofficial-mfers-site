@@ -12,14 +12,22 @@ import PageContainer from '../components/PageContainer'
 import ExtLink from '../components/ExtLink'
 
 // TODO: port all JSX inline styling on this page to the src/styles/main.scss file, along with some tighter typography layout & sizing
-const HEADING_SIZE = '4rem'
-const LIST_SIZE = '1.5rem'
+const HEADING_SIZE = '5em'
+const LIST_SIZE = '1.5em'
 
 const LinksPage = () => {
 	return (
 		<Layout pageTitle="links | unofficial mfers">
 			<PageContainer>
-				<h1 style={{ fontSize: HEADING_SIZE }}>officially unofficial links</h1>
+				<h1
+					style={{
+						fontSize: HEADING_SIZE,
+						marginBottom: '2rem',
+						letterSpacing: '-0.03em'
+					}}
+				>
+					officially unofficial links
+				</h1>
 
 				<ul style={{ fontSize: LIST_SIZE }}>
 					<li>
