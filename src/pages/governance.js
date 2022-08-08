@@ -133,7 +133,7 @@ const GovernancePage = () => {
 							<p>
 								A proposal is drafted by the initiative organizers with details
 								about their plan of execution and requirements they need. This
-								proposal is submitted to the signers and considered on a basis it
+								proposal is submitted to the signers via the intake form <a href="https://www.submitmfer.xyz" target="_blank">here</a> and considered on a basis it
 								is not damaging and the action makes sense for the unofficial
 								mfers to take at the time.
 							</p>
@@ -184,8 +184,9 @@ const GovernancePage = () => {
 							unofficial mfers SnapShot space
 						</ExtLink>{' '}
 						is where we vote on important community proposals! It's located at:
+						<a href={SNAPSHOT_LINK} target="_blank">{SNAPSHOT_LINK}</a>
 					</p>
-					{SNAPSHOT_LINK}
+					
 				</div>
 			</PageContainer>
 		</Layout>
