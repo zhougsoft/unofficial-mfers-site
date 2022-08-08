@@ -22,6 +22,7 @@ const LinksPage = () => {
 				<h1
 					style={{
 						fontSize: HEADING_SIZE,
+						fontWeight: 'bold',
 						marginBottom: '2rem',
 						letterSpacing: '-0.03em'
 					}}

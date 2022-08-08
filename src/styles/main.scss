@@ -129,7 +129,7 @@ a {
 .home-info {
 	width: 100%;
 	text-align: center;
-	margin-bottom: 1.5rem;
+	margin-bottom: 2rem;
 
 	@media (min-width: $breakpoint-md) {
 		width: 32rem;
@@ -163,10 +163,11 @@ a {
 }
 
 .article-link-card {
+	font-size: 1.5rem;
 	font-family: $font-script;
 	font-style: normal;
 	font-weight: 700;
-	line-height: 24px;
+	line-height: 1.25rem;
 	color: inherit;
 }
 
@@ -265,27 +266,32 @@ $animationSpeed: 95s;
 // use 'em' to size fonts to leverage responsive styles in body
 .gov-wrapper {
 	p {
+		font-family: $font-main;
 		font-size: 1.25em;
-		line-height: 1rem;
 	}
 
-	ul {
+	ul,
+	ol {
 		margin: 0;
 	}
 }
 
 .gov-heading {
 	font-size: 5em;
-	letter-spacing: -0.04em;
+	letter-spacing: -0.03em;
+	font-weight: bold;
 	margin-bottom: 2rem;
 }
 
 .gov-subheading {
 	font-size: 3.5em;
 	letter-spacing: -0.03em;
+	font-weight: bold;
 	margin: 4rem 0 1.5rem 0;
 }
 
-#sartoshi-mirror-link {
-	font-size: 1.5rem;
+.prop-process-list {
+	& li {
+		margin-top: 3rem;
+	}
 }

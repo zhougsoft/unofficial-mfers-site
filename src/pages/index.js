@@ -35,7 +35,6 @@ const IndexPage = () => {
 					<Card className="d-flex box-shadow">
 						<Card.Body>
 							<Card.Link
-								id="sartoshi-mirror-link"
 								className="article-link-card"
 								href={WHAT_ARE_MFERS_LINK}
 								target="_blank"

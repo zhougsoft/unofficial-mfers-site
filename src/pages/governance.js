@@ -128,7 +128,7 @@ const GovernancePage = () => {
 						</strong>
 					</p>
 
-					<ol>
+					<ol className='prop-process-list'>
 						<li>
 							<p>
 								An initiative is surfaced and discussed within the mfers
