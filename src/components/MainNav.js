@@ -39,6 +39,9 @@ const MainNav = () => {
 						<Link to="/links" className="internal-nav-link">
 							links
 						</Link>
+						<Link to="/meme-craftor" className="internal-nav-link">
+							meme craftor
+						</Link>
 					</Nav>
 					<Nav className="icon-nav-bar">
 						<Nav.Link
