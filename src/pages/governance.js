@@ -34,18 +34,14 @@ const GovernancePage = () => {
 						ideas with the community! Welcome to the movement, mfer.
 					</p>
 
-					<small>
-						<em>
-							*** everything you see on this page should considered a
-							"work-in-progress", thank you for being patient while the
-							community contributors do their work! ***
-						</em>
-					</small>
-
-					<h2 className="gov-subheading">community treasury</h2>
+					{/* --- TREASURY --- */}
+					<h2 className="gov-subheading">treasury</h2>
 					<p>
-						The unofficial mfers community treasury is a Gnosis-safe multi-sig
-						secured by the following signers:
+						The{' '}
+						<ExtLink href={TREASURY_LINK}>
+							unofficial mfers community treasury
+						</ExtLink>{' '}
+						is a Gnosis-safe multi-sig secured by the following signers:
 					</p>
 
 					<ul>
@@ -106,79 +102,80 @@ const GovernancePage = () => {
 						</li>
 					</ul>
 
+					{/* --- PROPOSAL PROCESS --- */}
 					<h2 className="gov-subheading">proposal process</h2>
 					<p>
 						When taking actions such as transacting with the community multi-sig
 						or altering core governance processes, a proposal is required to
 						outline the action to take and the plan on how to execute it.
-					</p>
-
-					<p>
+						<br />
+						<br />
 						<strong>
-							Here are the <em>current formal steps</em> of the unofficial mfers
-							proposal pipeline:
+							There are currently five steps in the unofficial mfers proposal
+							pipeline:
 						</strong>
 					</p>
-
+					<br />
 					<ol className="prop-process-list">
 						<li>
+							<h3>proposal submission</h3>
 							<p>
-								An initiative is surfaced and discussed within the mfers
-								community across social platforms.
+								A proposal is submitted to the treasury via the{' '}
+								<ExtLink href={PROP_SUBMISSION_LINK}>intake form here</ExtLink>{' '}
+								and considered on a basis it is not damaging and the action
+								makes sense for the unofficial mfers to take at the time.
 							</p>
 						</li>
 						<li>
+							<h3>discussion</h3>
 							<p>
-								A proposal is drafted by the initiative organizers with details
-								about their plan of execution and requirements they need. This
-								proposal is submitted to the signers via the intake form{' '}
-								<ExtLink href={PROP_SUBMISSION_LINK}>here</ExtLink> and
-								considered on a basis it is not damaging and the action makes
-								sense for the unofficial mfers to take at the time.
-							</p>
-							<p>
-								This selection process is a current veto power held by the
-								signers, as the signers select which proposals move forward in
-								the pipeline.
+								If accepted, the proposal is presented to the community for
+								discussion in the{' '}
+								<ExtLink href={DISCORD_LINK}>unofficial mfers discord</ExtLink>{' '}
+								via a dedicated proposal thread.
 							</p>
 						</li>
 						<li>
+							<h3>soft pass vote</h3>
 							<p>
-								If selected, the proposal will be presented to the community in
-								the{' '}
-								<ExtLink href={DISCORD_LINK}>unofficial mfers Discord</ExtLink>{' '}
-								for a "soft pass" with a minimum voting time of 48 hours and a
-								majority vote amongst mfer holders.
-							</p>
-							<p>
-								This "soft pass" notifies the community of a potential upcoming
-								governance action and allows for feedback. The "soft pass"
-								proposal may be amended and re-submitted if it does not pass in
-								the vote or if mfers would like amendments.
-							</p>
-						</li>
-						<li>
-							<p>
-								Should the soft pass reach majority vote upon completion of the
-								voting timeframe, the proposal (in its soft-passed form) can
-								then be posted to SnapShot for a token-weighted vote (1 mfer = 1
-								vote) for a voting period open for a minimum of 72 hours.
+								The project lead for the proposal decides when to begin the soft
+								pass vote in the unofficial mfers discord. The soft pass will
+								run for a period of 48 hours.
+								<br />
+								<br />
+								<strong>
+									A successful soft pass requires a minimum of 125 <em>Yes</em>{' '}
+									votes with a 75% threshold of participating voters choosing{' '}
+									<em>Yes</em>
+								</strong>{' '}
+								(soft pass votes are anonymous).
 							</p>
 						</li>
 						<li>
+							<h3>snapshot vote</h3>
 							<p>
-								If the <ExtLink href={SNAPSHOT_LINK}>SnapShot vote</ExtLink>{' '}
-								reaches a majority vote within the voting timeframe, the action
-								outlined in the proposal is executed.
+								After achieving a successful soft-pass the proposal will be
+								posted to <ExtLink href={SNAPSHOT_LINK}>Snapshot</ExtLink> for a
+								token-weighted vote <strong>(1 mfer = 1 vote).</strong>
+								<br />
+								<br />
+								The Snapshot vote will run for a period of{' '}
+								<strong>72 hours.</strong> If the Snapshot vote reaches a
+								majority vote within the voting timeframe, the action outlined
+								in the proposal is executed.
 							</p>
+						</li>
+						<li>
+							<h3>funding</h3>
 							<p>
 								If the action involves any transactions using the community
 								treasury, or its sub-treasuries, the signers securing those
-								multi-sigs shall execute those transactions.
+								multi-sigs shall execute those transactions for funding.
 							</p>
 						</li>
 					</ol>
 
+					{/* --- SNAPSHOT --- */}
 					<h2 className="gov-subheading">snapshot</h2>
 					<p>
 						The{' '}
