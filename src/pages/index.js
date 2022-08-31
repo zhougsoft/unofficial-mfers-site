@@ -13,7 +13,7 @@ import svgExternalLink from '../assets/svg/external-link.svg'
 const IndexPage = () => {
 	const makeCarousel = urls =>
 		urls.map(url => (
-			<div className="slide">
+			<div className="slide" key={`slide-${Math.random()}`}>
 				<img src={url} alt="carousel display mfer" />
 			</div>
 		))
@@ -47,13 +47,13 @@ const IndexPage = () => {
 					</Card>
 				</section>
 				<footer className="slider-section">
-					<div class="slider">
-						<div class="slide-track-left">
+					<div className="slider">
+						<div className="slide-track-left">
 							{makeCarousel(CAROUSEL_IMGS_TOP)}
 						</div>
 					</div>
-					<div class="slider">
-						<div class="slide-track-right">
+					<div className="slider">
+						<div className="slide-track-right">
 							{makeCarousel(CAROUSEL_IMGS_BOTTOM)}
 						</div>
 					</div>

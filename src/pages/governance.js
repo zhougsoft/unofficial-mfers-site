@@ -4,6 +4,7 @@ import {
 	SNAPSHOT_LINK,
 	DISCORD_LINK,
 	TREASURY_LINK,
+	PROP_SUBMISSION_LINK,
 } from '../constants'
 import Layout from '../components/Layout'
 import PageContainer from '../components/PageContainer'
@@ -49,7 +50,7 @@ const GovernancePage = () => {
 
 					<ul>
 						{TREASURY_SIGNERS.map(signer => (
-							<li>
+							<li key={`signer-${signer.name}`}>
 								<ExtLink href={signer.twitter}>{signer.name}</ExtLink>
 							</li>
 						))}
@@ -79,38 +80,29 @@ const GovernancePage = () => {
 
 					<ul>
 						<li>
-							<a
-								href="https://etherscan.io/address/0xaefb75fca15bdf0292c34ef42a4378fbb226f0ee"
-								target="_blank"
-							>
+							<ExtLink href="https://etherscan.io/address/0xaefb75fca15bdf0292c34ef42a4378fbb226f0ee">
 								discord.unofficialmfers.eth
 								<br />
 								0xaefb75fca15bdf0292c34ef42a4378fbb226f0ee
-							</a>
+							</ExtLink>
 							<br />
 							<br />
 						</li>
 						<li>
-							<a
-								href="https://etherscan.io/address/0x059f171fe3e64c0724b012a4511c93e968a06342"
-								target="_blank"
-							>
+							<ExtLink href="https://etherscan.io/address/0x059f171fe3e64c0724b012a4511c93e968a06342">
 								charity.unofficialmfers.eth
 								<br />
 								0x059f171fe3e64c0724b012a4511c93e968a06342
-							</a>
+							</ExtLink>
 							<br />
 							<br />
 						</li>
 						<li>
-							<a
-								href="https://etherscan.io/address/0x104924f017e70166c2deccbf948a39d3f6c6e94f"
-								target="_blank"
-							>
+							<ExtLink href="https://etherscan.io/address/0x104924f017e70166c2deccbf948a39d3f6c6e94f">
 								nftnyc.unofficialmfers.eth
 								<br />
 								0x104924f017e70166c2deccbf948a39d3f6c6e94f
-							</a>
+							</ExtLink>
 						</li>
 					</ul>
 
@@ -128,7 +120,7 @@ const GovernancePage = () => {
 						</strong>
 					</p>
 
-					<ol className='prop-process-list'>
+					<ol className="prop-process-list">
 						<li>
 							<p>
 								An initiative is surfaced and discussed within the mfers
@@ -140,11 +132,9 @@ const GovernancePage = () => {
 								A proposal is drafted by the initiative organizers with details
 								about their plan of execution and requirements they need. This
 								proposal is submitted to the signers via the intake form{' '}
-								<a href="https://www.submitmfer.xyz" target="_blank">
-									here
-								</a>{' '}
-								and considered on a basis it is not damaging and the action
-								makes sense for the unofficial mfers to take at the time.
+								<ExtLink href={PROP_SUBMISSION_LINK}>here</ExtLink> and
+								considered on a basis it is not damaging and the action makes
+								sense for the unofficial mfers to take at the time.
 							</p>
 							<p>
 								This selection process is a current veto power held by the
@@ -197,9 +187,7 @@ const GovernancePage = () => {
 						</ExtLink>{' '}
 						is where we vote on important community proposals! It's located at:
 						<br />
-						<a href={SNAPSHOT_LINK} target="_blank">
-							{SNAPSHOT_LINK}
-						</a>
+						<ExtLink href={SNAPSHOT_LINK}>{SNAPSHOT_LINK}</ExtLink>
 					</p>
 				</div>
 			</PageContainer>
