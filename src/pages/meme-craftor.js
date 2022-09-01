@@ -1,15 +1,23 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Layout from '../components/Layout'
 import PageContainer from '../components/PageContainer'
-import { createCanvas } from 'canvas'
-const mycanvas = createCanvas(200, 200)
+import Canvas from "../components/canvas"
+import FileUpload from '../components/file_upload'
 
 const MemeCraftorPage = () => {
+    const [images, setImage] = useState([])
+
+    const handleSetImage = (arrBuffer) => {
+        setImage((prevImages) => [
+            ...prevImages,
+            arrBuffer
+        ])
+    }
     return (
         <Layout pageTitle="meme-craftor | unofficial mfers">
             <PageContainer>
-                {/* {mycanvas} */}
-                <div>something</div>
+                <Canvas images={images}></Canvas>
+                <FileUpload handleSetImage={handleSetImage}></FileUpload>
             </PageContainer>
         </Layout>
     )
