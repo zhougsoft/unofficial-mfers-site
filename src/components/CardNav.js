@@ -15,9 +15,9 @@ const CardNav = ({ heads, handleSetImage }) => {
 	}, [])
 
 	const renderMferHeads = () => {
-		return mferHeads.map(dataURL => {
+		return mferHeads.map((dataURL,idx) => {
 			return (
-				<Col onClick={() => handleSetImage(dataURL)}>
+				<Col key={`${dataURL}${idx}`} onClick={() => handleSetImage(dataURL)}>
 					<Card>
 						<Card.Img src={dataURL} />
 						<Card.Body>

@@ -82,6 +82,7 @@ const GovernancePage = () => {
 							<a
 								href="https://etherscan.io/address/0xaefb75fca15bdf0292c34ef42a4378fbb226f0ee"
 								target="_blank"
+								rel="noreferrer"
 							>
 								discord.unofficialmfers.eth
 								<br />
@@ -94,6 +95,7 @@ const GovernancePage = () => {
 							<a
 								href="https://etherscan.io/address/0x059f171fe3e64c0724b012a4511c93e968a06342"
 								target="_blank"
+								rel="noreferrer"
 							>
 								charity.unofficialmfers.eth
 								<br />
@@ -106,6 +108,7 @@ const GovernancePage = () => {
 							<a
 								href="https://etherscan.io/address/0x104924f017e70166c2deccbf948a39d3f6c6e94f"
 								target="_blank"
+								rel="noreferrer"
 							>
 								nftnyc.unofficialmfers.eth
 								<br />
@@ -140,7 +143,8 @@ const GovernancePage = () => {
 								A proposal is drafted by the initiative organizers with details
 								about their plan of execution and requirements they need. This
 								proposal is submitted to the signers via the intake form{' '}
-								<a href="https://www.submitmfer.xyz" target="_blank">
+								<a href="https://www.submitmfer.xyz" target="_blank"
+								rel="noreferrer">
 									here
 								</a>{' '}
 								and considered on a basis it is not damaging and the action
@@ -197,7 +201,8 @@ const GovernancePage = () => {
 						</ExtLink>{' '}
 						is where we vote on important community proposals! It's located at:
 						<br />
-						<a href={SNAPSHOT_LINK} target="_blank">
+						<a href={SNAPSHOT_LINK} target="_blank"
+						rel="noreferrer">
 							{SNAPSHOT_LINK}
 						</a>
 					</p>
