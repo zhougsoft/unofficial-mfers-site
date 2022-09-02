@@ -1,32 +1,40 @@
 import React, { useState, useEffect } from 'react'
 import { Row, Container, Card, Nav, Col } from 'react-bootstrap'
-import { fetchMferHead } from '../utils/utils'
+import { createImgObject, fetchMferHead } from '../utils/utils'
 
-const CardNav = ({ heads, handleSetImage }) => {
+const CardNav = ({ heads, handleSetImage, images }) => {
 	const [mferHeads, setMferHeads] = useState([])
 
 	useEffect(() => {
 		const fetchHeads = async () => {
-			const dataURL = await fetchMferHead()
-			setMferHeads([dataURL, dataURL, dataURL, dataURL])
+            const dataURL = await fetchMferHead()
+            const dataUrls = [dataURL, dataURL];
+            const imgObjs = [];
+            for(let i = 0; i < dataUrls.length; i++) {
+                const dataURL = dataUrls[i]
+                console.log(imgObjs)
+                const imgObj = await createImgObject(images,dataURL);
+                imgObjs.push(imgObj);
+            }
+			setMferHeads(imgObjs)
 		}
 
 		fetchHeads()
 	}, [])
 
 	const renderMferHeads = () => {
-		return mferHeads.map((dataURL,idx) => {
-			return (
-				<Col key={`${dataURL}${idx}`} onClick={() => handleSetImage(dataURL)}>
-					<Card>
-						<Card.Img src={dataURL} />
-						<Card.Body>
-							<Card.Text>This mfer is the is cool as shit</Card.Text>
-						</Card.Body>
-					</Card>
-				</Col>
-			)
-		})
+        return mferHeads.map((imgObj, idx) => {
+            return (
+                <Col key={`${imgObj.dataURL}${idx}`} onClick={() => handleSetImage(imgObj.dataURL)}>
+                    <Card>
+                        <Card.Img src={imgObj.dataURL} />
+                        <Card.Body>
+                            <Card.Text>This mfer is the is cool as shit</Card.Text>
+                        </Card.Body>
+                    </Card>
+                </Col>
+            )
+})
 	}
 
 	return (
