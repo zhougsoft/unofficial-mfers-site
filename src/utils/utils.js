@@ -9,3 +9,9 @@ export const fetchMferHead = async id => {
 	const buffer = Buffer.from(arrayBuffer)
 	return `data:png;base64,${buffer.toString('base64')}`
 }
+
+export const convertToBufferBase64 = async buffer => {
+    const bufferBase64 = buffer.split('data:png;base64,')[1]
+
+    return bufferBase64;
+}

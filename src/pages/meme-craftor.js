@@ -9,10 +9,10 @@ import CardNav from '../components/CardNav'
 const MemeCraftorPage = () => {
     const [images, setImage] = useState([])
 
-    const handleSetImage = (arrBuffer) => {
+    const handleSetImage = (dataURL) => {
         setImage((prevImages) => [
             ...prevImages,
-            arrBuffer
+            dataURL
         ])
     }
 
@@ -26,7 +26,7 @@ const MemeCraftorPage = () => {
 								<FileUpload handleSetImage={handleSetImage}></FileUpload>
 							</Col>
                             <Col>
-                                <CardNav></CardNav>
+                                <CardNav heads={[]} handleSetImage={handleSetImage}></CardNav>
                             </Col>
 						</Row>
 					</Container>

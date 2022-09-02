@@ -4,10 +4,9 @@ const Canvas = ({images}) => {
 	const canvasRef = useRef(null)
 
 	const draw = async (ctx, canvas) => {
-		if (images.length !== 0) {
+		for(let i = 0; i < images.length; i++) {
 			const img = new Image()
 			img.src = images[images.length -1]
-			debugger
 
 			await new Promise(resolve => {
 				img.onload = () => {
