@@ -6,13 +6,23 @@ const Canvas = ({images}) => {
 	const draw = async (ctx, canvas) => {
 		for(let i = 0; i < images.length; i++) {
 			const img = new Image()
-			img.src = images[images.length -1]
-
+			img.src = images[i]
 			await new Promise(resolve => {
 				img.onload = () => {
-					canvas.width = parseInt(img.width)
-					canvas.height = parseInt(img.height)
-					ctx.drawImage(img, 0, 0)
+					const imgWidth = img.width;
+					const imgHeight = img.height;
+					const ratio = imgWidth/imgHeight;
+					if (i === 0) {
+						canvas.width = parseInt(img.width)
+						canvas.height = parseInt(img.height)
+						ctx.drawImage(img, 0, 0)
+					} else {
+						const newImageHeight = Math.floor(canvas.height * .20)
+						const newImageWidth = Math.floor(newImageHeight * ratio);
+						ctx.drawImage(img, 0, 0, newImageWidth, newImageHeight )
+					}
+
+					resolve()
 				}
 			})
 		}

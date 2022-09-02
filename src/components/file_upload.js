@@ -7,7 +7,6 @@ const FileUpload = ({handleSetImage}) => {
     
     const onSubmit = async data => {
         let resultDataUrl = await new Promise(resolve => {
-            debugger
             let fileReader = new FileReader()
             fileReader.onload = e => resolve(fileReader.result)
             fileReader.readAsDataURL(data.picture['0'])

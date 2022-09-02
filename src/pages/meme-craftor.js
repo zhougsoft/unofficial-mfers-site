@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import Layout from '../components/Layout'
 import PageContainer from '../components/PageContainer'
-import Canvas from "../components/canvas"
+import Canvas from "../components/Canvas"
 import FileUpload from '../components/file_upload'
 import CardNav from '../components/CardNav'
 
