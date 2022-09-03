@@ -18,27 +18,13 @@ export const convertToBufferBase64 = async buffer => {
 
 export const createImgObject = async (images, imgSource) => {
     const imgObj = { dx: 0, dy: 0, width: 0, height: 0, img: '' }
-    imgObj.dataUrl = imgSource;
+    imgObj.dataURL = imgSource;
     const img = new Image();
     img.src = imgSource;
     await new Promise(resolve => {
-        img.onLoad = () => {
-            const imgWidth = img.width
-            const imgHeight = img.height
-            const ratio = imgWidth / imgHeight
-            if (images.length === 0) {
-                imgObj.width = img.width
-                imgObj.height = img.height
-            } else {
-                const baseImageHeight = images[0].height
-
-                const newImageHeight = Math.floor(baseImageHeight * 0.2)
-                const newImageWidth = Math.floor(newImageHeight * ratio)
-                
-                imgObj.width = newImageWidth
-                imgObj.height = newImageHeight
-            }
-            
+        img.onload = () => {
+            imgObj.width = img.width
+            imgObj.height = img.height
             resolve()
         }
     })

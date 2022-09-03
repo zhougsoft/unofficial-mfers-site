@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Row, Container, Card, Nav, Col } from 'react-bootstrap'
 import { createImgObject, fetchMferHead } from '../utils/utils'
 
-const CardNav = ({ heads, handleSetImage, images }) => {
+const CardNav = ({ handleSetImage, images }) => {
 	const [mferHeads, setMferHeads] = useState([])
 
 	useEffect(() => {
@@ -12,7 +12,6 @@ const CardNav = ({ heads, handleSetImage, images }) => {
             const imgObjs = [];
             for(let i = 0; i < dataUrls.length; i++) {
                 const dataURL = dataUrls[i]
-                console.log(imgObjs)
                 const imgObj = await createImgObject(images,dataURL);
                 imgObjs.push(imgObj);
             }
@@ -24,8 +23,9 @@ const CardNav = ({ heads, handleSetImage, images }) => {
 
 	const renderMferHeads = () => {
         return mferHeads.map((imgObj, idx) => {
+            console.log(imgObj)
             return (
-                <Col key={`${imgObj.dataURL}${idx}`} onClick={() => handleSetImage(imgObj.dataURL)}>
+                <Col key={`${imgObj.dataURL}${idx}`} onClick={() => handleSetImage(imgObj)}>
                     <Card>
                         <Card.Img src={imgObj.dataURL} />
                         <Card.Body>
