@@ -4,10 +4,15 @@ Buffer.from('anything', 'base64')
 window.Buffer = window.Buffer || require('buffer').Buffer
 
 export const fetchMferHead = async id => {
-	const response = await fetch(`https://heads.mfers.dev/1.png`)
-	const arrayBuffer = await response.arrayBuffer()
-	const buffer = Buffer.from(arrayBuffer)
-	return `data:png;base64,${buffer.toString('base64')}`
+    try {
+        const response = await fetch(`https://heads.mfers.dev/1.png`)
+        const arrayBuffer = await response.arrayBuffer()
+        const buffer = Buffer.from(arrayBuffer)
+        return `data:png;base64,${buffer.toString('base64')}`
+    } catch (e) {
+        console.log(e);
+        return``
+    }
 }
 
 export const convertToBufferBase64 = async buffer => {
@@ -17,7 +22,7 @@ export const convertToBufferBase64 = async buffer => {
 }
 
 export const createImgObject = async (images, imgSource) => {
-    const imgObj = { dx: 0, dy: 0, width: 0, height: 0, img: '' }
+    const imgObj = { x: 0, y: 0, width: 0, height: 0, img: '' }
     imgObj.dataURL = imgSource;
     const img = new Image();
     img.src = imgSource;
