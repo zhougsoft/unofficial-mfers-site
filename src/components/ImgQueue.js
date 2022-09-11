@@ -1,17 +1,19 @@
 import React from 'react'
 import { Row, Container, Card, Nav, Col } from 'react-bootstrap'
 
-const ImgQueue = ({ images, flipImage }) => {
-
+const ImgQueue = ({ images, flipImage, handleDeleteImg }) => {
 	const renderImgs = () => {
 		return images.map((imgObj, idx) => {
 			return (
 				<Col key={`${imgObj.dataURL}${idx}`}>
 					<Card>
-						<Card.Img src={imgObj.dataURL}/>
+						<Card.Img src={imgObj.dataURL} />
 						<Card.Body>
 							<Card.Text>{idx}</Card.Text>
-							<Card.Text onClick={(e) => flipImage(imgObj)}>flip image</Card.Text>
+							<Card.Text onClick={e => flipImage(imgObj)}>flip image</Card.Text>
+							<Card.Text onClick={e => handleDeleteImg(imgObj)}>
+								delete image
+							</Card.Text>
 						</Card.Body>
 					</Card>
 				</Col>

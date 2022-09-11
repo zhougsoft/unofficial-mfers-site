@@ -16,9 +16,12 @@ const MemeCraftorPage = () => {
 	}
 
 	const flipImage = imgObj => {
-		debugger
 		imgObj.mirrored = !imgObj.mirrored
 		setFlipImage(!flip)
+	}
+
+	const handleDeleteImg = idx => {
+		setImage(images.splice(idx,1))
 	}
 
 	return (
@@ -33,19 +36,18 @@ const MemeCraftorPage = () => {
 								handleSetImage={handleSetImage}
 							></FileUpload>
 						</Col>
-					</Row>
-					<Row>
-						<Col>
-							<ImgQueue images={images} flipImage={flipImage}></ImgQueue>
-						</Col>
-					</Row>
-					<Row>
 						<Col>
 							<CardNav
 								images={images}
 								heads={[]}
 								handleSetImage={handleSetImage}
+								handleDeleteImg={handleDeleteImg}
 							></CardNav>
+						</Col>
+					</Row>
+					<Row>
+						<Col>
+							<ImgQueue images={images} flipImage={flipImage}></ImgQueue>
 						</Col>
 					</Row>
 				</Container>

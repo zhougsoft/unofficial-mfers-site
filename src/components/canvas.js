@@ -29,10 +29,11 @@ const Canvas = ({ images }) => {
 		const screenWidth = window.screen.width
 		const screenRatio = screenWidth / screenHeight
 
-		const canvasHeight = Math.floor(screenHeight * 0.55)
+		const canvasHeight = Math.floor(screenHeight * 0.40)
 		const canvasWidth = Math.floor(canvasHeight * screenRatio)
 		ctx.clearRect(0, 0, canvasWidth, canvasHeight)
-
+		canvas.width = parseInt(canvasHeight * screenRatio)
+		canvas.height = parseInt(canvasHeight)
 		for (let i = 0; i < images.length; i++) {
 			const img = images[i]
 			const imgWidth = img.origWidth
