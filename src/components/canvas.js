@@ -21,7 +21,19 @@ const Canvas = ({ images }) => {
 		draw()
 	}, [])
 
-	const draw = async () => {
+	const drawImage = (ctx,canvas,width,height,img) => {
+		if (img.mirrored) {
+			ctx.save()
+			ctx.translate(canvas.width, 0)
+			ctx.scale(-1, 1)
+			ctx.drawImage(img.img, img.x, img.y, width, height)
+			ctx.restore()
+		} else {
+			ctx.drawImage(img.img, img.x, img.y, width, height)
+		}
+	}
+
+	const draw = () => {
 		const canvas = canvasRef.current
 		const ctx = canvas.getContext('2d')
 
@@ -42,27 +54,9 @@ const Canvas = ({ images }) => {
 			if (i === 0) {
 				canvas.width = parseInt(canvasHeight * ratio)
 				canvas.height = parseInt(canvasHeight)
-				if (img.mirrored) {
-					ctx.save()
-					ctx.translate(canvas.width, 0)
-					ctx.scale(-1, 1)
-					ctx.drawImage(
-						img.img,
-						img.x,
-						img.y,
-						canvasHeight * ratio,
-						canvasHeight
-					)
-					ctx.restore()
-				} else {
-					ctx.drawImage(
-						img.img,
-						img.x,
-						img.y,
-						canvasHeight * ratio,
-						canvasHeight
-					)
-				}
+
+				drawImage(ctx, canvas, canvasHeight * ratio, canvasHeight,img)
+
 			} else {
 				if (img.width === 0) {
 					const baseImageHeight = images[0].origHeight
@@ -73,21 +67,7 @@ const Canvas = ({ images }) => {
 					img.width = newImageWidth
 					img.height = newImageHeight
 				}
-				if (img.mirrored) {
-					ctx.save()
-					ctx.translate(canvas.width, 0)
-					ctx.scale(-1, 1)
-					ctx.drawImage(
-						img.img,
-						canvas.width - img.x - img.width,
-						img.y,
-						img.width,
-						img.height
-					)
-					ctx.restore()
-				} else {
-					ctx.drawImage(img.img, img.x, img.y, img.width, img.height)
-				}
+				drawImage(ctx, canvas, img.width, img.height,img)
 			}
 
 			if (i !== 0) {
