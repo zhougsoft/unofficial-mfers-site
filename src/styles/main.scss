@@ -52,7 +52,8 @@ a {
 
 // --- SHARED ---
 .container {
-	max-width: 100%;
+	width: 100%;
+	max-width: $max-content-width;
 	padding-right: 2rem;
 	padding-left: 2rem;
 	margin-right: auto;
@@ -272,18 +273,9 @@ $animationSpeed: 15s;
 
 	a {
 		font-family: $font-script;
-		font-size: 1.25em;
+		font-size: 1.5em;
 		font-weight: bold;
 	}
-
-	small {
-		font-family: $font-script;
-		font-size: 1.1em;
-	}
-
-	// a {
-	// 	font-size: inherit;
-	// }
 
 	ul,
 	ol {
@@ -292,22 +284,25 @@ $animationSpeed: 15s;
 }
 
 .gov-heading {
-	font-size: 5em;
+	font-size: 7em;
 	letter-spacing: -0.03em;
 	font-weight: bold;
 	margin-bottom: 2rem;
 }
 
 .gov-subheading {
-	font-size: 3.5em;
+	font-size: 5em;
 	letter-spacing: -0.03em;
 	font-weight: bold;
 	margin: 4rem 0 1.5rem 0;
 }
 
 .prop-process-list {
-	& li {
-		margin-top: 3rem;
+	& li::marker,
+	h3 {
+		font-size: 3em;
+		font-weight: bold;
+		letter-spacing: -0.03em;
 	}
 }
 
