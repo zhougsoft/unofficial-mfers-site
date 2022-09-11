@@ -24,7 +24,7 @@ const Canvas = ({ images }) => {
 	const draw = async () => {
 		const canvas = canvasRef.current
 		const ctx = canvas.getContext('2d')
-		// clear the canvas
+
 		const screenHeight = window.screen.height
 		const screenWidth = window.screen.width
 		const screenRatio = screenWidth / screenHeight
@@ -43,7 +43,6 @@ const Canvas = ({ images }) => {
 				canvas.width = parseInt(canvasHeight * ratio)
 				canvas.height = parseInt(canvasHeight)
 				if (img.mirrored) {
-					console.log('banan')
 					ctx.save()
 					ctx.translate(canvas.width, 0)
 					ctx.scale(-1, 1)
@@ -66,7 +65,7 @@ const Canvas = ({ images }) => {
 				}
 			} else {
 				if (img.width === 0) {
-					const baseImageHeight = images[0].height
+					const baseImageHeight = images[0].origHeight
 
 					const newImageHeight = Math.floor(baseImageHeight * 0.2)
 					const newImageWidth = Math.floor(newImageHeight * ratio)
