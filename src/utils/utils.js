@@ -21,15 +21,20 @@ export const convertToBufferBase64 = async buffer => {
     return bufferBase64;
 }
 
-export const createImgObject = async (images, imgSource) => {
+export const createImgObject = async (images, imgSource, scaleDown) => {
     const imgObj = { x: 0, y: 0, width: 0, height: 0, img: '' }
     imgObj.dataURL = imgSource;
     const img = new Image();
     img.src = imgSource;
     await new Promise(resolve => {
         img.onload = () => {
-            imgObj.width = img.width
-            imgObj.height = img.height
+            if(!scaleDown) {
+                imgObj.width = img.width
+                imgObj.height = img.height
+            }
+
+            imgObj.origWidth = img.width;
+            imgObj.origHeight = img.height;
             resolve()
         }
     })

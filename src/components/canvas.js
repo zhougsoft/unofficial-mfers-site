@@ -30,17 +30,18 @@ const Canvas = ({ images }) => {
 
 		for (let i = 0; i < images.length; i++) {
 			const img = images[i]
-			const imgWidth = img.width
-			const imgHeight = img.height
+			const imgWidth = img.origWidth
+			const imgHeight = img.origHeight
 			const ratio = imgWidth / imgHeight
 
 			if (i === 0) {
 				canvas.width = parseInt(img.width)
 				canvas.height = parseInt(img.height)
+				ctx.drawImage(img.img, img.x, img.y, img.origWidth, img.origHeight)
 			} else {
 
-				if(img.width === 0 || img.height === 0) {
-
+				if(img.width === 0) {
+					debugger
 					const baseImageHeight = images[0].height
 	
 					const newImageHeight = Math.floor(baseImageHeight * 0.2)
@@ -49,9 +50,9 @@ const Canvas = ({ images }) => {
 					img.width = newImageWidth
 					img.height = newImageHeight
 				}
+				ctx.drawImage(img.img, img.x, img.y, img.width, img.height)
 			}
 			
-			ctx.drawImage(img.img, img.x, img.y, img.width, img.height)
 			if (i !== 0) {
 				drawDragAnchor(img.x,img.y,ctx);
 				drawDragAnchor(img.x + img.width,img.y,ctx);
@@ -112,9 +113,8 @@ const Canvas = ({ images }) => {
 
 	const handleMouseDown = e => {
 		e.preventDefault()
-
 		setStartX(parseInt(e.clientX - offsetX))
-		setStartY(parseInt(e.clientY - offsetY))
+		setStartY(parseInt(e.pageY - offsetY))
 		// Put your mousedown stuff here
 		for (let i = 1; i < images.length; i++) {
 			const corner = anchorHitTest(startX, startY, i)
@@ -131,7 +131,7 @@ const Canvas = ({ images }) => {
 
 	const handleMouseMove = (e) => {
 		let mouseX = parseInt(e.clientX - offsetX)
-		let mouseY = parseInt(e.clientY - offsetY)
+		let mouseY = parseInt(e.pageY - offsetY)
 
 		console.log(`mouse x ${mouseX}`)
 		console.log(`mouse y ${mouseY}`)
@@ -174,7 +174,7 @@ const Canvas = ({ images }) => {
 				case 3:
 					//bottom-left
 					img.x = mouseX;
-					img.width = img.x - mouseX;
+					img.width = imageRight - mouseX;
 					img.height = mouseY - img.y;
 					break;
 			}
@@ -185,7 +185,6 @@ const Canvas = ({ images }) => {
 			// redraw the image with resizing anchors
 			draw();
 		} else {
-			console.log("banana")
 			img.x += dx
 			img.y += dy
 			draw()

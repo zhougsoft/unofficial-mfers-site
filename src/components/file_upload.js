@@ -12,7 +12,11 @@ const FileUpload = ({handleSetImage, images}) => {
         let resultDataUrl = await new Promise(resolve => {
             let fileReader = new FileReader()
             fileReader.onload = async e => {
-                imgObj = await createImgObject(images,fileReader.result);
+                if(images.length === 0) {
+                    imgObj = await createImgObject(images,fileReader.result, false);
+                } else {
+                    imgObj = await createImgObject(images, fileReader.result, true)
+                }
                 resolve(fileReader.result)
             }
             fileReader.readAsDataURL(data.picture['0'])

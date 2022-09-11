@@ -12,7 +12,7 @@ const CardNav = ({ handleSetImage, images }) => {
             const imgObjs = [];
             for(let i = 0; i < dataUrls.length; i++) {
                 const dataURL = dataUrls[i]
-                const imgObj = await createImgObject(images,dataURL);
+                const imgObj = await createImgObject(images,dataURL, true);
                 imgObjs.push(imgObj);
             }
 			setMferHeads(imgObjs)
