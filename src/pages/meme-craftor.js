@@ -5,12 +5,20 @@ import PageContainer from '../components/PageContainer'
 import Canvas from '../components/Canvas'
 import FileUpload from '../components/file_upload'
 import CardNav from '../components/CardNav'
+import ImgQueue from '../components/ImgQueue'
 
 const MemeCraftorPage = () => {
 	const [images, setImage] = useState([])
+	const [flip, setFlipImage] = useState(true)
 
 	const handleSetImage = imgObj => {
 		setImage(prevImageObjs => [...prevImageObjs, imgObj])
+	}
+
+	const flipImage = imgObj => {
+		debugger
+		imgObj.mirrored = !imgObj.mirrored
+		setFlipImage(!flip)
 	}
 
 	return (
@@ -18,13 +26,20 @@ const MemeCraftorPage = () => {
 			<PageContainer>
 				<Container>
 					<Row>
-						<Col>
+						<Col className="">
 							<Canvas images={images}></Canvas>
 							<FileUpload
 								images={images}
 								handleSetImage={handleSetImage}
 							></FileUpload>
 						</Col>
+					</Row>
+					<Row>
+						<Col>
+							<ImgQueue images={images} flipImage={flipImage}></ImgQueue>
+						</Col>
+					</Row>
+					<Row>
 						<Col>
 							<CardNav
 								images={images}

@@ -22,7 +22,7 @@ export const convertToBufferBase64 = async buffer => {
 }
 
 export const createImgObject = async (images, imgSource, scaleDown) => {
-    const imgObj = { x: 0, y: 0, width: 0, height: 0, img: '' }
+    const imgObj = { x: 0, y: 0, width: 0, height: 0, img: '', mirrored:false }
     imgObj.dataURL = imgSource;
     const img = new Image();
     img.src = imgSource;
