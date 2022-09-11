@@ -77,7 +77,13 @@ const Canvas = ({ images }) => {
 					ctx.save()
 					ctx.translate(canvas.width, 0)
 					ctx.scale(-1, 1)
-					ctx.drawImage(img.img, img.x, img.y, img.width, img.height)
+					ctx.drawImage(
+						img.img,
+						canvas.width - img.x - img.width,
+						img.y,
+						img.width,
+						img.height
+					)
 					ctx.restore()
 				} else {
 					ctx.drawImage(img.img, img.x, img.y, img.width, img.height)

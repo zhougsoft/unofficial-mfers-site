@@ -8,7 +8,7 @@ const ImgQueue = ({ images, flipImage }) => {
 			return (
 				<Col key={`${imgObj.dataURL}${idx}`}>
 					<Card>
-						<Card.Img src={imgObj.dataURL} />
+						<Card.Img src={imgObj.dataURL}/>
 						<Card.Body>
 							<Card.Text>{idx}</Card.Text>
 							<Card.Text onClick={(e) => flipImage(imgObj)}>flip image</Card.Text>
