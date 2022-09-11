@@ -10,6 +10,7 @@ import Layout from '../components/Layout'
 import PageContainer from '../components/PageContainer'
 import ExtLink from '../components/ExtLink'
 
+
 const GovernancePage = () => {
 	return (
 		<Layout pageTitle="governance | unofficial mfers">
