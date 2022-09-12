@@ -41,21 +41,21 @@ const Canvas = ({ images }) => {
 		const screenWidth = window.screen.width
 		const screenRatio = screenWidth / screenHeight
 
-		const canvasHeight = Math.floor(screenHeight * 0.40)
-		const canvasWidth = Math.floor(canvasHeight * screenRatio)
+		const canvasWidth = Math.floor(screenWidth * .40)
+		const canvasHeight = Math.floor(canvasWidth*.7)
 		ctx.clearRect(0, 0, canvasWidth, canvasHeight)
-		canvas.width = parseInt(canvasHeight * screenRatio)
-		canvas.height = parseInt(canvasHeight)
+		canvas.width = canvasWidth
+		canvas.height = canvasHeight
 		for (let i = 0; i < images.length; i++) {
 			const img = images[i]
 			const imgWidth = img.origWidth
 			const imgHeight = img.origHeight
-			const ratio = imgWidth / imgHeight
+			const ratio = imgHeight/imgWidth
 			if (i === 0) {
-				canvas.width = parseInt(canvasHeight * ratio)
-				canvas.height = parseInt(canvasHeight)
+				canvas.width = parseInt(canvasWidth)
+				canvas.height = parseInt(canvasWidth*ratio)
 
-				drawImage(ctx, canvas, canvasHeight * ratio, canvasHeight,img)
+				drawImage(ctx, canvas, canvas.width, canvas.height,img)
 
 			} else {
 				if (img.width === 0) {
@@ -148,13 +148,10 @@ const Canvas = ({ images }) => {
 	const handleMouseMove = e => {
 		let mouseX = parseInt(e.clientX - offsetX)
 		let mouseY = parseInt(e.pageY - offsetY)
-
-		console.log(`mouse x ${mouseX}`)
-		console.log(`mouse y ${mouseY}`)
 		let img = images[selectedImg]
 		setStartX(mouseX)
 		setStartY(mouseY)
-
+		
 		if (selectedImg < 1) {
 			return
 		}
