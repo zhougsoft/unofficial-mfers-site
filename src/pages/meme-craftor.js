@@ -21,7 +21,9 @@ const MemeCraftorPage = () => {
 	}
 
 	const handleDeleteImg = idx => {
-		setImage(images.splice(idx,1))
+		images.splice(idx, 1)
+
+		setImage(images.map((img,i) => img))
 	}
 
 	return (
@@ -41,13 +43,16 @@ const MemeCraftorPage = () => {
 								images={images}
 								heads={[]}
 								handleSetImage={handleSetImage}
-								handleDeleteImg={handleDeleteImg}
 							></CardNav>
 						</Col>
 					</Row>
 					<Row>
 						<Col>
-							<ImgQueue images={images} flipImage={flipImage}></ImgQueue>
+							<ImgQueue
+								images={images}
+								flipImage={flipImage}
+								handleDeleteImg={handleDeleteImg}
+							></ImgQueue>
 						</Col>
 					</Row>
 				</Container>

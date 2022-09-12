@@ -21,12 +21,22 @@ const Canvas = ({ images }) => {
 		draw()
 	}, [])
 
-	const drawImage = (ctx,canvas,width,height,img) => {
+	const drawImage = (ctx,canvas,width,height,img,idx) => {
 		if (img.mirrored) {
 			ctx.save()
 			ctx.translate(canvas.width, 0)
 			ctx.scale(-1, 1)
-			ctx.drawImage(img.img, img.x, img.y, width, height)
+			if(idx === 0) {
+				ctx.drawImage(
+					img.img,
+					img.x,
+					img.y,
+					width,
+					height
+				)
+			}else {
+				ctx.drawImage(img.img, canvas.width-img.x-img.width, img.y, width, height)
+			}
 			ctx.restore()
 		} else {
 			ctx.drawImage(img.img, img.x, img.y, width, height)
@@ -35,6 +45,7 @@ const Canvas = ({ images }) => {
 
 	const draw = () => {
 		const canvas = canvasRef.current
+		if (!canvas) return;
 		const ctx = canvas.getContext('2d')
 
 		const screenHeight = window.screen.height
@@ -46,6 +57,7 @@ const Canvas = ({ images }) => {
 		ctx.clearRect(0, 0, canvasWidth, canvasHeight)
 		canvas.width = canvasWidth
 		canvas.height = canvasHeight
+		console.log(images)
 		for (let i = 0; i < images.length; i++) {
 			const img = images[i]
 			const imgWidth = img.origWidth
@@ -54,8 +66,9 @@ const Canvas = ({ images }) => {
 			if (i === 0) {
 				canvas.width = parseInt(canvasWidth)
 				canvas.height = parseInt(canvasWidth*ratio)
-
-				drawImage(ctx, canvas, canvas.width, canvas.height,img)
+				img.x = 0;
+				img.y = 0;
+				drawImage(ctx, canvas, canvas.width, canvas.height,img,i)
 
 			} else {
 				if (img.width === 0) {
@@ -219,9 +232,7 @@ const Canvas = ({ images }) => {
 		setSelectedImg(-1)
 	}
 
-	if (images.length !== 0) {
-		draw()
-	}
+	draw()
 	return (
 		<canvas
 			onMouseDown={handleMouseDown}

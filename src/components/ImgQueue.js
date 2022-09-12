@@ -11,7 +11,7 @@ const ImgQueue = ({ images, flipImage, handleDeleteImg }) => {
 						<Card.Body>
 							<Card.Text>{idx}</Card.Text>
 							<Card.Text onClick={e => flipImage(imgObj)}>flip image</Card.Text>
-							<Card.Text onClick={e => handleDeleteImg(imgObj)}>
+							<Card.Text onClick={e => handleDeleteImg(idx)}>
 								delete image
 							</Card.Text>
 						</Card.Body>
