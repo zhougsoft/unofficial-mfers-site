@@ -11,7 +11,7 @@ const Canvas = ({ images }) => {
 	const [startX, setStartX] = useState(0)
 	const [startY, setStartY] = useState(0)
 	const [draggingResizer, setDraggingResizer] = useState(-1)
-
+	//
 	useEffect(() => {
 		const canvas = canvasRef.current
 		const offsetX = canvas.offsetLeft
