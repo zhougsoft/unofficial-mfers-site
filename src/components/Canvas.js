@@ -47,10 +47,9 @@ const Canvas = ({ images }) => {
 		const canvas = canvasRef.current
 		if (!canvas) return
 		const ctx = canvas.getContext('2d')
-
-		const screenHeight = window.screen.height
-		const screenWidth = window.screen.width
-		const screenRatio = screenWidth / screenHeight
+		debugger
+		const screenHeight = window.innerHeight
+		const screenWidth = window.innerWidth
 
 		const canvasWidth = Math.floor(screenWidth * 0.4)
 		const canvasHeight = Math.floor(canvasWidth * 0.7)

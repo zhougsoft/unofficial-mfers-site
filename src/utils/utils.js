@@ -5,10 +5,19 @@ window.Buffer = window.Buffer || require('buffer').Buffer
 
 export const fetchMferHead = async id => {
     try {
-        const response = await fetch(`https://heads.mfers.dev/1.png`)
-        const arrayBuffer = await response.arrayBuffer()
-        const buffer = Buffer.from(arrayBuffer)
-        return `data:png;base64,${buffer.toString('base64')}`
+        const dataURLS = []
+        for (let i = 1; i < 10; i++) {
+            const response = await fetch(`https://heads.mfers.dev/${i}.png`)
+            const arrayBuffer = await response.arrayBuffer()
+            const buffer = Buffer.from(arrayBuffer)
+            dataURLS.push(`data:png;base64,${buffer.toString('base64')}`)
+            await new Promise((resolve) => {
+                setTimeout(() => {resolve()}, 1000)
+            })
+        }
+
+        debugger
+        return dataURLS
     } catch (e) {
         console.log(e);
         return``

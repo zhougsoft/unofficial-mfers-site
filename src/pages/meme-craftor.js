@@ -8,8 +8,8 @@ import CardNav from '../components/CardNav'
 import ImgQueue from '../components/ImgQueue'
 
 const MemeCraftorPage = () => {
-	const [images, setImage] = useState([])
-	const [flip, setFlipImage] = useState(true)
+	const [images, setImage] = useState([]);
+	const [flip, setFlipImage] = useState(true);
 
 	const handleSetImage = imgObj => {
 		setImage(prevImageObjs => [...prevImageObjs, imgObj])
@@ -41,18 +41,10 @@ const MemeCraftorPage = () => {
 						<Col>
 							<CardNav
 								images={images}
-								heads={[]}
 								handleSetImage={handleSetImage}
-							></CardNav>
-						</Col>
-					</Row>
-					<Row>
-						<Col>
-							<ImgQueue
-								images={images}
-								flipImage={flipImage}
 								handleDeleteImg={handleDeleteImg}
-							></ImgQueue>
+								flipImage={flipImage}
+							></CardNav>
 						</Col>
 					</Row>
 				</Container>

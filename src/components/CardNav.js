@@ -1,41 +1,27 @@
-import React, { useState, useEffect } from 'react'
-import { Row, Container, Card, Nav, Col } from 'react-bootstrap'
-import { createImgObject, fetchMferHead } from '../utils/utils'
+import React, { useState } from 'react'
+import { Container, Card, Nav } from 'react-bootstrap'
+import ImgQueue from './ImgQueue'
+import MferHeads from './MferHeads'
 
-const CardNav = ({ handleSetImage, images }) => {
+const CardNav = ({ handleDeleteImg, handleSetImage, images, flipImage }) => {
 	const [mferHeads, setMferHeads] = useState([])
+	const [currentTab, setCurrentTab] = useState(0)
 
-	useEffect(() => {
-		const fetchHeads = async () => {
-            const dataURL = await fetchMferHead()
-            const dataUrls = [dataURL, dataURL];
-			setMferHeads(dataUrls)
-		}
-
-		fetchHeads()
-	}, [])
-
-	const makeImgObjectAndHandleSetImage = async (dataURL) => {
-		const imgObj = await createImgObject(images,dataURL, true)
-		handleSetImage(imgObj)
+	const handleTabChange = tabIdx => {
+		setCurrentTab(tabIdx)
 	}
 
-	const renderMferHeads = () => {
-        return mferHeads.map((dataURL, idx) => {
-            return (
-				<Col
-					key={`${dataURL}${idx}`}
-					onClick={() => makeImgObjectAndHandleSetImage(dataURL)}
-				>
-					<Card>
-						<Card.Img src={dataURL} />
-						<Card.Body>
-							<Card.Text>This mfer is the is cool as shit</Card.Text>
-						</Card.Body>
-					</Card>
-				</Col>
-			)
-		})
+	const renderTabContent = tabIdx => {
+		const tabs = [
+			<ImgQueue
+				images={images}
+				handleDeleteImg={handleDeleteImg}
+				flipImage={flipImage}
+			></ImgQueue>,
+			<MferHeads handleSetImage={handleSetImage} images={images}></MferHeads>,
+		]
+
+		return tabs[tabIdx]
 	}
 
 	return (
@@ -43,23 +29,18 @@ const CardNav = ({ handleSetImage, images }) => {
 			<Card>
 				<Card.Header>
 					<Nav variant="tabs" defaultActiveKey="#first">
-						<Nav.Item>
-							<Nav.Link href="#first">Mfer Heads</Nav.Link>
+						<Nav.Item onClick={() => handleTabChange(0)}>
+							<Nav.Link href="#first">Images</Nav.Link>
 						</Nav.Item>
-						<Nav.Item>
-							<Nav.Link href="#link">Add Ons</Nav.Link>
+						<Nav.Item onClick={() => handleTabChange(1)}>
+							<Nav.Link href="#link">Mfer Heads</Nav.Link>
 						</Nav.Item>
 					</Nav>
 				</Card.Header>
-				<Card.Body>
-					<Card.Title>Choose mfer heads</Card.Title>
-					<Row xs={1} md={2} className="g-4">
-						{renderMferHeads()}
-					</Row>
-				</Card.Body>
+				{renderTabContent(currentTab)}
 			</Card>
 		</Container>
 	)
 }
 
-export default CardNav;
+export default CardNav
