@@ -9,31 +9,33 @@ const CardNav = ({ handleSetImage, images }) => {
 		const fetchHeads = async () => {
             const dataURL = await fetchMferHead()
             const dataUrls = [dataURL, dataURL];
-            const imgObjs = [];
-            for(let i = 0; i < dataUrls.length; i++) {
-                const dataURL = dataUrls[i]
-                const imgObj = await createImgObject(images,dataURL, true);
-                imgObjs.push(imgObj);
-            }
-			setMferHeads(imgObjs)
+			setMferHeads(dataUrls)
 		}
 
 		fetchHeads()
 	}, [])
 
+	const makeImgObjectAndHandleSetImage = async (dataURL) => {
+		const imgObj = await createImgObject(images,dataURL, true)
+		handleSetImage(imgObj)
+	}
+
 	const renderMferHeads = () => {
-        return mferHeads.map((imgObj, idx) => {
+        return mferHeads.map((dataURL, idx) => {
             return (
-                <Col key={`${imgObj.dataURL}${idx}`} onClick={() => handleSetImage(imgObj)}>
-                    <Card>
-                        <Card.Img src={imgObj.dataURL} />
-                        <Card.Body>
-                            <Card.Text>This mfer is the is cool as shit</Card.Text>
-                        </Card.Body>
-                    </Card>
-                </Col>
-            )
-})
+				<Col
+					key={`${dataURL}${idx}`}
+					onClick={() => makeImgObjectAndHandleSetImage(dataURL)}
+				>
+					<Card>
+						<Card.Img src={dataURL} />
+						<Card.Body>
+							<Card.Text>This mfer is the is cool as shit</Card.Text>
+						</Card.Body>
+					</Card>
+				</Col>
+			)
+		})
 	}
 
 	return (
