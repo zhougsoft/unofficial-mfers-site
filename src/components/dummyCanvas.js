@@ -21,21 +21,21 @@ const Canvas = ({ images }) => {
 		draw()
 	}, [])
 
-	const drawImage = (ctx,canvas,width,height,img,idx) => {
+	const drawImage = (ctx, canvas, width, height, img, idx) => {
 		if (img.mirrored) {
 			ctx.save()
 			ctx.translate(canvas.width, 0)
 			ctx.scale(-1, 1)
-			if(idx === 0) {
+			if (idx === 0) {
+				ctx.drawImage(img.img, img.x, img.y, width, height)
+			} else {
 				ctx.drawImage(
 					img.img,
-					img.x,
+					canvas.width - img.x - img.width,
 					img.y,
 					width,
 					height
 				)
-			}else {
-				ctx.drawImage(img.img, canvas.width-img.x-img.width, img.y, width, height)
 			}
 			ctx.restore()
 		} else {
@@ -45,15 +45,15 @@ const Canvas = ({ images }) => {
 
 	const draw = () => {
 		const canvas = canvasRef.current
-		if (!canvas) return;
+		if (!canvas) return
 		const ctx = canvas.getContext('2d')
 
 		const screenHeight = window.screen.height
 		const screenWidth = window.screen.width
 		const screenRatio = screenWidth / screenHeight
 
-		const canvasWidth = Math.floor(screenWidth * .40)
-		const canvasHeight = Math.floor(canvasWidth*.7)
+		const canvasWidth = Math.floor(screenWidth * 0.4)
+		const canvasHeight = Math.floor(canvasWidth * 0.7)
 		ctx.clearRect(0, 0, canvasWidth, canvasHeight)
 		canvas.width = canvasWidth
 		canvas.height = canvasHeight
@@ -62,14 +62,13 @@ const Canvas = ({ images }) => {
 			const img = images[i]
 			const imgWidth = img.origWidth
 			const imgHeight = img.origHeight
-			const ratio = imgHeight/imgWidth
+			const ratio = imgHeight / imgWidth
 			if (i === 0) {
 				canvas.width = parseInt(canvasWidth)
-				canvas.height = parseInt(canvasWidth*ratio)
-				img.x = 0;
-				img.y = 0;
-				drawImage(ctx, canvas, canvas.width, canvas.height,img,i)
-
+				canvas.height = parseInt(canvasWidth * ratio)
+				img.x = 0
+				img.y = 0
+				drawImage(ctx, canvas, canvas.width, canvas.height, img, i)
 			} else {
 				if (img.width === 0) {
 					const baseImageHeight = images[0].origHeight
@@ -80,7 +79,7 @@ const Canvas = ({ images }) => {
 					img.width = newImageWidth
 					img.height = newImageHeight
 				}
-				drawImage(ctx, canvas, img.width, img.height,img)
+				drawImage(ctx, canvas, img.width, img.height, img)
 			}
 
 			if (i !== 0) {
@@ -164,7 +163,7 @@ const Canvas = ({ images }) => {
 		let img = images[selectedImg]
 		setStartX(mouseX)
 		setStartY(mouseY)
-		
+
 		if (selectedImg < 1) {
 			return
 		}
