@@ -21,6 +21,7 @@ const FileUpload = ({handleSetImage, images}) => {
             }
             fileReader.readAsDataURL(data.picture['0'])
         })
+        console.log(resultDataUrl)
         handleSetImage(imgObj);
     };
 

@@ -1,4 +1,5 @@
 import { Buffer } from 'buffer'
+import gnSartoshi from '../assets/images/gn.jpeg'
 
 Buffer.from('anything', 'base64')
 window.Buffer = window.Buffer || require('buffer').Buffer
@@ -6,21 +7,26 @@ window.Buffer = window.Buffer || require('buffer').Buffer
 export const fetchMferHead = async id => {
     try {
         const dataURLS = []
-        for (let i = 1; i < 10; i++) {
-            const response = await fetch(`https://heads.mfers.dev/${i}.png`)
+        if (id) {
+            const response = await fetch(`https://heads.mfers.dev/${id}.png`)
             const arrayBuffer = await response.arrayBuffer()
             const buffer = Buffer.from(arrayBuffer)
             dataURLS.push(`data:png;base64,${buffer.toString('base64')}`)
-            await new Promise((resolve) => {
-                setTimeout(() => {resolve()}, 1000)
-            })
+        } else {
+            for (let i = 1; i < 2; i++) {
+                const response = await fetch(`https://heads.mfers.dev/${i}.png`)
+                const arrayBuffer = await response.arrayBuffer()
+                const buffer = Buffer.from(arrayBuffer)
+                dataURLS.push(`data:png;base64,${buffer.toString('base64')}`)
+                await new Promise((resolve) => {
+                    setTimeout(() => {resolve()}, 1000)
+                })
+            }
         }
-
-        debugger
         return dataURLS
     } catch (e) {
         console.log(e);
-        return``
+        return [-1,"there was an error fetching head. please make sure input is a number"]
     }
 }
 
@@ -49,4 +55,9 @@ export const createImgObject = async (images, imgSource, scaleDown) => {
     })
     imgObj.img = img
     return imgObj;
+}
+
+export const endOfSartoshiDataUrl = () => {
+    const img = new Image()
+	img.src = gnSartoshi
 }

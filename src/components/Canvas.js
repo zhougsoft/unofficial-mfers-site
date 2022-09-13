@@ -47,7 +47,6 @@ const Canvas = ({ images }) => {
 		const canvas = canvasRef.current
 		if (!canvas) return
 		const ctx = canvas.getContext('2d')
-		debugger
 		const screenHeight = window.innerHeight
 		const screenWidth = window.innerWidth
 
@@ -81,7 +80,7 @@ const Canvas = ({ images }) => {
 				drawImage(ctx, canvas, img.width, img.height, img)
 			}
 
-			if (i !== 0) {
+			if (i !== 0 && (imageHitTest(startX,startY,i) || anchorHitTest(startX,startY,i) >= 0)) {
 				drawDragAnchor(img.x, img.y, ctx)
 				drawDragAnchor(img.x + img.width, img.y, ctx)
 				drawDragAnchor(img.x, img.y + img.height, ctx)
