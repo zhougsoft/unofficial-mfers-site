@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Row, Container, Card, Nav, Col } from 'react-bootstrap'
 import { createImgObject, fetchMferHead, endOfSartoshiDataUrl } from '../utils/utils'
-import gnSartoshi from '../assets/images/gn.jpeg'
 
 const MferHeads = ({ handleSetImage, images }) => {
 	const [mferHeads, setMferHeads] = useState([])
@@ -65,17 +64,6 @@ const MferHeads = ({ handleSetImage, images }) => {
 				) : (
 					''
 				)}
-				<Col
-					key={`${gnSartoshi}`}
-					onClick={() => makeImgObjectAndHandleSetImage(gnSartoshi)}
-				>
-					<Card>
-						<Card.Img src={gnSartoshi} />
-						<Card.Body>
-							<Card.Text>This mfer is the is cool as shit</Card.Text>
-						</Card.Body>
-					</Card>
-				</Col>
 				{renderMferHeads()}
 			</Row>
 		</Card.Body>
