@@ -1,9 +1,6 @@
 import { Buffer } from 'buffer'
 import gnSartoshi from '../assets/images/gn.jpeg'
 
-Buffer.from('anything', 'base64')
-window.Buffer = window.Buffer || require('buffer').Buffer
-
 export const fetchMferHead = async id => {
     try {
         const dataURLS = []
