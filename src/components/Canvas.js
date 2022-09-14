@@ -11,6 +11,7 @@ const Canvas = ({ images }) => {
 	const [startX, setStartX] = useState(0)
 	const [startY, setStartY] = useState(0)
 	const [draggingResizer, setDraggingResizer] = useState(-1)
+	const [rotating, setRotatingImg] = useState(-1)
 	//
 	useEffect(() => {
 		const canvas = canvasRef.current
@@ -38,6 +39,12 @@ const Canvas = ({ images }) => {
 				)
 			}
 			ctx.restore()
+		} else if (img.rotation) {
+			ctx.save()
+			ctx.translate(img.x + width/2, img.y + height/2)
+			ctx.rotate(img.rotation)
+			ctx.drawImage(img.img, -width/2, -height/2, width, height)
+			ctx.restore()
 		} else {
 			ctx.drawImage(img.img, img.x, img.y, width, height)
 		}
@@ -47,7 +54,6 @@ const Canvas = ({ images }) => {
 		const canvas = canvasRef.current
 		if (!canvas) return
 		const ctx = canvas.getContext('2d')
-		const screenHeight = window.innerHeight
 		const screenWidth = window.innerWidth
 
 		const canvasWidth = Math.floor(screenWidth * 0.4)
@@ -55,7 +61,6 @@ const Canvas = ({ images }) => {
 		ctx.clearRect(0, 0, canvasWidth, canvasHeight)
 		canvas.width = canvasWidth
 		canvas.height = canvasHeight
-		console.log(images)
 		for (let i = 0; i < images.length; i++) {
 			const img = images[i]
 			const imgWidth = img.origWidth
@@ -76,15 +81,22 @@ const Canvas = ({ images }) => {
 
 					img.width = newImageWidth
 					img.height = newImageHeight
+					img.x = img.x + canvas.width/2 - img.width/2
+					img.y = img.y + canvas.height/2 - img.height/2
 				}
 				drawImage(ctx, canvas, img.width, img.height, img)
 			}
 
-			if (i !== 0 && (imageHitTest(startX,startY,i) || anchorHitTest(startX,startY,i) >= 0)) {
+			if (
+				i !== 0 &&
+				(imageHitTest(startX, startY, i) ||
+					anchorHitTest(startX, startY, i) >= 0)
+			) {
 				drawDragAnchor(img.x, img.y, ctx)
 				drawDragAnchor(img.x + img.width, img.y, ctx)
 				drawDragAnchor(img.x, img.y + img.height, ctx)
 				drawDragAnchor(img.x + img.width, img.y + img.height, ctx)
+				drawDragAnchor(img.x + img.width/2, img.y + img.height, ctx)
 			}
 		}
 	}
@@ -116,6 +128,13 @@ const Canvas = ({ images }) => {
 		if (dx * dx + dy * dy <= rr) {
 			return 3
 		}
+
+		dx = x - (img.x + img.width/2)
+		dy = y - (img.y + img.height)
+		if (dx * dx + dy * dy <= rr) {
+			return 4
+		}
+
 		return -1
 	}
 
@@ -146,11 +165,20 @@ const Canvas = ({ images }) => {
 			const corner = anchorHitTest(startX, startY, i)
 			if (corner > -1) {
 				console.log('hit anchor', corner)
+
+				if(corner === 4) {
+					setRotatingImg(corner)
+				} 
 				setDraggingResizer(corner)
 				setSelectedImg(i)
 			} else if (imageHitTest(startX, startY, i)) {
 				console.log('hit image')
 				setSelectedImg(i)
+				if (rotating === i) {
+					setRotatingImg(-1)
+				} else {
+					setRotatingImg(i)
+				}
 			}
 		}
 	}
@@ -161,6 +189,9 @@ const Canvas = ({ images }) => {
 		let img = images[selectedImg]
 		setStartX(mouseX)
 		setStartY(mouseY)
+		if(!img) {
+			return
+		}
 
 		if (selectedImg < 1) {
 			return
@@ -200,6 +231,11 @@ const Canvas = ({ images }) => {
 					img.width = imageRight - mouseX
 					img.height = mouseY - img.y
 					break
+				case 4:
+					console.log("in case 4")
+					img.rotation = Math.atan2(mouseX - img.x, -(mouseY - img.y))
+					draw()
+
 			}
 
 			if (img.width < 25) {
@@ -222,6 +258,7 @@ const Canvas = ({ images }) => {
 		e.preventDefault()
 		setSelectedImg(-1)
 		setDraggingResizer(-1)
+		setRotatingImg(-1)
 	}
 
 	const handleMouseOut = e => {
