@@ -35,10 +35,13 @@ const CardNav = ({ handleDeleteImg, handleSetImage, images, flipImage }) => {
 							<Nav.Link href="#first">Images</Nav.Link>
 						</Nav.Item>
 						<Nav.Item onClick={() => handleTabChange(1)}>
-							<Nav.Link href="#link">Mfer Heads</Nav.Link>
+							<Nav.Link href="#mfer-heads">Mfer Heads</Nav.Link>
 						</Nav.Item>
 						<Nav.Item onClick={() => handleTabChange(2)}>
-							<Nav.Link href="#link">Templates</Nav.Link>
+							<Nav.Link href="#templates">Templates</Nav.Link>
+						</Nav.Item>
+						<Nav.Item onClick={() => handleTabChange(3)}>
+							<Nav.Link href="#skin">Skins</Nav.Link>
 						</Nav.Item>
 					</Nav>
 				</Card.Header>

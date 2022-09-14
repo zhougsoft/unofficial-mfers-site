@@ -34,7 +34,7 @@ export const convertToBufferBase64 = async buffer => {
 }
 
 export const createImgObject = async (images, imgSource, scaleDown) => {
-    const imgObj = { x: 0, y: 0, width: 0, height: 0, img: '', mirrored:false }
+    const imgObj = { x: 0, y: 0, width: 0, rotation:0, height: 0, img: '', mirrored:false }
     imgObj.dataURL = imgSource;
     const img = new Image();
     img.src = imgSource;
@@ -52,9 +52,4 @@ export const createImgObject = async (images, imgSource, scaleDown) => {
     })
     imgObj.img = img
     return imgObj;
-}
-
-export const endOfSartoshiDataUrl = () => {
-    const img = new Image()
-	img.src = gnSartoshi
 }
