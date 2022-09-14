@@ -96,7 +96,7 @@ const Canvas = ({ images }) => {
 				drawDragAnchor(img.x + img.width, img.y, ctx)
 				drawDragAnchor(img.x, img.y + img.height, ctx)
 				drawDragAnchor(img.x + img.width, img.y + img.height, ctx)
-				drawDragAnchor(img.x + img.width/2, img.y + img.height, ctx)
+				// drawDragAnchor(img.x + img.width/2, img.y + img.height, ctx)
 			}
 		}
 	}
@@ -129,11 +129,11 @@ const Canvas = ({ images }) => {
 			return 3
 		}
 
-		dx = x - (img.x + img.width/2)
-		dy = y - (img.y + img.height)
-		if (dx * dx + dy * dy <= rr) {
-			return 4
-		}
+		// dx = x - (img.x + img.width/2)
+		// dy = y - (img.y + img.height)
+		// if (dx * dx + dy * dy <= rr) {
+		// 	return 4
+		// }
 
 		return -1
 	}

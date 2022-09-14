@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react'
-import { Row, Container, Card, Nav, Col } from 'react-bootstrap'
-import { createImgObject, fetchMferHead, endOfSartoshiDataUrl } from '../utils/utils'
+import { Row, Card, Nav, Col } from 'react-bootstrap'
+import { createImgObject, fetchMferHead } from '../utils/utils'
 
 const MferHeads = ({ handleSetImage, images }) => {
 	const [mferHeads, setMferHeads] = useState([])
 	const [fetchingHeads, setFetchingHeads] = useState(true)
     const [mferHeadNumber, setMferHeadNumber] = useState(0)
+	const [mferToFetch, setMferToFetch] = useState(0)
+
 	useEffect(() => {
 		const fetchHeads = async () => {
 			const dataURLs = await fetchMferHead()
@@ -46,17 +48,24 @@ const MferHeads = ({ handleSetImage, images }) => {
     const handleFetchMferHead = async () => {
         setFetchingHeads(true)
         setMferHeads([])
-        const response = await fetchMferHead(mferHeadNumber)
+        const response = await fetchMferHead(mferHeadNumber, mferToFetch)
         if (response[0] !== -1) {
             setMferHeads(response)
         }
         setFetchingHeads(false)
     }
 
+	const handleMferFetchChange = (mferToFetch) => {
+		setMferToFetch(mferToFetch)
+	}
+
 	return (
 		<Card.Body>
-			<Card.Title>Choose mfer heads</Card.Title>
+			<Card.Title>Choose mfer heads (click to place on canvas)</Card.Title>
 			<input onChange={e => handleMferHeadNumber(e)}></input>
+			<input type="radio" value="0" name="gender" onClick={() => {handleMferFetchChange(0)}}/> Head
+			<input type="radio" value="1" name="gender" onClick={() => {handleMferFetchChange(1)}}/> Body
+			<input type="radio" value="2" name="gender" onClick={() => {handleMferFetchChange(2)}}/> Clear Body
 			<button onClick={handleFetchMferHead}>fetch</button>
 			<Row xs={1} md={2} className="g-4">
 				{fetchingHeads ? (

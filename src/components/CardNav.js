@@ -3,7 +3,7 @@ import { Container, Card, Nav } from 'react-bootstrap'
 import ImgQueue from './ImgQueue'
 import MferHeads from './MferHeads'
 import Templates from './Templates'
-
+import Skins from './Skins'
 const CardNav = ({ handleDeleteImg, handleSetImage, images, flipImage }) => {
 	const [mferHeads, setMferHeads] = useState([])
 	const [currentTab, setCurrentTab] = useState(0)
@@ -20,7 +20,8 @@ const CardNav = ({ handleDeleteImg, handleSetImage, images, flipImage }) => {
 				flipImage={flipImage}
 			></ImgQueue>,
 			<MferHeads handleSetImage={handleSetImage} images={images}></MferHeads>,
-			<Templates images={images} handleSetImage={handleSetImage}></Templates>
+			<Templates images={images} handleSetImage={handleSetImage}></Templates>,
+			<Skins images={images} handleSetImage={handleSetImage}></Skins>
 		]
 
 		return tabs[tabIdx]
@@ -35,7 +36,7 @@ const CardNav = ({ handleDeleteImg, handleSetImage, images, flipImage }) => {
 							<Nav.Link href="#first">Images</Nav.Link>
 						</Nav.Item>
 						<Nav.Item onClick={() => handleTabChange(1)}>
-							<Nav.Link href="#mfer-heads">Mfer Heads</Nav.Link>
+							<Nav.Link href="#mfer-heads">Mfers</Nav.Link>
 						</Nav.Item>
 						<Nav.Item onClick={() => handleTabChange(2)}>
 							<Nav.Link href="#templates">Templates</Nav.Link>

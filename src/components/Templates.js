@@ -11,7 +11,7 @@ const Templates = ({handleSetImage, images}) => {
 
 	return (
 		<Card.Body>
-			<Card.Title>Templates</Card.Title>
+			<Card.Title>Templates (click to place on canvas)</Card.Title>
 			<Row xs={1} md={2} className="g-4">
 				<Col
 					key={`${gnSartoshi}`}
