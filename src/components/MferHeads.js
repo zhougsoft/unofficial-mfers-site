@@ -61,11 +61,11 @@ const MferHeads = ({ handleSetImage, images }) => {
 
 	return (
 		<Card.Body>
-			<Card.Title>Choose mfer heads (click to place on canvas)</Card.Title>
+			<Card.Title>Choose mfer(click to place on canvas)</Card.Title>
 			<input onChange={e => handleMferHeadNumber(e)}></input>
 			<input type="radio" value="0" name="gender" onClick={() => {handleMferFetchChange(0)}}/> Head
 			<input type="radio" value="1" name="gender" onClick={() => {handleMferFetchChange(1)}}/> Body
-			<input type="radio" value="2" name="gender" onClick={() => {handleMferFetchChange(2)}}/> Clear Body
+			<input type="radio" value="2" name="gender" onClick={() => {handleMferFetchChange(2)}}/> transparent png
 			<button onClick={handleFetchMferHead}>fetch</button>
 			<Row xs={1} md={2} className="g-4">
 				{fetchingHeads ? (

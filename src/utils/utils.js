@@ -8,7 +8,7 @@ export const fetchMferHead = async (id, mferToFetch) => {
 			if (mferToFetch === 0) {
 				response = await fetch(`https://heads.mfers.dev/${id}.png`)
 			} else if (mferToFetch === 1) {
-				response = await fetch(`https://bodies.mfers.dev/${id}.png`)
+				response = await fetch(`https://plain.mfers.dev/${id}.png`)
 			} else if (mferToFetch === 2) {
 				response = await fetch(`https://clear.mfers.dev/${id}.png`)
 			}
