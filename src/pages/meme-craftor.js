@@ -5,7 +5,6 @@ import PageContainer from '../components/PageContainer'
 import Canvas from '../components/Canvas'
 import FileUpload from '../components/file_upload'
 import CardNav from '../components/CardNav'
-import ImgQueue from '../components/ImgQueue'
 
 const MemeCraftorPage = () => {
 	const [images, setImage] = useState([]);
