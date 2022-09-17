@@ -22,7 +22,7 @@ const ImgQueue = ({ images, flipImage, handleDeleteImg }) => {
 	}
 
 	return (
-		<Card.Body>
+		<Card.Body style={{ 'overflow-y': 'auto', height: '50vw' }}>
 			<Card.Title>Images</Card.Title>
 			<Row xs={1} md={2} className="g-4">
 				{renderImgs()}

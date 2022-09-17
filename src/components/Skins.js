@@ -69,7 +69,7 @@ const Skins = ({ handleSetImage, images }) => {
     }
 
 	return (
-		<Card.Body>
+		<Card.Body style={{"overflow-y": "auto", height:"50vw"}}>
 			<Card.Title>Skins (click to place on canvas)</Card.Title>
 			<Row xs={1} md={2} className="g-4">
 				{renderSkins()}
