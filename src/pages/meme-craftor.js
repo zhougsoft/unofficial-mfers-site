@@ -30,7 +30,7 @@ const MemeCraftorPage = () => {
 			<PageContainer>
 				<Container>
 					<Row>
-						<Col className="">
+						<Col>
 							<Canvas images={images}></Canvas>
 							<FileUpload
 								images={images}

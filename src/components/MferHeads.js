@@ -62,7 +62,7 @@ const MferHeads = ({ handleSetImage, images }) => {
 	}
 
 	return (
-		<Card.Body style={{ 'overflow-y': 'auto', height: '35vw' }}>
+		<Card.Body style={{ 'overflowY': 'auto', height: '35vw' }}>
 			<Card.Title>Choose mfer(click to place on canvas)</Card.Title>
 			<form onSubmit={handleSubmit(handleFetchMferHead)}>
 				<input onChange={e => handleMferHeadNumber(e)}></input>

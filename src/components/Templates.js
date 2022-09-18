@@ -10,7 +10,7 @@ const Templates = ({ handleSetImage, images }) => {
 	}
 
 	return (
-		<Card.Body style={{ 'overflow-y': 'auto', height: '35vw' }}>
+		<Card.Body style={{ 'overflowY': 'auto', height: '35vw' }}>
 			<Card.Title>Templates (click to place on canvas)</Card.Title>
 			<Row xs={1} md={2} className="g-4">
 				<Col

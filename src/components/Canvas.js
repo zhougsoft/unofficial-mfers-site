@@ -12,14 +12,13 @@ const Canvas = ({ images }) => {
 	const [startY, setStartY] = useState(0)
 	const [draggingResizer, setDraggingResizer] = useState(-1)
 	const [rotating, setRotatingImg] = useState(-1)
-	//
+
 	useEffect(() => {
 		const canvas = canvasRef.current
 		const offsetX = canvas.offsetLeft
 		const offsetY = canvas.offsetTop
 		setOffsetX(offsetX)
 		setOffsetY(offsetY)
-		draw()
 	}, [])
 
 	const drawImage = (ctx, canvas, width, height, img, idx) => {
@@ -54,12 +53,14 @@ const Canvas = ({ images }) => {
 		const canvas = canvasRef.current
 		if (!canvas) return
 		const ctx = canvas.getContext('2d')
-		const screenWidth = window.innerWidth
-
-		const canvasWidth = Math.floor(screenWidth * 0.4)
-		const canvasHeight = Math.floor(canvasWidth * 0.7)
-		ctx.clearRect(0, 0, canvasWidth, canvasHeight)
+		ctx.clearRect(0, 0, canvas.width, canvas.height)
+		const canvasWidth = canvas.parentElement.clientWidth - 2*parseFloat(
+			window
+				.getComputedStyle(canvas.parentElement, null)
+				.getPropertyValue('padding-left')
+		)
 		canvas.width = canvasWidth
+		const canvasHeight = Math.floor(canvas.width * 0.7)
 		canvas.height = canvasHeight
 		for (let i = 0; i < images.length; i++) {
 			const img = images[i]
@@ -67,8 +68,7 @@ const Canvas = ({ images }) => {
 			const imgHeight = img.origHeight
 			const ratio = imgHeight / imgWidth
 			if (i === 0) {
-				canvas.width = parseInt(canvasWidth)
-				canvas.height = parseInt(canvasWidth * ratio)
+				canvas.height = parseInt(canvas.width * ratio)
 				img.x = 0
 				img.y = 0
 				drawImage(ctx, canvas, canvas.width, canvas.height, img, i)
@@ -81,8 +81,9 @@ const Canvas = ({ images }) => {
 
 					img.width = newImageWidth
 					img.height = newImageHeight
-					img.x = img.x + canvas.width/2 - img.width/2
-					img.y = img.y + canvas.height/2 - img.height/2
+
+					img.x = canvas.width/2 - img.width/2
+					img.y = canvas.height/2 - img.height/2
 				}
 				drawImage(ctx, canvas, img.width, img.height, img)
 			}
@@ -148,6 +149,9 @@ const Canvas = ({ images }) => {
 	// test if x,y is inside the bounding box of texts[textIndex]
 	const imageHitTest = (x, y, imgIndex) => {
 		let img = images[imgIndex]
+		console.log(img)
+		console.log(x)
+		console.log(y)
 		return (
 			x >= img.x &&
 			x <= img.x + img.width &&
@@ -184,6 +188,7 @@ const Canvas = ({ images }) => {
 	}
 
 	const handleMouseMove = e => {
+		e.preventDefault()
 		let mouseX = parseInt(e.clientX - offsetX)
 		let mouseY = parseInt(e.pageY - offsetY)
 		let img = images[selectedImg]
@@ -196,7 +201,6 @@ const Canvas = ({ images }) => {
 		if (selectedImg < 1) {
 			return
 		}
-		e.preventDefault()
 
 		// Put your mousemove stuff here
 		let dx = mouseX - startX
