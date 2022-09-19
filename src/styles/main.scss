@@ -308,5 +308,6 @@ $animationSpeed: 15s;
 
 #canvas {
     border: 1px solid blue;
-	width: 100%
+	width: 100%;
+	touch-action: none;
 }   

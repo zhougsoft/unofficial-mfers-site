@@ -3,7 +3,7 @@ import React, { useRef, useEffect, useState } from 'react'
 const Canvas = ({ images }) => {
 	const canvasRef = useRef(null)
 	const pi2 = Math.PI * 2
-	const resizerRadius = 8
+	const resizerRadius = 13
 	const rr = resizerRadius * resizerRadius
 	const [selectedImg, setSelectedImg] = useState(-1)
 	const [offsetX, setOffsetX] = useState(0)
@@ -149,9 +149,6 @@ const Canvas = ({ images }) => {
 	// test if x,y is inside the bounding box of texts[textIndex]
 	const imageHitTest = (x, y, imgIndex) => {
 		let img = images[imgIndex]
-		console.log(img)
-		console.log(x)
-		console.log(y)
 		return (
 			x >= img.x &&
 			x <= img.x + img.width &&
@@ -161,9 +158,15 @@ const Canvas = ({ images }) => {
 	}
 
 	const handleMouseDown = e => {
-		e.preventDefault()
-		setStartX(parseInt(e.clientX - offsetX))
-		setStartY(parseInt(e.pageY - offsetY))
+		if(!e._reactName.includes("Touch")) {
+			e.preventDefault()
+			setStartX(parseInt(e.clientX - offsetX))
+			setStartY(parseInt(e.pageY - offsetY))
+		} else {
+			setStartX(parseInt(e.changedTouches[0].clientX - offsetX))
+			setStartY(parseInt(e.changedTouches[0].pageY - offsetY))
+		}
+
 		// Put your mousedown stuff here
 		for (let i = 1; i < images.length; i++) {
 			const corner = anchorHitTest(startX, startY, i)
@@ -188,9 +191,16 @@ const Canvas = ({ images }) => {
 	}
 
 	const handleMouseMove = e => {
-		e.preventDefault()
-		let mouseX = parseInt(e.clientX - offsetX)
-		let mouseY = parseInt(e.pageY - offsetY)
+		let mouseX;
+		let mouseY;
+		if (!e._reactName.includes('Touch')) {
+			e.preventDefault()
+			mouseX = parseInt(e.clientX - offsetX)
+			mouseY = parseInt(e.pageY - offsetY)
+		} else {
+			mouseX = parseInt(e.changedTouches[0].clientX - offsetX)
+			mouseY = parseInt(e.changedTouches[0].pageY - offsetY)
+		}
 		let img = images[selectedImg]
 		setStartX(mouseX)
 		setStartY(mouseY)
@@ -268,6 +278,8 @@ const Canvas = ({ images }) => {
 	const handleMouseOut = e => {
 		e.preventDefault()
 		setSelectedImg(-1)
+		setRotatingImg(-1)
+		setDraggingResizer(-1)
 	}
 
 	draw()
@@ -277,6 +289,11 @@ const Canvas = ({ images }) => {
 			onMouseMove={handleMouseMove}
 			onMouseUp={handleMouseUp}
 			onMouseOut={handleMouseOut}
+
+			onTouchStart={handleMouseDown}
+			onTouchMove={handleMouseMove}
+			onTouchCancel={handleMouseUp}
+			onTouchEnd={handleMouseOut}
 			ref={canvasRef}
 			id="canvas"
 		/>
