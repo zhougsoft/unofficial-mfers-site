@@ -16,14 +16,6 @@ export const PROP_SUBMISSION_LINK = 'https://submitmfer.xyz'
 // lists
 export const TREASURY_SIGNERS = [
 	{
-		name: 'imp0ster',
-		twitter: 'https://twitter.com/the_imp0ster',
-	},
-	{
-		name: 'zhoug',
-		twitter: 'https://twitter.com/zhoug0x',
-	},
-	{
 		name: 'masterchan',
 		twitter: 'https://twitter.com/masterchanx',
 	},
