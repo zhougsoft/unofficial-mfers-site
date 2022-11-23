@@ -1,6 +1,6 @@
 # unofficialmfers.com 🎧🚬
 
-> [**unofficialmfers.com**](https://unofficialmfers.com) is the official website of the [unofficial mfers](https://twitter.com/unofficialmfers). hit up [zhoug](https://twitter.com/zhoug0x) if u have any questions!
+> [**unofficialmfers.com**](https://unofficialmfers.com) is the official website of the [unofficial mfers](https://twitter.com/unofficialmfers)
 
 ### run
 
