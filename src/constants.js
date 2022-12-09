@@ -11,6 +11,8 @@ export const TREASURY_LINK =
 export const SNAPSHOT_LINK = 'https://snapshot.org/#/unofficialmfers.eth'
 export const WHAT_ARE_MFERS_LINK =
 	'https://mirror.xyz/sartoshi.eth/QukjtL1076-1SEoNJuqyc-x4Ut2v8_TocKkszo-S_nU'
+export const MFERPEDIA =
+	'https://mferpedia.notion.site/mferpedia-d0c1ed16cc5a4214821158ef032eeb41'
 export const PROP_SUBMISSION_LINK = 'https://submitmfer.xyz'
 
 // lists
