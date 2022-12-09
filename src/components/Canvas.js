@@ -71,10 +71,12 @@ const Canvas = ({ images }) => {
 				canvas.height = parseInt(canvas.width * ratio)
 				img.x = 0
 				img.y = 0
+				img.width = canvas.width
+				img.height = canvas.height
 				drawImage(ctx, canvas, canvas.width, canvas.height, img, i)
 			} else {
 				if (img.width === 0) {
-					const baseImageHeight = images[0].origHeight
+					const baseImageHeight = images[0].height
 
 					const newImageHeight = Math.floor(baseImageHeight * 0.2)
 					const newImageWidth = Math.floor(newImageHeight * ratio)
