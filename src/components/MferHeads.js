@@ -34,9 +34,6 @@ const MferHeads = ({ handleSetImage, images }) => {
 				>
 					<Card>
 						<Card.Img src={dataURL} />
-						<Card.Body>
-							<Card.Text>This mfer is the is cool as shit</Card.Text>
-						</Card.Body>
 					</Card>
 				</Col>
 			)

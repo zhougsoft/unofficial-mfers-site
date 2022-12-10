@@ -19,9 +19,6 @@ const Templates = ({ handleSetImage, images }) => {
 				>
 					<Card>
 						<Card.Img src={gnSartoshi} />
-						<Card.Body>
-							<Card.Text>This mfer is the is cool as shit</Card.Text>
-						</Card.Body>
 					</Card>
 				</Col>
 			</Row>

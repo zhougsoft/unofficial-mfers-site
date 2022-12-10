@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 import Layout from '../components/Layout'
 import PageContainer from '../components/PageContainer'
 import Canvas from '../components/Canvas'
-import FileUpload from '../components/file_upload'
+import FileUpload from '../components/FileUpload'
 import CardNav from '../components/CardNav'
 
 const MemeCraftorPage = () => {

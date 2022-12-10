@@ -1,6 +1,5 @@
 import React from 'react'
 import { Row, Col, Card } from 'react-bootstrap'
-import gnSartoshi from '../assets/images/gn.jpeg'
 import skin_bull from '../assets/images/skin_bull.png'
 import skin_bunny from '../assets/images/skin_bunny.png'
 import skin_chicken from '../assets/images/skin_chicken.png'
@@ -59,9 +58,6 @@ const Skins = ({ handleSetImage, images }) => {
                 >
                     <Card>
                         <Card.Img src={skin} />
-                        <Card.Body>
-                            <Card.Text>This mfer is the is cool as shit</Card.Text>
-                        </Card.Body>
                     </Card>
                 </Col>
             )

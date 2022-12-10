@@ -248,10 +248,13 @@ const Canvas = ({ images }) => {
 					img.height = mouseY - img.y
 					break
 				case 4:
-					console.log("in case 4")
+					console.log('in case 4')
 					img.rotation = Math.atan2(mouseX - img.x, -(mouseY - img.y))
 					draw()
-
+				default:
+					console.warn(
+						'Canvas.js - received an unexpected value for draggingResizer'
+					)
 			}
 
 			if (img.width < 25) {
