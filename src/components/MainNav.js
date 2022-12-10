@@ -36,9 +36,6 @@ const MainNav = () => {
 						<Link to="/governance" className="internal-nav-link">
 							governance
 						</Link>
-						<Link to="/links" className="internal-nav-link">
-							links
-						</Link>
 						<Link to="/meme-craftor" className="internal-nav-link">
 							meme craftor
 						</Link>
