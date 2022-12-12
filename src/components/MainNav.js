@@ -39,6 +39,9 @@ const MainNav = () => {
 						<Link to="/links" className="internal-nav-link">
 							links
 						</Link>
+						<Link to="/timeline" className="internal-nav-link">
+							timeline
+						</Link>
 					</Nav>
 					<Nav className="icon-nav-bar">
 						<Nav.Link
