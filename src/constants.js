@@ -13,7 +13,7 @@ export const WHAT_ARE_MFERS_LINK =
 	'https://mirror.xyz/sartoshi.eth/QukjtL1076-1SEoNJuqyc-x4Ut2v8_TocKkszo-S_nU'
 export const PROP_SUBMISSION_LINK = 'https://submitmfer.xyz'
 export const MFERPEDIA =
-	'https://mferpedia.notion.site/mferpedia-d0c1ed16cc5a4214821158ef032eeb41'
+	'https://zhoug.notion.site/mferpedia-d0c1ed16cc5a4214821158ef032eeb41'
 // lists
 export const TREASURY_SIGNERS = [
 	{
