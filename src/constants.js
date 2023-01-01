@@ -180,7 +180,7 @@ export const TIMELINE_EVENTS = [
 		cardTitle: 'mfer aheads are deployed',
 		url: 'https://twitter.com/MfersAhead',
 		cardDetailedText:
-			'mfers aheads, a derivative, are deployed by @Metabananas: the first piece is an ahead version of sartoshi_nft pfp, Metabananas continued to drop new aheads till reach 420 supply',
+			'mfers aheads, a derivative, are deployed by @Metabananas: the first piece is an ahead version of sartoshi_nft pfp. total supply of 420',
 		media: {
 			name: 'mfers ahead',
 			source: {
@@ -325,7 +325,7 @@ export const TIMELINE_EVENTS = [
 		cardTitle: 'sartoshi returns',
 		url: 'https://twitter.com/sartoshi_rip',
 		cardDetailedText:
-			'Sartoshit returns as sartoshi_rip',
+			'Sartoshit returns as @sartoshi_rip',
 		media: {
 			name: 'mfers returns',
 			source: {
