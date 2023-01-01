@@ -3,6 +3,20 @@ import { Chrono } from "react-chrono";
 import Layout from '../components/Layout'
 import PageContainer from '../components/PageContainer'
 import { Container, Row, Col } from 'react-bootstrap'
+import d_mfers from '../assets/images/3d_mfers.png'
+import end_of_sartoshi from '../assets/images/end_of_sartoshi.png'
+import mfer_904 from '../assets/images/mfer_904.png'
+import mfer_6529_tweet from '../assets/images/mfer_6529_tweet.png'
+import mfer_aheads from '../assets/images/mfer_aheads.png'
+import mfer_creyzies from '../assets/images/mfer_creyzies.png'
+import mfer_marketplace from '../assets/images/mfer_marketplace.png'
+import mfer_tattoo_tweet from '../assets/images/mfer_tattoo_tweet.png'
+import mfer_tattoo_video_nft from '../assets/images/mfer_tattoo_video_nft.png'
+import mfers_contract from '../assets/images/mfers_contract.png'
+import mfers_discord from '../assets/images/mfers_discord.png'
+import mfers_mint_website from '../assets/images/mfers_mint_website.png'
+import mfers_sketch from '../assets/images/mfers_sketch.png'
+import mfers_timesquare from '../assets/images/mfers_timesquare.png'
 import svgDiscord from '../assets/svg/discord-logo.svg'
 import svgTwitter from '../assets/svg/twitter-logo.svg'
 import svgOpensea from '../assets/svg/opensea-logo.svg'
@@ -16,9 +30,9 @@ import svgOpensea from '../assets/svg/opensea-logo.svg'
 				cardDetailedText:
 					'mfers contract deployed on the blockchain (block 13711155) by sartoshi',
 				media: {
-					name: 'dunkirk beach',
+					name: 'mfer contract',
 					source: {
-						url: '/mfers_contract.png',
+						url: mfers_contract,
 					},
 					type: 'IMAGE',
 				},
@@ -32,7 +46,7 @@ import svgOpensea from '../assets/svg/opensea-logo.svg'
 				media: {
 					name: 'mfers mint website',
 					source: {
-						url: '/mfers_mint_website.png',
+						url: mfers_mint_website,
 					},
 					type: 'IMAGE',
 				},
@@ -46,7 +60,7 @@ import svgOpensea from '../assets/svg/opensea-logo.svg'
 				media: {
 					name: '3d mfers',
 					source: {
-						url: '/3d_mfers.png',
+						url: d_mfers,
 					},
 					type: 'IMAGE',
 				},
@@ -61,7 +75,7 @@ import svgOpensea from '../assets/svg/opensea-logo.svg'
 				media: {
 					name: 'mfers discord',
 					source: {
-						url: '/mfers_discord.png',
+						url: mfers_discord,
 					},
 					type: 'IMAGE',
 				},
@@ -76,7 +90,7 @@ import svgOpensea from '../assets/svg/opensea-logo.svg'
 				media: {
 					name: 'mfers ahead',
 					source: {
-						url: '/mfer_aheads.png',
+						url: mfer_aheads,
 					},
 					type: 'IMAGE',
 				},
@@ -91,7 +105,7 @@ import svgOpensea from '../assets/svg/opensea-logo.svg'
 				media: {
 					name: 'mfers tattoo tweet',
 					source: {
-						url: '/mfer_tattoo_tweet.png',
+						url: mfer_tattoo_tweet,
 					},
 					type: 'IMAGE',
 				},
@@ -106,7 +120,7 @@ import svgOpensea from '../assets/svg/opensea-logo.svg'
 				media: {
 					name: 'mfers tattoo nft',
 					source: {
-						url: '/mfer_tattoo_video_nft.png',
+						url: mfer_tattoo_video_nft,
 					},
 					type: 'IMAGE',
 				},
@@ -120,7 +134,7 @@ import svgOpensea from '../assets/svg/opensea-logo.svg'
 				media: {
 					name: 'mfers times square',
 					source: {
-						url: '/mfers_timesquare	.png',
+						url: mfers_timesquare,
 					},
 					type: 'IMAGE',
 				},
@@ -134,7 +148,7 @@ import svgOpensea from '../assets/svg/opensea-logo.svg'
 				media: {
 					name: 'mfers 80eth sale',
 					source: {
-						url: '/mfer_904.png',
+						url: mfer_904,
 					},
 					type: 'IMAGE',
 				},
@@ -147,7 +161,7 @@ import svgOpensea from '../assets/svg/opensea-logo.svg'
 				media: {
 					name: 'mfers 6529 tweet',
 					source: {
-						url: '/mfer_6529_tweet.png',
+						url: mfer_6529_tweet,
 					},
 					type: 'IMAGE',
 				},
@@ -162,7 +176,7 @@ import svgOpensea from '../assets/svg/opensea-logo.svg'
 				media: {
 					name: 'mfers sketch',
 					source: {
-						url: '/mfers_sketch.png',
+						url: mfers_sketch,
 					},
 					type: 'IMAGE',
 				},
@@ -177,7 +191,7 @@ import svgOpensea from '../assets/svg/opensea-logo.svg'
 				media: {
 					name: 'mfers creyzies',
 					source: {
-						url: '/mfer_creyzies.png',
+						url: mfer_creyzies,
 					},
 					type: 'IMAGE',
 				},
@@ -192,7 +206,7 @@ import svgOpensea from '../assets/svg/opensea-logo.svg'
 				media: {
 					name: 'mfers EOS',
 					source: {
-						url: '/end_of_sartoshi.png',
+						url: end_of_sartoshi,
 					},
 					type: 'IMAGE',
 				},
@@ -207,7 +221,7 @@ import svgOpensea from '../assets/svg/opensea-logo.svg'
 				media: {
 					name: 'mfers EOS',
 					source: {
-						url: '/mfer_marketplace.png',
+						url: mfer_marketplace,
 					},
 					type: 'IMAGE',
 				},
