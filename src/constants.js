@@ -22,12 +22,13 @@ export const LOOKSRARE_LINK =
 export const ETHERSCAN_LINK =
 	'https://etherscan.io/address/0x79FCDEF22feeD20eDDacbB2587640e45491b757f'
 export const TREASURY_LINK =
-	'https://etherscan.io/address/0x79FCDEF22feeD20eDDacbB2587640e45491b757f'
+	'https://etherscan.io/address/0x21130e908bba2d41b63fbca7caa131285b8724f8'
 export const SNAPSHOT_LINK = 'https://snapshot.org/#/unofficialmfers.eth'
 export const WHAT_ARE_MFERS_LINK =
 	'https://mirror.xyz/sartoshi.eth/QukjtL1076-1SEoNJuqyc-x4Ut2v8_TocKkszo-S_nU'
 export const PROP_SUBMISSION_LINK = 'https://submitmfer.xyz'
-
+export const MFERPEDIA =
+	'https://zhoug.notion.site/mferpedia-d0c1ed16cc5a4214821158ef032eeb41'
 // lists
 export const TREASURY_SIGNERS = [
 	{

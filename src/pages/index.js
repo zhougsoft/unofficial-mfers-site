@@ -6,6 +6,7 @@ import {
 	WHAT_ARE_MFERS_LINK,
 	CAROUSEL_IMGS_TOP,
 	CAROUSEL_IMGS_BOTTOM,
+	MFERPEDIA
 } from '../constants'
 import svgSun from '../assets/svg/sun.svg'
 import svgExternalLink from '../assets/svg/external-link.svg'
@@ -42,6 +43,19 @@ const IndexPage = () => {
 							>
 								what are mfers?{' '}
 								<img src={svgExternalLink} alt="external link icon" />
+							</Card.Link>
+						</Card.Body>
+					</Card>
+					<br></br>
+					<Card className="d-flex box-shadow">
+						<Card.Body>
+							<Card.Link
+								className="article-link-card"
+								href={MFERPEDIA}
+								target="_blank"
+								rel="noopener"
+							>
+								mferpedia <img src={svgExternalLink} alt="external link icon" />
 							</Card.Link>
 						</Card.Body>
 					</Card>

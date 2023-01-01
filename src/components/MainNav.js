@@ -36,9 +36,6 @@ const MainNav = () => {
 						<Link to="/governance" className="internal-nav-link">
 							governance
 						</Link>
-						<Link to="/links" className="internal-nav-link">
-							links
-						</Link>
 						<Link to="/timeline" className="internal-nav-link">
 							timeline
 						</Link>
