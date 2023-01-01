@@ -12,6 +12,7 @@ import mfers_discord from './assets/images/mfers_discord.png'
 import mfers_mint_website from './assets/images/mfers_mint_website.png'
 import mfers_sketch from './assets/images/mfers_sketch.png'
 import mfers_timesquare from './assets/images/mfers_timesquare.png'
+import mfer_returns from './assets/images/mfer_returns.png'
 
 // links
 export const DISCORD_LINK = 'https://discord.gg/unofficialmfers'
@@ -315,6 +316,20 @@ export const TIMELINE_EVENTS = [
 			name: 'mfers EOS',
 			source: {
 				url: mfer_marketplace,
+			},
+			type: 'IMAGE',
+		},
+	},
+	{
+		title: 'january 1 2023',
+		cardTitle: 'sartoshi returns',
+		url: 'https://twitter.com/sartoshi_rip',
+		cardDetailedText:
+			'Sartoshit returns as sartoshi_rip',
+		media: {
+			name: 'mfers returns',
+			source: {
+				url: mfer_returns,
 			},
 			type: 'IMAGE',
 		},
