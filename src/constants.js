@@ -177,10 +177,10 @@ export const TIMELINE_EVENTS = [
 	,
 	{
 		title: 'january 5 2022',
-		cardTitle: 'mfer aheads are deployed',
+		cardTitle: 'mfers ahead are deployed',
 		url: 'https://twitter.com/MfersAhead',
 		cardDetailedText:
-			'mfers aheads, a derivative, are deployed by @Metabananas: the first piece is an ahead version of sartoshi_nft pfp. total supply of 420',
+			'mfers ahead, a derivative, are deployed by @Metabananas: the first piece is an ahead version of sartoshi_nft pfp. total supply of 420',
 		media: {
 			name: 'mfers ahead',
 			source: {
@@ -192,10 +192,10 @@ export const TIMELINE_EVENTS = [
 	,
 	{
 		title: 'january 13 2022',
-		cardTitle: 'the first mfer tatoo',
+		cardTitle: 'the first mfer tattoo',
 		url: 'https://twitter.com/the_imp0ster/status/1481473560564621312?t=RMvl4IgKix-Tnt4TUJnzqg&s=19',
 		cardDetailedText:
-			'@the_imp0ster gets an mfer tattoo (yeah, for real and has been recorded) : the video is auctioned on OpenSea to start the mfers treasury',
+			'@the_imp0ster gets an mfer tattoo (yeah, for real and has been recorded) : the video is auctioned on OpenSea to start the unofficial mfers treasury',
 		media: {
 			name: 'mfers tattoo tweet',
 			source: {
@@ -263,10 +263,10 @@ export const TIMELINE_EVENTS = [
 	,
 	{
 		title: 'april 8 2022',
-		cardTitle: 'sketch mfers is deployed',
+		cardTitle: 'sketchy mfers is deployed',
 		url: 'https://opensea.io/collection/sketchymfers',
 		cardDetailedText:
-			'sketchtmfers, a derivative, are deployed by a collective of mfers artists and dev @jellopeas, sodasoondae and @zhoug0x',
+			'sketchy mfers, a derivative, are deployed by a collective of mfers artists and dev @jellopeas, sodasoondae and @zhoug0x',
 		media: {
 			name: 'mfers sketch',
 			source: {
@@ -281,7 +281,7 @@ export const TIMELINE_EVENTS = [
 		cardTitle: 'Creyzies is dropped',
 		url: 'https://opensea.io/collection/creyzies',
 		cardDetailedText:
-			'first companion collection is airdropped to all mfers holder : CREYZIES by @reylarsdam',
+			'first companion collection is airdropped to all mfer holders : CREYZIES by @reylarsdam',
 		media: {
 			name: 'mfers creyzies',
 			source: {
@@ -325,7 +325,7 @@ export const TIMELINE_EVENTS = [
 		cardTitle: 'sartoshi returns',
 		url: 'https://twitter.com/sartoshi_rip',
 		cardDetailedText:
-			'Sartoshit returns as @sartoshi_rip',
+			'Sartoshi returns as @sartoshi_rip',
 		media: {
 			name: 'mfers returns',
 			source: {
