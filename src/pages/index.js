@@ -6,16 +6,16 @@ import {
 	WHAT_ARE_MFERS_LINK,
 	CAROUSEL_IMGS_TOP,
 	CAROUSEL_IMGS_BOTTOM,
-	MFERPEDIA
+	MFERPEDIA,
 } from '../constants'
 import svgSun from '../assets/svg/sun.svg'
 import svgExternalLink from '../assets/svg/external-link.svg'
 
 const IndexPage = () => {
-	const makeCarousel = urls =>
-		urls.map(url => (
+	const makeCarousel = files =>
+		files.map(filename => (
 			<div className="slide" key={`slide-${Math.random()}`}>
-				<img src={url} alt="carousel display mfer" />
+				<img src={`/carousel/${filename}`} alt="carousel display mfer" />
 			</div>
 		))
 

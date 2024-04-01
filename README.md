@@ -4,8 +4,9 @@
 
 ### run
 
-1. install dependencies: `npm install`
-1. run development server: `npm run start`
+1. install dependencies: `yarn`
+1. run development server: `yarn start`
+1. go to `localhost:8000`
 
 ### contributing
 

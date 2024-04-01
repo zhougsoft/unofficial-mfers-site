@@ -265,7 +265,7 @@ $animationSpeed: 15s;
 // --- GOVERNANCE PAGE ---
 
 // use 'em' to size fonts to leverage responsive styles in body
-.gov-wrapper {
+.treasury-wrapper {
 	p {
 		font-family: $font-main;
 		font-size: 1.25em;
@@ -283,14 +283,14 @@ $animationSpeed: 15s;
 	}
 }
 
-.gov-heading {
+.treasury-heading {
 	font-size: 7em;
 	letter-spacing: -0.03em;
 	font-weight: bold;
 	margin-bottom: 2rem;
 }
 
-.gov-subheading {
+.treasury-subheading {
 	font-size: 5em;
 	letter-spacing: -0.03em;
 	font-weight: bold;

@@ -1,18 +1,11 @@
 import React from 'react'
 import { Navbar, Container, Nav } from 'react-bootstrap'
 import { Link } from 'gatsby'
-
-import {
-	DISCORD_LINK,
-	OPENSEA_LINK,
-	LOOKSRARE_LINK,
-	TWITTER_LINK,
-} from '../constants'
+import { DISCORD_LINK, OPENSEA_LINK, TWITTER_LINK } from '../constants'
 
 import svgDiscord from '../assets/svg/discord-logo.svg'
 import svgTwitter from '../assets/svg/twitter-logo.svg'
 import svgOpensea from '../assets/svg/opensea-logo.svg'
-import svgLooksrare from '../assets/svg/looksrare-logo.svg'
 
 const MainNav = () => {
 	return (
@@ -33,8 +26,8 @@ const MainNav = () => {
 						<Link to="/" className="internal-nav-link">
 							home
 						</Link>
-						<Link to="/governance" className="internal-nav-link">
-							governance
+						<Link to="/treasury" className="internal-nav-link">
+							treasury
 						</Link>
 						<Link to="/timeline" className="internal-nav-link">
 							timeline
@@ -61,13 +54,6 @@ const MainNav = () => {
 							target="_blank"
 						>
 							<img src={svgOpensea} alt="opensea icon" />
-						</Nav.Link>
-						<Nav.Link
-							href={LOOKSRARE_LINK}
-							className="text-color spacing"
-							target="_blank"
-						>
-							<img src={svgLooksrare} alt="looksrare icon" />
 						</Nav.Link>
 					</Nav>
 				</Navbar.Collapse>
