@@ -62,28 +62,9 @@ export const TREASURY_SIGNER_ALUMNI = [
 	},
 ]
 
-
-
-
-
-
-
-
-
-
-
-
-export const CAROUSEL_IMGS_TOP = ['/3191.png', '/7332.png']
-
-export const CAROUSEL_IMGS_BOTTOM = ['/3191.png', '/7332.png']
-
-
-
-
-
-
-
-
+// TODO: add showcase mfers
+export const CAROUSEL_IMGS_TOP = ['3191.png', '7332.png']
+export const CAROUSEL_IMGS_BOTTOM = ['3191.png', '7332.png']
 
 export const TIMELINE_EVENTS = [
 	{

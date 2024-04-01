@@ -11,14 +11,14 @@ import {
 import svgSun from '../assets/svg/sun.svg'
 import svgExternalLink from '../assets/svg/external-link.svg'
 
-const IndexPage = () => {
-	const makeCarousel = files =>
-		files.map(filename => (
-			<div className="slide" key={`slide-${Math.random()}`}>
-				<img src={`/carousel/${filename}`} alt="carousel display mfer" />
-			</div>
-		))
+const makeCarousel = files =>
+	files.map(filename => (
+		<div className="slide" key={`slide-${Math.random()}`}>
+			<img src={`/carousel/${filename}`} alt="carousel display mfer" />
+		</div>
+	))
 
+const IndexPage = () => {
 	return (
 		<Layout pageTitle="unofficial mfers">
 			<div className="home-wrapper">
