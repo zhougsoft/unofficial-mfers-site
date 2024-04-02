@@ -60,7 +60,7 @@ const IndexPage = () => {
 						</Card.Body>
 					</Card>
 				</section>
-				<footer className="slider-section">
+				{/* <footer className="slider-section">
 					<div className="slider">
 						<div className="slide-track-left">
 							{makeCarousel(CAROUSEL_IMGS_TOP)}
@@ -71,7 +71,7 @@ const IndexPage = () => {
 							{makeCarousel(CAROUSEL_IMGS_BOTTOM)}
 						</div>
 					</div>
-				</footer>
+				</footer> */}
 			</div>
 		</Layout>
 	)
