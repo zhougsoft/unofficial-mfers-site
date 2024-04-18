@@ -1,29 +1,26 @@
 {
-  "name": "unofficial-mfers",
-  "version": "1.0.0",
+  "name": "unofficial-mfers-site",
+  "version": "0.1.0",
   "private": true,
-  "description": "the official website of the unofficial mfers",
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "bootstrap": "^5.2.0",
-    "gatsby": "^4.17.2",
-    "gatsby-plugin-image": "^2.17.0",
-    "gatsby-plugin-react-helmet": "^5.17.0",
-    "gatsby-plugin-sass": "^5.17.0",
-    "gatsby-plugin-sharp": "^4.17.0",
-    "gatsby-source-filesystem": "^4.17.0",
-    "gatsby-transformer-sharp": "^4.17.0",
-    "react": "^18.2.0",
-    "react-bootstrap": "^2.4.0",
-    "react-chrono": "^1.20.0",
-    "react-dom": "^18.2.0",
-    "react-helmet": "^6.1.0",
-    "sass": "^1.53.0"
+    "react": "^18",
+    "react-dom": "^18",
+    "next": "14.2.1"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.1"
   }
 }
