@@ -32,6 +32,9 @@ const MainNav = () => {
 						<Link to="/timeline" className="internal-nav-link">
 							timeline
 						</Link>
+						<Link to="/mfercoin" className="internal-nav-link">
+							mfercoin
+						</Link>
 					</Nav>
 					<Nav className="icon-nav-bar">
 						<Nav.Link
