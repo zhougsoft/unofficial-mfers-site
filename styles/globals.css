@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+	font-family: 'Sartoshi Script';
+	src: url('../public/fonts/SartoshiScript-Regular.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'Comic Mono';
+	src: url('../public/fonts/ComicMono.ttf') format('truetype');
+}
