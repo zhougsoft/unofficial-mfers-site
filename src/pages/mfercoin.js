@@ -30,37 +30,37 @@ const MfercoinPage = () => {
 
                         <p>
                             <ExtLink href={MFERCOIN_MIRROR}>
-                                mirror article
+                                mirror article ↗
                             </ExtLink>
                         </p>
 
                         <p>
                             <ExtLink href={MFERCOIN_WP_IPFS}>
-                                whitepaper
+                                whitepaper ↗
                             </ExtLink>
                         </p>
                         <p>
                             <ExtLink href={MFERCOIN_CONTRACT}>
-                                contract
+                                contract ↗
                             </ExtLink>
                         </p>
 
 
                         <p>
                             <ExtLink href={MFERCOIN_UNISWAP}>
-                                uniswap
+                                uniswap ↗
                             </ExtLink>
                         </p>
 
 
                         <p>
                             <ExtLink href={MFERCOIN_DEXSCREENER}>
-                                DexScreener
+                                DexScreener ↗
                             </ExtLink>
                         </p>
                         <p>
                             <ExtLink href={MFERCOIN_OKX}>
-                                OKX
+                                OKX ↗
                             </ExtLink>
                         </p>
 
