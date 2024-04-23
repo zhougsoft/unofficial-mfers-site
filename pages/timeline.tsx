@@ -1,13 +1,13 @@
 import Layout from '@/components/Layout';
 import { NextPage } from 'next';
 
-const PAGE_TITLE = 'unofficial mfers';
-const PAGE_DESC = 'unofficial mfers';
+const PAGE_TITLE = 'timeline | unofficial mfers';
+const PAGE_DESC = 'unofficial mfers community timeline';
 
-const HomePage: NextPage = () => {
+const TimelinePage: NextPage = () => {
 	return (
 		<Layout pageTitle={PAGE_TITLE} pageDesc={PAGE_DESC}>
-			<h1 className="font-sartoshi text-[4rem] font-bold">gm mfers</h1>
+			<h1 className="font-sartoshi text-[4rem] font-bold">timeline</h1>
 			<p className="font-comic">
 				you can state a roadmap that says where you will go, but you can also
 				plant seeds and see where they grow
@@ -16,4 +16,4 @@ const HomePage: NextPage = () => {
 	);
 };
 
-export default HomePage;
+export default TimelinePage;

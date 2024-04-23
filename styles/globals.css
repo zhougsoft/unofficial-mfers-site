@@ -11,3 +11,9 @@
 	font-family: 'Comic Mono';
 	src: url('../public/fonts/ComicMono.ttf') format('truetype');
 }
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
