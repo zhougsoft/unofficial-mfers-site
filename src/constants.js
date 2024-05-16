@@ -45,10 +45,6 @@ export const TREASURY_SIGNERS = [
 		name: 'mleejr',
 		twitter: 'https://twitter.com/mleejr',
 	},
-	{
-		name: 'kml',
-		twitter: 'https://twitter.com/kmldot',
-	},
 ]
 
 export const TREASURY_SIGNER_ALUMNI = [
@@ -59,6 +55,10 @@ export const TREASURY_SIGNER_ALUMNI = [
 	{
 		name: 'zhoug',
 		twitter: 'https://twitter.com/zhougsoft',
+	},
+	{
+		name: 'kml',
+		twitter: 'https://twitter.com/kmldot',
 	},
 ]
 
@@ -285,14 +285,20 @@ export const TIMELINE_EVENTS = [
 	},
 ]
 
-export const MFERCOIN_MIRROR = 'https://mirror.xyz/sartoshi.eth/gTS1jOL9JdfbO2--rTIMiGo5SmovIbxyPR7xIJJCxUo';
+export const MFERCOIN_MIRROR =
+	'https://mirror.xyz/sartoshi.eth/gTS1jOL9JdfbO2--rTIMiGo5SmovIbxyPR7xIJJCxUo'
 
-export const MFERCOIN_WP_IPFS = 'https://ipfs.io/ipfs/QmRB2uGqNiwX8piYCNLmNK234BTcXksDfobt7UDfPFUzFa/mfercoin.pdf';
+export const MFERCOIN_WP_IPFS =
+	'https://ipfs.io/ipfs/QmRB2uGqNiwX8piYCNLmNK234BTcXksDfobt7UDfPFUzFa/mfercoin.pdf'
 
-export const MFERCOIN_CONTRACT = 'https://basescan.org/address/0xe3086852a4b125803c815a158249ae468a3254ca';
+export const MFERCOIN_CONTRACT =
+	'https://basescan.org/address/0xe3086852a4b125803c815a158249ae468a3254ca'
 
-export const MFERCOIN_UNISWAP = 'https://app.uniswap.org/explore/tokens/base/0xe3086852a4b125803c815a158249ae468a3254ca';
+export const MFERCOIN_UNISWAP =
+	'https://app.uniswap.org/explore/tokens/base/0xe3086852a4b125803c815a158249ae468a3254ca'
 
-export const MFERCOIN_DEXSCREENER = 'https://dexscreener.com/base/0xb08a99ab559e5456907278727a3b0d968c0a313b';
+export const MFERCOIN_DEXSCREENER =
+	'https://dexscreener.com/base/0xb08a99ab559e5456907278727a3b0d968c0a313b'
 
-export const MFERCOIN_OKX = 'https://www.okx.com/web3/dex-swap#inputChain=8453&inputCurrency=0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee&outputChain=8453&outputCurrency=0xe3086852a4b125803c815a158249ae468a3254ca';
+export const MFERCOIN_OKX =
+	'https://www.okx.com/web3/dex-swap#inputChain=8453&inputCurrency=0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee&outputChain=8453&outputCurrency=0xe3086852a4b125803c815a158249ae468a3254ca'
