@@ -302,3 +302,18 @@ export const MFERCOIN_DEXSCREENER =
 
 export const MFERCOIN_OKX =
 	'https://www.okx.com/web3/dex-swap#inputChain=8453&inputCurrency=0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee&outputChain=8453&outputCurrency=0xe3086852a4b125803c815a158249ae468a3254ca'
+
+
+export const WHATAREMFERS_FRENCH = 'https://paragraph.xyz/@sartocratesbased.eth/que-sont-les-mfers'
+
+export const WHATAREMFERS_ITALIAN = 'https://paragraph.xyz/@sartocratesbased.eth/che-cosa-sono-gli-mfers'
+
+export const WHATAREMFERS_FARSI = 'https://paragraph.xyz/@sartocratesbased.eth/mfers-chyh%D8%9F'
+
+export const WHATAREMFERS_TURKISH = 'https://paragraph.xyz/@sartocratesbased.eth/mfers-nedir'
+
+export const WHATAREMFERS_KOREAN = 'https://paragraph.xyz/@sartocratesbased.eth/%EC%8A%88%EB%B2%8C%EB%9F%BC%EB%93%A4%EC%9D%B4%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80'
+
+export const WHATAREMFERS_DUTCH = 'https://paragraph.xyz/@sartocratesbased.eth/wat-zijn-mfers'
+
+export const SARTOCRATES_FARCASTER = 'https://warpcast.com/sartocrates'
