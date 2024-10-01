@@ -26,6 +26,9 @@ const MainNav = () => {
 						<Link to="/" className="internal-nav-link">
 							home
 						</Link>
+						<Link to="/whataremfers" className="internal-nav-link">
+							mfers?
+						</Link>
 						<Link to="/treasury" className="internal-nav-link">
 							treasury
 						</Link>

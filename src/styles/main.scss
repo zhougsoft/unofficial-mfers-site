@@ -262,6 +262,53 @@ $animationSpeed: 15s;
 	}
 }
 
+// --- WHATAREMFERS PAGE ---
+.whataremfers-wrapper {
+	p {
+		font-family: $font-main;
+		font-size: 1.25em;
+	}
+
+	a {
+		font-family: $font-script;
+		font-size: 1.5em;
+		font-weight: bold;
+	}
+
+	ul,
+	ol {
+		margin: 0;
+	}
+}
+
+.whataremfers-wrapper img {
+	max-width: 500px;
+	max-height: 500px;
+	border-radius: .5rem;
+	box-shadow: 2px 5px 5px gainsboro;
+	margin-bottom: 2em;
+}
+
+.whataremfers-heading {
+	font-size: 5em;
+	letter-spacing: -0.03em;
+	font-weight: bold;
+	margin: 0;
+}
+
+.whataremfers-subheading {
+	font-size: 2em;
+	letter-spacing: -0.03em;
+	font-weight: bold;
+	margin-top: 1.5em;
+	margin-bottom: 0.5em;
+	text-decoration: underline;
+}
+
+.whataremfers_customlink {
+	font-size: .5rem;
+}
+
 // --- MFERCOIN PAGE ---
 .mfercoin-wrapper {
 	p {
