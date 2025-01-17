@@ -14,8 +14,8 @@ const TreasuryPage = () => {
 		<Layout pageTitle="treasury | unofficial mfers">
 			<PageContainer>
 				<div className="treasury-wrapper">
-					<h1 className="treasury-heading">community treasury</h1>
-					<p>
+					<h1 className="treasury-heading">treasury</h1>
+					{/* <p>
 						mfers area a constantly evolving and self-improving social machine -
 						think{' '}
 						<ExtLink href="https://en.wikipedia.org/wiki/Ant#Learning">
@@ -27,25 +27,25 @@ const TreasuryPage = () => {
 						mfering is a group effort, so please share any feedback points or
 						ideas with the community. welcome to the movement, mfer.
 					</p>
-					<hr />
-					<p>
+					<hr /> */}
+					{/* <p>
 						The{' '}
 						<ExtLink href={TREASURY_LINK}>
 							unofficial mfers community treasury
 						</ExtLink>{' '}
 						is a Gnosis-safe multi-sig secured by the following signers:
-					</p>
-					<ul>
+					</p> */}
+					{/* <ul>
 						{TREASURY_SIGNERS.map(signer => (
 							<li key={`signer-${signer.name}`}>
 								<ExtLink href={signer.twitter}>{signer.name}</ExtLink>
 							</li>
 						))}
-					</ul>
-					<br />
+					</ul> */}
+					{/* <br /> */}
 					<p>
 						<strong>
-							The treasury address is located on the Ethereum mainnet at:
+							The treasury address is located on the Ethereum network at:
 						</strong>
 					</p>
 					<ExtLink href={TREASURY_LINK}>
@@ -67,7 +67,7 @@ const TreasuryPage = () => {
 							))}
 						</ul>
 					</small>
-					<br />
+					{/* <br />
 					<br />
 					<h2 className="treasury-subheading">snapshot</h2>
 					<p>
@@ -78,7 +78,7 @@ const TreasuryPage = () => {
 						is where we vote on important community proposals! It's located at:
 						<br />
 						<ExtLink href={SNAPSHOT_LINK}>{SNAPSHOT_LINK}</ExtLink>
-					</p>
+					</p> */}
 				</div>
 			</PageContainer>
 		</Layout>

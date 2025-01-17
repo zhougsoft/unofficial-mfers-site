@@ -28,24 +28,24 @@ export const WHAT_ARE_MFERS_LINK =
 export const MFERPEDIA =
 	'https://zhoug.notion.site/mferpedia-d0c1ed16cc5a4214821158ef032eeb41'
 // lists
-export const TREASURY_SIGNERS = [
-	{
-		name: 'masterchan',
-		twitter: 'https://twitter.com/masterchanx',
-	},
-	{
-		name: 'metabananas',
-		twitter: 'https://twitter.com/metabananas',
-	},
-	{
-		name: 'lexito',
-		twitter: 'https://twitter.com/lexnfts',
-	},
-	{
-		name: 'mleejr',
-		twitter: 'https://twitter.com/mleejr',
-	},
-]
+// export const TREASURY_SIGNERS = [
+// 	{
+// 		name: 'masterchan',
+// 		twitter: 'https://twitter.com/masterchanx',
+// 	},
+// 	{
+// 		name: 'metabananas',
+// 		twitter: 'https://twitter.com/metabananas',
+// 	},
+// 	{
+// 		name: 'lexito',
+// 		twitter: 'https://twitter.com/lexnfts',
+// 	},
+// 	{
+// 		name: 'mleejr',
+// 		twitter: 'https://twitter.com/mleejr',
+// 	},
+// ]
 
 export const TREASURY_SIGNER_ALUMNI = [
 	{
@@ -60,6 +60,18 @@ export const TREASURY_SIGNER_ALUMNI = [
 		name: 'kml',
 		twitter: 'https://twitter.com/kmldot',
 	},
+	{
+		name: 'mleejr',
+		twitter: 'https://twitter.com/mleejr',
+	},
+	{
+		name: 'masterchan',
+		twitter: 'https://twitter.com/masterchanx',
+	},
+	{
+		name: 'metabananas',
+		twitter: 'https://twitter.com/metabananas',
+	}
 ]
 
 // TODO: add showcase mfers
