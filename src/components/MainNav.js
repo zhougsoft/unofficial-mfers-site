@@ -38,6 +38,9 @@ const MainNav = () => {
 						<Link to="/mfercoin" className="internal-nav-link">
 							mfercoin
 						</Link>
+						<Link to="/games" className="internal-nav-link">
+							games
+						</Link>
 					</Nav>
 					<Nav className="icon-nav-bar">
 						<Nav.Link
